@@ -1,0 +1,248 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.homepage {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    color: white;
+    margin: auto;
+    left: 40%;
+    right: 60%;
+    top: 13%;
+    position: absolute;
+}
+
+.Title {
+    font-size: 200px;
+    margin-bottom: 65px;
+}
+
+.Title1 {
+    font-size: 75px;
+    text-align: center;
+}
+
+.choose {
+    border-color: white;
+    border: 3px solid;
+    font-size: 25px;
+    text-align: center;
+}
+
+.unchoose {
+    border-color: black;
+    border: 3px solid;
+    text-align: center;
+}
+
+.player1 {
+    text-align: center;
+    width: 185px;
+    border-color: white;
+    border: 3px solid;
+    font-size: 45px;
+    left: 45%;
+    top: 25%;
+    position: absolute
+}
+
+.player2 {
+    text-align: center;
+    width: 185px;
+    border-color: white;
+    border: 3px solid;
+    font-size: 45px;
+    left: 45%;
+    top: 43%;
+    position: absolute
+}
+
+.player3 {
+    text-align: center;
+    width: 185px;
+    border-color: white;
+    border: 3px solid;
+    font-size: 45px;
+    left: 45%;
+    top: 61%;
+    position: absolute
+}
+
+.player4 {
+    text-align: center;
+    width: 185px;
+    border-color: white;
+    border: 3px solid;
+    font-size: 45px;
+    left: 45%;
+    top: 79%;
+    position: absolute
+}
+
+.pokemon1 {
+    left: 63%;
+    top: 16%;
+    position: absolute;
+}
+
+.pokemon2 {
+    left: 23%;
+    top: 30%;
+    position: absolute;
+}
+
+.pokemon3 {
+    left: 63%;
+    top: 49%;
+    position: absolute;
+}
+
+.pokemon4 {
+    left: 23%;
+    top: 68%;
+    position: absolute;
+}
+
+.testInput:focus {
+    color: red;
+}
+
+.testInput {
+    color: yellow;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.change_page {
+    left: 80%;
+    top: 90%;
+    position: absolute;
+}
+
+.character {
+    z-index: -2;
+    height: 952px;
+    width: 817pxs;
+    left: 25%;
+    top: 2%;
+    position: absolute;
+}
+
+.dialog_box {
+    background-color: black;
+    border-color: white;
+    border: 3px solid;
+    font-size: 45px;
+    height: 323px;
+    width: 99%;
+    top: 67%;
+    position: absolute;
+}
+
+.dialog_box1 {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-color: white;
+    border: 3px solid;
+    font-size: 45px;
+    height: 323px;
+    width: 99%;
+    top: 67%;
+    position: absolute;
+}
+
+.name_box {
+    background-color: black;
+    border-color: white;
+    border: 3px solid;
+    font-size: 45px;
+    height: 70px;
+    width: 300px;
+    z-index: -1;
+    top: 60%;
+    position: absolute;
+}
+
+.name_box1 {
+    background-color: black;
+    border-color: white;
+    border: 3px solid;
+    font-size: 45px;
+    height: 70px;
+    width: 300px;
+    z-index: -1;
+    top: 60%;
+    position: absolute;
+    /* margin-top: 29%; */
+}
+
+.bag {
+    z-index: 1;
+    margin-left: 94%
+}
+
+.return {
+    z-index: -1;
+    margin-left: 90%;
+    float: none;
+    margin-top: -5%;
+}
+
+.envelope {
+    z-index: -2;
+    left: 30%;
+    top: 15%;
+    position: absolute
+}
+
+.bag_title {
+    font-size: 80px;
+    margin: 0px;
+    text-align: center;
+    z-index: 1;
+    float: none;
+}
+
+.letter {
+    z-index: -1;
+    left: 27%;
+    top: 15%;
+    position: absolute
+}
+
+.choice1 {
+    border-color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 3px solid;
+    height: 90px;
+    width: 50%;
+    font-size: 70px;
+    text-align: center;
+    left: 25%;
+    top: 22.5%;
+    position: absolute;
+    display: none;
+}
+
+.choice2 {
+    border-color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 3px solid;
+    height: 90px;
+    width: 50%;
+    font-size: 69px;
+    text-align: center;
+    left: 25%;
+    top: 31%;
+    position: absolute;
+    display: none;
+}
+
+.display {
+    display: none;
+}

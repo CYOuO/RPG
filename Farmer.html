@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./styles.css" rel="stylesheet" type="text/css">
+    <script src="./test.js"></script>
+    <title>星晨-活動組-RPG</title>
+</head>
+
+<body>
+    <div class="" id="Farmer1">
+        <div class="bag"><img src="img/bag_new.png" id="bag"></div>
+        <div class="character" id="character">
+            <img src="img/農場主人.png" id="character_img" />
+        </div>
+        <div class="choice1" id="dad" onclick="dad()">爸爸</div>
+        <div class="choice2" id="mom">媽媽</div>
+        <div class="name_box" id="name_box"></div>
+        <div class="dialog_box" id="dialog_box"></div>
+    </div>
+    <!--背包裡的信封-->
+    <div class="display" id="bag_envelope">
+        <div class="bag_title">背包</div>
+        <div class="return" id="return" onclick="return_key()"><img src="img/return.png" width="70%" height="70%"></div>
+        <div class="envelope">
+            <img src="img/envelope_new.png" id="envelope_new" width="175%" height="175%"></img>
+        </div>
+    </div>
+    <!--背包裡的信-->
+    <div class="display" id="bag_letter">
+        <div class="bag_title">背包</div>
+        <div class="return" id="return2" onclick="return_key2()">
+            <img src="img/return.png" width="70%" height="70%">
+        </div>
+        <div class="envelope" id="letter">
+            <img src="img/letter.png" width="90%" height="90%" />
+        </div>
+    </div>
+    <div class="display" id="box">
+        <div class="name_box1" id="name1">你</div>
+        <div class="dialog_box1" id="word">是媽媽寫給爸爸的父親節卡片。</div>
+    </div>
+    <!--分支-->
+    <!-- <div class="display" id="branch">
+        <div class="bag"><img src="img/bag.png" width="96%" height="96%"></div>
+        <div class="character" id="character2">
+            <img src="img/農場主人.png" id="character2_img" width="96%" height="96%" />
+        </div>
+        <div class="choice1" id="dad" onclick="dad()">爸爸</div>
+        <div class="choice2" id="mom" onclick="mom()">媽媽</div>
+        <div class="name_box" id="name_box2">你</div>
+        <div class="dialog_box" id="dialog_box2" onclick="dialog_box2()">把信還回去吧，要給誰呢？</div>
+    </div> -->
+
+</body>
+
+</html>
