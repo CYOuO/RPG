@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./styles.css" rel="stylesheet" type="text/css">
-    <script src="./Farmer.js"></script>
+    <script src="./.js"></script>
     <title>星晨-活動組-RPG</title>
 </head>
 
@@ -14,17 +14,10 @@
     <div class="" id="Farmer1">
         <div class="bag"><img src="img/bag_new.png" id="bag"></div>
         <div class="character" id="character">
-            <img src="img/農場主人/0.png" id="character_img" />
+            <img src="img/博士.png" id="character_img" />
         </div>
-        <div class="display" id=Choice>
-            <div class="choice1" id="choice1"></div>
-            <div class="choice2" id="choice2"></div>
-        </div>
-        <div class="display" id=Choice3>
-            <div class="choice1" id="choice3_1"></div>
-            <div class="choice2" id="choice3_2"></div>
-            <div class="choice3" id="choice3_3"></div>
-        </div>
+        <div class="choice1" id="dad" onclick="dad()">爸爸</div>
+        <div class="choice2" id="mom">媽媽</div>
         <div class="name_box" id="name_box"></div>
         <div class="dialog_box" id="dialog_box"></div>
     </div>
@@ -48,7 +41,7 @@
     </div>
     <div class="display" id="box">
         <div class="name_box1" id="name1">你</div>
-        <div class="dialog_box1" id="word">得趕快去摘蘋果呢。</div>
+        <div class="dialog_box1" id="word">是媽媽寫給爸爸的父親節卡片。</div>
     </div>
     <!--分支-->
     <!-- <div class="display" id="branch">

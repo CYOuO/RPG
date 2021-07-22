@@ -129,8 +129,8 @@ a {
     z-index: -2;
     height: 952px;
     width: 817pxs;
-    left: 25%;
-    top: 2%;
+    left: 35%;
+    top: 11.5%;
     position: absolute;
 }
 
@@ -226,7 +226,6 @@ a {
     left: 25%;
     top: 22.5%;
     position: absolute;
-    display: none;
 }
 
 .choice2 {
@@ -240,7 +239,19 @@ a {
     left: 25%;
     top: 31%;
     position: absolute;
-    display: none;
+}
+
+.choice3 {
+    border-color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 3px solid;
+    height: 90px;
+    width: 50%;
+    font-size: 70px;
+    text-align: center;
+    left: 25%;
+    top: 39.5%;
+    position: absolute;
 }
 
 .display {
