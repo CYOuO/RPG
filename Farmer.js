@@ -3,13 +3,14 @@ document.write('<script src="Farmer/Scripts.js"></script>');
 var init = 0;
 //Bag//
 let bag = [ //初始Bag裡的物品
-    { item: "envelope", image: "", open: 0, thing: 1, event: Envelope_new },
+    { item: "envelope", image: "img/envelope_new.png", image2: "img/envelope.png", open: 0, bThing: 1, thing: "img/letter.png", name: "你", word: "得趕快去摘蘋果呢。", others: 0 },
 ]
 
 function Bag_open() { //判斷背包有無新物品
-    if (bag[0].open === 1) {
-        document.getElementById("bag").src = "img/bag.png";
-    } else if (bag[0].open === 0) {
+    for (let a = 0; a < bag.length; a++)
+        if (bag[a].open === 1) {
+            document.getElementById("bag").src = "img/bag.png";
+        } else if (bag[a].open === 0) {
         document.getElementById("bag").src = "img/bag_new.png";
     }
 }
@@ -22,17 +23,64 @@ function Bag_open() { //判斷背包有無新物品
 
 function bag_appear() {
     document.getElementById("bag").style.visibility = "visible"; //顯示背包
-    bag_detect();
+    // console.log(45678);
+    // bag_detect();
+
 }
+
+var n = 0
 
 function bag_detect() {
     document.getElementById("bag").addEventListener('click', function() { //按背包
-        bag_envelope.style.display = "block"; //顯示信封
-        Farmer1.style.display = "none" //劇情頁消失
-        if (bag[0].thing === 1) {
-            document.getElementById("envelope_new").addEventListener('click', function() { bag[0].event(); });
+        console.log(122222)
+        n = 0
+        document.getElementById("bag_envelope").style.display = "block"; //顯示信封
+        document.getElementById("Farmer1").style.display = "none" //劇情頁消失
+        document.getElementById("previous").style.display = "none";
+        document.getElementById("next").style.display = "none";
+        bag_change_thing();
+        if (bag[n].bThing === 1) {
+            document.getElementById("envelope_new").addEventListener('click', function() { Envelope_new(); });
         }
     })
+}
+
+function bag_change_thing() {
+    if (bag.length > 1) {
+        switch (bag[n].others) {
+            case 0:
+                document.getElementById("next").style.display = "block";
+                document.getElementById("previous").style.display = "none";
+                console.log(n)
+                break;
+            case 1:
+                document.getElementById("next").style.display = "none";
+                document.getElementById("previous").style.display = "block";
+                console.log(7748)
+                break;
+            case 2:
+                document.getElementById("previous").style.display = "block";
+                document.getElementById("next").style.display = "block";
+                console.log(2266)
+                break;
+        }
+
+    }
+}
+
+function change_bag_thing() {
+    document.getElementById("previous").addEventListener('click', function() {
+        n = n - 1;
+        console.log("按上一頁" + n);
+        document.getElementById("envelope_new").src = bag[n].image;
+        bag_change_thing()
+    });
+    document.getElementById("next").addEventListener('click', function() {
+        n = n + 1;
+        console.log("按下一頁" + n);
+        document.getElementById("envelope_new").src = bag[n].image;
+        bag_change_thing()
+    });
 }
 
 //分支
@@ -78,7 +126,7 @@ function Apple() {
 
 
 var number = 2;
-
+//通關102
 function Choice_stage2_0() { //我在考慮一下/我想好了
     number = 2;
     choice = 1
@@ -167,7 +215,7 @@ function Choice_stage2_2_2_0() { //你是鼎鼎大名的流動商人/公共場�
     };
 }
 
-function Choice_stage3_0() { //北方/北方的反方向
+function Choice_stage3_0() { //為了夢想離開/為了媽媽留下
     number = 2;
     choice = 7
     Choice_box();
@@ -178,6 +226,34 @@ function Choice_stage3_0() { //北方/北方的反方向
     document.getElementById("choice2").onclick = () => {
         cs = stage3_2;
         change_scipts()
+    };
+}
+
+function Choice_stage3_1_0() { //道歉/反駁
+    number = 2;
+    choice = 2;
+    Choice_box();
+    document.getElementById("choice1").onclick = () => {
+        cs = stage3_2_1;
+        change_scipts();
+    };
+    document.getElementById("choice2").onclick = () => {
+        cs = stage3_2_2;
+        change_scipts();
+    };
+}
+
+function Choice_stage3_2_1_0() { //280/120
+    number = 2;
+    choice = 3
+    Choice_box();
+    document.getElementById("choice1").onclick = () => {
+        cs = stage3_2_1_1;
+        change_scipts();
+    };
+    document.getElementById("choice2").onclick = () => {
+        cs = stage3_2_1_2;
+        change_scipts();
     };
 }
 
@@ -323,6 +399,25 @@ function change_scipts() {
     document.getElementById("Choice3").style.display = "none";
 }
 
+function change_scipts1() { //失敗選項劇情接回找爸爸
+    istop = 1
+    stage2 = stage2_2;
+    m = 12;
+    Stage2_box();
+    change_bag_letter();
+}
+
+function change_bag_letter() { //背包新增給爸爸的信
+    // bag.push({ item: "envelope", image: "img/envelope_new.png", image2: "img/envelope.png", open: 0, bThing: 1, thing: "img/媽媽的信", event: Envelope_new, others: 1 })
+    bag[1] = { item: "envelope", image: "img/envelope_new.png", image2: "img/envelope.png", open: 0, bThing: 1, thing: "img/媽媽的信.png", name: "你", word: "得趕快找到爸爸呢。", others: 1 }
+    bag.open = 0;
+    Bag_open();
+    // bag_detect();
+    Stage2_box();
+    m++;
+
+}
+
 //返回鍵//
 function return_key() { //
     document.getElementById("Farmer1").style.display = "block";
@@ -349,22 +444,26 @@ function return_key2() {
     }
 }
 //Bag Event//
-function Envelope_new() { //初點信封
+function Envelope_new() { //點背包物品外觀
 
-    if (bag[0].thing === 1) {
-        bag[0].open = 1;
-        document.getElementById("bag").src = "img/bag.png";
-        bag[0].image = src = "img/envelope.png";
-        document.getElementById("envelope_new").src = bag[0].image;
-        document.getElementById("bag_envelope").style.display = "none";
-        document.getElementById("return2").style.display = "none";
+    if (bag[n].bThing === 1) {
+        bag[n].open = 1;
+        // document.getElementById("bag").src = "img/bag.png";
+        Bag_open();
+        bag[n].image = src = bag[n].image2; //更改為無紅點
+        document.getElementById("envelope_new").src = bag[n].image2;
+        document.getElementById("bag_envelope").style.display = "none"; //外包裝頁消失
+        document.getElementById("return2").style.display = "none"; //返回鍵消失
         document.getElementById("bag_letter").style.display = "block";
+        document.getElementById("letter").src = bag[n].thing;
+        document.getElementById("name1").textContent = bag[n].name;
+        document.getElementById("word1").textContent = bag[n].word;
         document.getElementById("letter").addEventListener('click', function() {
             document.getElementById("box").style.display = "block";
             document.getElementById("return2").style.display = "block";
         })
     } else {
-        bag[0].open = 1;
+        bag[n].open = 1;
         Bag_open();
     }
 
@@ -373,7 +472,7 @@ function Envelope_new() { //初點信封
 //密碼
 var score = 0
 
-function Password_Apple() {
+function Password_Apple() { //輸入密碼
 
     // var password = ''
     let password = prompt('輸入密碼:', '');
@@ -403,6 +502,11 @@ function run() {
 
 }
 window.addEventListener('load', function() {
-    document.getElementById("bag").style.visibility = "hidden";
-    run();
+    if (istop >= 1) return;
+    else {
+        document.getElementById("bag").style.visibility = "hidden";
+        bag_detect();
+        change_bag_thing()
+        run();
+    }
 })

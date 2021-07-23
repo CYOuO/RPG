@@ -197,7 +197,7 @@ a {
     z-index: -2;
     left: 30%;
     top: 15%;
-    position: absolute
+    position: absolute;
 }
 
 .bag_title {
@@ -256,4 +256,21 @@ a {
 
 .display {
     display: none;
+}
+
+.previous {
+    width: 125px;
+    height: 125px;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+
+.next {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
 }
