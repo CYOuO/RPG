@@ -45,7 +45,7 @@ function bag_detect() {
     })
 }
 
-function bag_change_thing() {
+function bag_change_thing() { //偵測背包換頁按鈕
     if (bag.length > 1) {
         switch (bag[n].others) {
             case 0:
@@ -68,7 +68,7 @@ function bag_change_thing() {
     }
 }
 
-function change_bag_thing() {
+function change_bag_thing() { //切換背包物品
     document.getElementById("previous").addEventListener('click', function() {
         n = n - 1;
         console.log("按上一頁" + n);
@@ -419,7 +419,7 @@ function change_bag_letter() { //背包新增給爸爸的信
 }
 
 //返回鍵//
-function return_key() { //
+function return_key() { //物品外觀返回鍵
     document.getElementById("Farmer1").style.display = "block";
     document.getElementById("bag_envelope").style.display = "none";
     Stage1_box();
@@ -427,7 +427,7 @@ function return_key() { //
 
 let X = 0;
 
-function return_key2() {
+function return_key2() { //物品內容返回鍵
     document.getElementById("Farmer1").style.display = "block";
     document.getElementById("bag_letter").style.display = "none";
     document.getElementById("box").style.display = "none";

@@ -93,7 +93,7 @@ let stage2_2_1 = [ //抱歉
 
 ]
 
-let stage2_2_1_1 = [
+let stage2_2_1_1 = [ //280元
     { name: "你", word: "280元！", image: "img/農場主人/0.png", bEvent: 0 },
     { name: "哈密瓜", word: "哈哈哈沒錯，看不出來啊小夥子，你算術真不錯", image: "img/商人.png", bEvent: 0, },
     {
@@ -108,7 +108,7 @@ let stage2_2_1_1 = [
     },
 ]
 
-let stage2_2_1_2 = [
+let stage2_2_1_2 = [ //120元
     { name: "你", word: "120元？", image: "img/農場主人/0.png", bEvent: 0 },
     { name: "哈密瓜", word: "哈哈哈答錯囉，還要加油啊小夥子！", image: "img/商人.png", bEvent: 0 },
     {
