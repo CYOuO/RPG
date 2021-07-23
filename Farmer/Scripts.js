@@ -9,7 +9,7 @@ let stage1 = [
     { name: "你", word: "算了先不想了，我手邊還有一項母親派給我的事情要做。。", image: "img/農場主人/0.png", bEvent: 0 },
     { name: "你", word: "再看一次媽媽留下的紙條然後趕快完成吧。。", image: "img/農場主人/0.png", bEvent: 1, event: bag_appear },
     { name: "你", word: "事不宜遲趕緊完成媽媽交代的家事吧！", image: "img/農場主人/0.png", bEvent: 0, },
-    { name: "提示", word: "點擊蘋果去幫媽媽摘蘋果吧！", image: "img/game_apple.png", bEvent: 1, event: Apple },
+    { name: "提示", word: "點擊蘋果去幫媽媽摘蘋果吧！", image: "img/農場主人物品/game_apple.png", bEvent: 1, event: Apple },
     { name: "提示", word: "輸入通關密碼吧", image: "", bEvent: 1, event: Choice_game },
 ]
 
@@ -312,8 +312,8 @@ let stage3_1 = [ //為了夢想離開
     { name: "你", word: "一個人如果沒有夢想，那就是一具沒有靈魂的軀殼", image: "img/農場主人/4.png", bEvent: 0 },
     { name: "你", word: "每個人都該有追逐夢想的權利", image: "img/農場主人/4.png", bEvent: 0 },
     { name: "媽媽", word: "是嗎，我知道了......你趕快走吧。", image: "img/媽媽/2.png", bEvent: 0 },
-    { name: "媽媽", word: "不過大賽會場跟你爸爸都在南方我寫封信", image: "img/媽媽/2.png", bEvent: 0 },
-    { name: "媽媽", word: "你順道去知會他一聲吧。", image: "img/媽媽/2.png", bEvent: 0 },
+    { name: "媽媽", word: "不過大賽會場跟你爸爸都在南方", image: "img/媽媽/2.png", bEvent: 0 },
+    { name: "媽媽", word: "我寫封信，你順道去知會他一聲吧。", image: "img/媽媽/2.png", bEvent: 0 },
     { name: "你", word: "媽媽......。", image: "img/農場主人/4.png", bEvent: 0 },
     { name: "媽媽", word: "快走！快走啊！趁我還沒改變心意", image: "img/媽媽/3.png", bEvent: 0 },
     { name: "媽媽", word: "朝向你的夢想奔跑吧。", image: "img/媽媽/3.png", bEvent: 0 },

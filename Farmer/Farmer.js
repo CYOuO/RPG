@@ -3,7 +3,7 @@ document.write('<script src="Farmer/Scripts.js"></script>');
 var init = 0;
 //Bag//
 let bag = [ //初始Bag裡的物品
-    { item: "envelope", image: "img/envelope_new.png", image2: "img/envelope.png", open: 0, bThing: 1, thing: "img/letter.png", name: "你", word: "得趕快去摘蘋果呢。", others: 0 },
+    { item: "envelope", image: "img/農場主人物品/envelope_new.png", image2: "img/農場主人物品/envelope.png", open: 0, bThing: 1, thing: "img/農場主人物品/letter.png", name: "你", word: "得趕快去摘蘋果呢。", others: 0 },
 ]
 
 function Bag_open() { //判斷背包有無新物品
@@ -409,7 +409,7 @@ function change_scipts1() { //失敗選項劇情接回找爸爸
 
 function change_bag_letter() { //背包新增給爸爸的信
     // bag.push({ item: "envelope", image: "img/envelope_new.png", image2: "img/envelope.png", open: 0, bThing: 1, thing: "img/媽媽的信", event: Envelope_new, others: 1 })
-    bag[1] = { item: "envelope", image: "img/envelope_new.png", image2: "img/envelope.png", open: 0, bThing: 1, thing: "img/媽媽的信.png", name: "你", word: "得趕快找到爸爸呢。", others: 1 }
+    bag[1] = { item: "envelope", image: "img/農場主人物品/媽媽的信封_new.png", image2: "img/農場主人物品/媽媽的信封.png", open: 0, bThing: 1, thing: "img/農場主人物品/媽媽的信.png", name: "你", word: "得趕快找到爸爸呢。", others: 1 }
     bag.open = 0;
     Bag_open();
     // bag_detect();
