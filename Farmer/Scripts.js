@@ -128,7 +128,7 @@ let stage2_2_1_0 = [ //猜完錢後
     { name: "你", word: "我還是靠自己吧", image: "img/農場主人/7.png", bEvent: 0 },
     { name: "哈密瓜", word: "哎呀小夥子，跟你開個玩笑呢", image: "img/商人.png", bEvent: 0 },
     { name: "哈密瓜", word: "我才不會當黑心商人呢，看你緊張的", image: "img/商人.png", bEvent: 0 },
-    { name: "哈密瓜", word: "指北針借你用用吧", image: "img/商人.png", bEvent: 0 },
+    { name: "哈密瓜", word: "指北針借你用用吧", image: "img/商人.png", bEvent: 1, event: change_bag_compass },
     { name: "哈密瓜", word: "改天記得還我啊", image: "img/商人.png", bEvent: 0 },
     { name: "你", word: "真的嗎！不過我不太會用指北針耶......", image: "img/農場主人/0.png", bEvent: 0 },
     { name: "哈密瓜", word: "這還不簡單！", image: "img/商人.png", bEvent: 0 },
@@ -150,8 +150,8 @@ let stage2_2_1_0 = [ //猜完錢後
     { name: "你", word: "對了！我還沒有問他住哪裡呢，我還要還指北針呀", image: "img/農場主人/7.png", bEvent: 0 },
     { name: "你", word: "真是可惜，找機會我一定要好好報答他", image: "img/農場主人/7.png", bEvent: 0 },
     { name: "你", word: "現在還是快點去南方找爸爸吧", image: "img/農場主人/1.png", bEvent: 0 },
-    { name: "你", word: "拿出指北針看看吧", image: "img/農場主人.png", bEvent: 0 },
-    { name: "你", word: "指北針指的方向是北方，那麼我應該往那條路走呢？", image: "img/農場主人/11.png", bEvent: 1, event: Choice_stage2_2_1_0_0 },
+    { name: "你", word: "拿出指北針看看吧", image: "img/農場主人物品/拿出指北針.png", bEvent: 0 },
+    { name: "你", word: "指北針指的方向是北方，那麼我應該往那條路走呢？", image: "img/農場主人物品/拿出指北針.png", bEvent: 1, event: Choice_stage2_2_1_0_0 },
 ]
 
 let stage2_2_1_0_1 = [ //北方
@@ -234,7 +234,7 @@ let stage2_2_1_0_0_0 = [ //菜市場/找到爸爸
     { name: "你", word: "是這樣的，我一直以來都有一個成為神奇寶貝大師的夢想", image: "img/農場主人/2.png", bEvent: 0 },
     { name: "你", word: "最近有了神奇寶貝大賽的消息", image: "img/農場主人/0.png", bEvent: 0 },
     { name: "你", word: "我已經成功說服了媽媽", image: "img/農場主人/2.png", bEvent: 0 },
-    { name: "你", word: "這是媽媽給你的信", image: "img/農場主人/2.png", bEvent: 0 },
+    { name: "你", word: "這是媽媽給你的信", image: "img/農場主人/2.png", bEvent: 1, event: change_bag_letter2 },
     { name: "你", word: "但是還需要問你的意見", image: "img/農場主人/11.png", bEvent: 0 },
     { name: "爸爸", word: "神奇寶貝大師啊......（看著信摸著下巴思考）", image: "img/爸爸/0.png", bEvent: 0 },
     { name: "你", word: "爸爸，希望你可以支持我的夢想！", image: "img/農場主人/2.png", bEvent: 0 },
@@ -322,4 +322,15 @@ let stage3_1 = [ //為了夢想離開
     { name: "你", word: "我會銘記在心的", image: "img/農場主人/0.png", bEvent: 0 },
     { name: "你", word: "再見了，媽媽。", image: "img/農場主人/0.png", bEvent: 0 },
     { name: "你", word: "再見了，媽媽。", image: "img/農場主人/0.png", bEvent: 1, event: change_scipts1 },
+]
+
+let stage3_2 = [ //為媽媽留下
+    { name: "你", word: "好吧，媽媽，我留下陪您", image: "img/農場主人/11.png", bEvent: 0 },
+    { name: "你", word: "您不要生氣，不要生氣，生氣給魔鬼留地步", image: "img/農場主人/11.png", bEvent: 0 },
+    { name: "你", word: "不要生氣，不要生氣，生氣吃虧是您自己。", image: "img/農場主人/11.png", bEvent: 0 },
+    { name: "媽媽", word: "好......好......", image: "img/媽媽/0.png", bEvent: 0 },
+    { name: "媽媽", word: "走吧兒子，我們回家", image: "img/媽媽/0.png", bEvent: 0 },
+    { name: "媽媽", word: "回家種蘋果樹", image: "img/媽媽/0.png", bEvent: 0 },
+    { name: "媽媽", word: "我們還能一起在蘋果樹下吃你摘回來的蘋果。", image: "img/媽媽/4.png", bEvent: 0 },
+    { name: "你", word: "好。", image: "img/農場主人/11.png", bEvent: 0 },
 ]

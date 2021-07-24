@@ -23,17 +23,14 @@ function Bag_open() { //判斷背包有無新物品
 
 function bag_appear() {
     document.getElementById("bag").style.visibility = "visible"; //顯示背包
-    // console.log(45678);
-    // bag_detect();
-
 }
 
 var n = 0
 
-function bag_detect() {
+function bag_detect() { //偵測按背包
     document.getElementById("bag").addEventListener('click', function() { //按背包
-        console.log(122222)
         n = 0
+        document.getElementById("envelope_new").src = bag[n].image;
         document.getElementById("bag_envelope").style.display = "block"; //顯示信封
         document.getElementById("Farmer1").style.display = "none" //劇情頁消失
         document.getElementById("previous").style.display = "none";
@@ -83,13 +80,39 @@ function change_bag_thing() { //切換背包物品
     });
 }
 
+function Envelope_new() { //點背包物品外觀
+
+    if (bag[n].bThing === 1) {
+        bag[n].open = 1;
+        // document.getElementById("bag").src = "img/bag.png";
+        Bag_open();
+        bag[n].image = bag[n].image2; //更改為無紅點
+        document.getElementById("envelope_new").src = bag[n].image;
+        document.getElementById("bag_envelope").style.display = "none"; //外包裝頁消失
+        document.getElementById("return2").style.display = "none"; //返回鍵消失
+        document.getElementById("bag_letter").style.display = "block";
+        document.getElementById("letter").src = bag[n].thing;
+        document.getElementById("name1").textContent = bag[n].name;
+        document.getElementById("word1").textContent = bag[n].word;
+        document.getElementById("letter").addEventListener('click', function() {
+            document.getElementById("box").style.display = "block";
+            document.getElementById("return2").style.display = "block";
+        })
+    } else {
+        bag[n].open = 1;
+        bag[n].image = bag[n].image2;
+        document.getElementById("envelope_new").src = bag[n].image;
+        Bag_open();
+    }
+
+}
 //分支
 var choice = 0
 
-function Choice_game() {
+function Choice_game() { //玩遊戲/輸入密碼
     choice = 0
     Choice_box();
-    document.getElementById("choice1").onclick = () => { window.open('Game_Apple.html', ); };
+    document.getElementById("choice1").onclick = () => { window.open('Game/Game_Apple.html', ); };
     document.getElementById("choice2").onclick = () => { Password_Apple() };
 }
 
@@ -99,7 +122,7 @@ function Apple() {
         document.getElementById("character").addEventListener('click', function() {
             if (istop >= 1) return;
             else {
-                window.open('Game_Apple.html', );
+                window.open('Game/Game_Apple.html', );
             }
         })
         document.getElementById("dialog_box").addEventListener('click', function() {
@@ -109,24 +132,8 @@ function Apple() {
     }
 }
 
-
-//stage2
-// function Bag_Basket() {
-//     bag[0] = { item: "baseket", image: "img/basket.png", open: 0, thing: 0 };
-//     Bag_open();
-//     document.getElementById("envelope_new").src = bag[0].image;
-//     // document.getElementById("envelope_new").onclick = () => {};
-//     document.getElementById("bag").addEventListener('click', function() {
-//         bag[0].open = 1;
-//         Bag_open();
-//     })
-//     m++;
-
-// }
-
-
-var number = 2;
-//通關102
+var number = 2; //選項個數
+//通關1127
 function Choice_stage2_0() { //我在考慮一下/我想好了
     number = 2;
     choice = 1
@@ -418,6 +425,29 @@ function change_bag_letter() { //背包新增給爸爸的信
 
 }
 
+function change_bag_compass() { //背包新增給指北針
+    // bag.push({ item: "envelope", image: "img/envelope_new.png", image2: "img/envelope.png", open: 0, bThing: 1, thing: "img/媽媽的信", event: Envelope_new, others: 1 })
+    bag[2] = { item: "compass", image: "img/農場主人物品/指北針_new.png", image2: "img/農場主人物品/指北針.png", open: 0, bThing: 0, thing: "", name: "", word: "", others: 1 }
+    bag[1].others = 2;
+    bag.open = 0;
+    Bag_open();
+    // bag_detect();
+    Stage2_box();
+    m++;
+
+}
+
+function change_bag_letter2() { //背包給爸爸的信消失
+    // bag.push({ item: "envelope", image: "img/envelope_new.png", image2: "img/envelope.png", open: 0, bThing: 1, thing: "img/媽媽的信", event: Envelope_new, others: 1 })
+    bag[1] = bag[2];
+    bag[2] = [];
+    Bag_open();
+    // bag_detect();
+    Stage2_box();
+    m++;
+
+}
+
 //返回鍵//
 function return_key() { //物品外觀返回鍵
     document.getElementById("Farmer1").style.display = "block";
@@ -435,7 +465,8 @@ function return_key2() { //物品內容返回鍵
     if (X == 0) {
         i++;
         Stage1_box();
-        Stage1_run();
+        i++;
+        // Stage1_run();
         X++
     } else {
         console.log(100 * X)
@@ -443,37 +474,12 @@ function return_key2() { //物品內容返回鍵
             // Stage1_run();
     }
 }
-//Bag Event//
-function Envelope_new() { //點背包物品外觀
 
-    if (bag[n].bThing === 1) {
-        bag[n].open = 1;
-        // document.getElementById("bag").src = "img/bag.png";
-        Bag_open();
-        bag[n].image = src = bag[n].image2; //更改為無紅點
-        document.getElementById("envelope_new").src = bag[n].image2;
-        document.getElementById("bag_envelope").style.display = "none"; //外包裝頁消失
-        document.getElementById("return2").style.display = "none"; //返回鍵消失
-        document.getElementById("bag_letter").style.display = "block";
-        document.getElementById("letter").src = bag[n].thing;
-        document.getElementById("name1").textContent = bag[n].name;
-        document.getElementById("word1").textContent = bag[n].word;
-        document.getElementById("letter").addEventListener('click', function() {
-            document.getElementById("box").style.display = "block";
-            document.getElementById("return2").style.display = "block";
-        })
-    } else {
-        bag[n].open = 1;
-        Bag_open();
-    }
-
-}
 
 //密碼
 var score = 0
 
 function Password_Apple() { //輸入密碼
-
     // var password = ''
     let password = prompt('輸入密碼:', '');
     if (password == "1127") {
@@ -485,6 +491,7 @@ function Password_Apple() { //輸入密碼
 
     } else if (password == "0714") {
         // alert("Welcome !"); 
+        score += 1;
         console.log(score);
         document.getElementById("Choice").style.display = "none";
         stage2 = stage3;
