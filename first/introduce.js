@@ -14,7 +14,7 @@ function run() {
             i++;
             if (i == 8) {
                 document.getElementById('dialog_box').addEventListener('click', function() {
-                    window.location.href = '/RPG/step/step1.html';
+                    window.location.href = '/step/step1.html';
                 })
             }
         }
