@@ -1,4 +1,4 @@
-document.write('<script src="Firefighter/Scripts.js"></script>');
+document.write('<script src="Daughter/Scripts.js"></script>');
 // Global variable//
 var init = 0;
 //Bag//
@@ -113,7 +113,7 @@ function bag_nothing() { //背包清空
 var choice = 0
 var number = 2; //選項個數
 
-function Choice_stage1_0() { //不行/可以
+function Choice_stage1_0() { //拒絕爸爸交代的事/接受爸爸交代的事
     number = 2;
     choice = 0;
     Choice_box();
@@ -127,32 +127,117 @@ function Choice_stage1_0() { //不行/可以
     };
 }
 
-function Choice_game() { //玩遊戲/輸入密碼
-    choice = 1
+function Choice_stage1_2_0() { //護士/流動商人
+    number = 2;
+    choice = 1;
     Choice_box();
-    document.getElementById("choice1").onclick = () => { window.open('Game/Game_Snake.html', ); };
-    document.getElementById("choice2").onclick = () => { Password_Game() };
+    document.getElementById("choice1").onclick = () => {
+        cs = stage1_2_1;
+        change_scipts()
+    };
+    document.getElementById("choice2").onclick = () => {
+        cs = stage1_2_2;
+        change_scipts()
+    };
 }
 
+function Choice_stage1_2_2_0() { //挽留哈密瓜/找土地分析專家
+    number = 2;
+    choice = 2;
+    Choice_box();
+    document.getElementById("choice1").onclick = () => {
+        cs = stage1_2_2_1;
+        change_scipts()
+    };
+    document.getElementById("choice2").onclick = () => {
+        cs = stage1_2_2_2;
+        change_scipts()
+    };
+}
 
+function Choice_stage1_2_2_2_0() { //出借/不借
+    number = 2;
+    choice = 3;
+    Choice_box();
+    document.getElementById("choice1").onclick = () => {
+        cs = stage1_2_2_2_1;
+        change_scipts()
+    };
+    document.getElementById("choice2").onclick = () => {
+        cs = stage1_2_2_2_2;
+        change_scipts()
+    };
+}
 
-function Game() {
-    if (istop >= 1) return;
-    else {
-        document.getElementById("character").addEventListener('click', function() {
-            if (istop >= 1) return;
-            else {
-                window.open('Game/Game_Snake.html', );
-            }
-        })
-        document.getElementById("dialog_box").addEventListener('click', function() {
-            if (istop >= 1) return;
-            else {
-                i++;
-                Stage1_box();
-            }
-        })
-    }
+function Choice_stage1_2_2_2_2_0() { //繼續站著/趕緊跟上
+    number = 2;
+    choice = 4;
+    Choice_box();
+    document.getElementById("choice1").onclick = () => {
+        cs = stage1_2_2_2_2_1;
+        change_scipts()
+    };
+    document.getElementById("choice2").onclick = () => {
+        cs = stage1_2_2_2_2_2;
+        change_scipts()
+    };
+}
+
+function Choice_stage1_2_2_2_2_2_0() { //沒有過多的在意/聽取小開的建議
+    number = 2;
+    choice = 5;
+    Choice_box();
+    document.getElementById("choice1").onclick = () => {
+        cs = stage1_2_2_2_2_2_1;
+        change_scipts()
+    };
+    document.getElementById("choice2").onclick = () => {
+        cs = stage1_2_2_2_2_2_2;
+        change_scipts()
+    };
+}
+
+function Choice_stage1_2_2_2_2_2_2_0() { //自己登記/邀請小開
+    number = 2;
+    choice = 6;
+    Choice_box();
+    document.getElementById("choice1").onclick = () => {
+        cs = stage1_2_2_2_2_2_2_1;
+        change_scipts()
+    };
+    document.getElementById("choice2").onclick = () => {
+        cs = stage1_2_2_2_2_2_2_2;
+        change_scipts()
+    };
+}
+
+function Choice_stage5() { //失敗
+    number = 2;
+    choice = 7;
+    console.log(score)
+    document.getElementById("dialog_box").textContent = "你現在的積分為：" + score;
+    Choice_box();
+    document.getElementById("choice1").onclick = () => { //遊戲結束
+
+    };
+    document.getElementById("choice2").onclick = () => { //從新開始
+        window.location.href = 'index.html';
+    };
+}
+
+function Choice_stage6() { //成功
+    score += 10;
+    number = 2;
+    choice = 7;
+    console.log(score)
+    document.getElementById("dialog_box").textContent = "恭喜妳成功讓主角參加神奇寶貝大賽啦！你現在的積分為：" + score;
+    Choice_box();
+    document.getElementById("choice1").onclick = () => { //遊戲結束
+
+    };
+    document.getElementById("choice2").onclick = () => { //從新開始
+        window.location.href = 'index.html';
+    };
 }
 
 //Choice
@@ -169,11 +254,18 @@ function Choice_box() {
     }
 }
 let Choice = [
-        { first: "不行", second: "可以" },
-        { first: "玩遊戲", second: "輸入密碼" },
-    ]
-    //Stage//
-    //Stage1
+    { first: "拒絕爸爸交代的事 ", second: "接受爸爸交代的事" },
+    { first: "護士 ", second: "流動商人" },
+    { first: "挽留哈密瓜", second: "找土地分析專家" },
+    { first: "出借", second: "不借" },
+    { first: "繼續站著", second: "趕緊跟上 " },
+    { first: "沒有過多的在意", second: "聽取小開的建議" },
+    { first: "自己登記", second: "邀請小開" },
+    { first: "遊戲結束", second: "從新開始" },
+]
+
+//Stage//
+//Stage1
 var i = 0
 var istop = 0; //运行
 function Stage1() {
@@ -189,12 +281,8 @@ function Stage1() {
 }
 
 function Stage1_run() {
-    // if (istop >= 1) return;
-    // else {
     document.getElementById('dialog_box').addEventListener('click', function() {
         console.log(i)
-            // if (istop >= 1) return;
-            // else {
         if (i < stage1.length) {
             Stage1_box();
             if (stage1[i].bEvent === 1) { //發生Script Event
@@ -209,11 +297,7 @@ function Stage1_run() {
     })
 }
 
-// }
-
 function Stage1_box() {
-    // if (istop >= 1) return;
-    // else {
     if (i < stage1.length) {
         document.getElementById("dialog_box").textContent = stage1[i].word;
         document.getElementById("name_box").textContent = stage1[i].name;
@@ -223,55 +307,7 @@ function Stage1_box() {
         document.getElementById("dialog_box").onclick = stage1[i].event();
     }
 }
-// }
 
-//Stage2
-// var m = 0;
-
-// function Stage() { //密碼1127
-//     if (istop >= 2) return;
-//     else {
-//         // 將原先Stage 1的台詞清空
-//         stage1 = [];
-//         istop = 1 //停止
-//             // bag = [];
-//             // bag[0] = { item: "nothing", image: "img/Nothing.png", open: 1, thing: 0, event: "" };
-//             // document.getElementById("envelope_new").src = bag[0].image;
-//         Stage_box();
-//         m++;
-//         Stage_run();
-//     }
-// }
-
-// function Stage_run() {
-//     document.getElementById('dialog_box').addEventListener('click', function() {
-//         console.log(m);
-//         if (istop >= 2) return;
-//         else {
-//             if (m < stage.length) {
-//                 Stage_box();
-//                 if (stage[m].bEvent === 1) { //發生Script Event
-//                     document.getElementById("dialog_box").onclick = stage[m].event();
-//                 } else {
-//                     m++;
-//                 }
-//             } else {
-//                 m = stage.length - 1; //控制i不超出範圍
-//                 document.getElementById("dialog_box").onclick = stage[m].event();
-//             }
-//         }
-//     })
-// }
-
-// function Stage_box() {
-//     if (istop >= 2) return;
-//     else {
-//         console.log(111)
-//         document.getElementById("dialog_box").textContent = stage[m].word;
-//         document.getElementById("name_box").textContent = stage[m].name;
-//         document.getElementById("character_img").src = stage[m].image;
-//     }
-// }
 var cs = 0
 
 function change_scipts() {
@@ -288,8 +324,6 @@ function none() {
     document.getElementById("choice3").style.display = "none";
     document.getElementById("choice4").style.display = "none";
 }
-
-
 //返回鍵//
 function return_key() { //物品外觀返回鍵
     document.getElementById("Farmer1").style.display = "block";
@@ -310,48 +344,9 @@ function return_key2() { //物品內容返回鍵
         i++;
         // Stage1_run();
         X++
-    } else {
-        console.log(100 * X)
-            // Stage1_box();
-            // Stage1_run();
     }
 }
-
-
-//密碼
 var score = 0
-
-function Password_Game() { //輸入密碼
-
-    // var password = ''
-    let password = prompt('輸入密碼:', '');
-    if (password == "2931") {
-        // alert("Welcome to my homepage!");
-        istop = 1
-        score += 5;
-        console.log(score);
-        document.getElementById("choice1").style.display = "none";
-        document.getElementById("choice2").style.display = "none";
-        document.getElementById("choice3").style.display = "none";
-        document.getElementById("choice4").style.display = "none";
-        cs = stage2;
-        change_scipts();
-    } else if (password == "1328") {
-        // alert("Welcome !");
-        istop = 1
-        score += 1;
-        console.log(score);
-        document.getElementById("choice1").style.display = "none";
-        document.getElementById("choice2").style.display = "none";
-        document.getElementById("choice3").style.display = "none";
-        document.getElementById("choice4").style.display = "none";
-        cs = stage3;
-        change_scipts();
-    } else {
-        alert("密碼錯誤! \n\n請重新輸入 ");
-    }
-
-}
 
 //執行//
 function run() {

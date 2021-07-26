@@ -194,15 +194,15 @@ function Choice_stage2_2_1_0_0_0() { //紡織廠/福興國小/菜市場
     number = 3;
     choice = 5
     Choice_box();
-    document.getElementById("choice3_1").onclick = () => {
+    document.getElementById("choice1").onclick = () => {
         cs = stage2_2_1_0_0_1;
         change_scipts()
     };
-    document.getElementById("choice3_2").onclick = () => {
+    document.getElementById("choice2").onclick = () => {
         cs = stage2_2_1_0_0_2;
         change_scipts()
     };
-    document.getElementById("choice3_3").onclick = () => {
+    document.getElementById("choice3").onclick = () => {
         cs = stage2_2_1_0_0_0;
         change_scipts()
     };
@@ -264,19 +264,71 @@ function Choice_stage3_2_1_0() { //280/120
     };
 }
 
+function Choice_stage4() { //問路人/自己找
+    number = 2;
+    choice = 8;
+    Choice_box();
+    document.getElementById("choice1").onclick = () => {
+        cs = stage4;
+        change_scipts();
+    };
+    document.getElementById("choice2").onclick = () => {
+        cs = stage5;
+        change_scipts();
+    };
+}
+
+function Choice_stage5() { //失敗
+    number = 2;
+    choice = 9;
+    console.log(score)
+    document.getElementById("dialog_box").textContent = "你現在的積分為：" + score;
+    Choice_box();
+    document.getElementById("choice1").onclick = () => { //遊戲結束
+
+    };
+    document.getElementById("choice2").onclick = () => { //從新開始
+        window.location.href = 'index.html';
+    };
+}
+
+function Choice_stage6() { //成功
+    score += 10;
+    number = 2;
+    choice = 9;
+    console.log(score)
+    document.getElementById("dialog_box").textContent = "恭喜妳成功讓主角參加神奇寶貝大賽啦！你現在的積分為：" + score;
+    Choice_box();
+    document.getElementById("choice1").onclick = () => { //遊戲結束
+
+    };
+    document.getElementById("choice2").onclick = () => { //從新開始
+        window.location.href = 'index.html';
+    };
+}
+
 //Choice
 function Choice_box() {
-    if (number == 2) {
-        document.getElementById("Choice").style.display = "block";
-        document.getElementById("choice1").textContent = Choice[choice].first;
+    document.getElementById("choice1").style.display = "block";
+    document.getElementById("choice1").textContent = Choice[choice].first;
+    if (number >= 2) {
+        document.getElementById("choice2").style.display = "block";
         document.getElementById("choice2").textContent = Choice[choice].second;
+        if (number >= 3) {
+            document.getElementById("choice3").style.display = "block";
+            document.getElementById("choice3").textContent = Choice[choice].third;
+        }
     }
-    if (number == 3) {
-        document.getElementById("Choice3").style.display = "block";
-        document.getElementById("choice3_1").textContent = Choice[choice].first;
-        document.getElementById("choice3_2").textContent = Choice[choice].second;
-        document.getElementById("choice3_3").textContent = Choice[choice].third;
-    }
+    // if (number >= 3) {
+    //     document.getElementById("Choice3").style.display = "block";
+    //     document.getElementById("choice3_3").textContent = Choice[choice].third;
+    // }
+    // if (number == 3) {
+    //     document.getElementById("Choice3").style.display = "block";
+    //     document.getElementById("choice3_1").textContent = Choice[choice].first;
+    //     document.getElementById("choice3_2").textContent = Choice[choice].second;
+    //     document.getElementById("choice3_3").textContent = Choice[choice].third;
+    // }
 }
 let Choice = [
     { first: "玩遊戲", second: "輸入密碼" },
@@ -287,6 +339,8 @@ let Choice = [
     { first: "紡織廠", second: "福興國小", third: "菜市場" },
     { first: "你是鼎鼎大名的流動商人", second: "公共場合不可以大聲喧鬧" },
     { first: "為了夢想離開", second: "為了媽媽留下" },
+    { first: "問路人", second: "自己找" },
+    { first: "遊戲結束", second: "從新開始" },
 ]
 
 
@@ -402,8 +456,14 @@ function change_scipts() {
     m = 0;
     Stage2_box();
     m++;
-    document.getElementById("Choice").style.display = "none";
-    document.getElementById("Choice3").style.display = "none";
+    none();
+}
+
+function none() {
+    document.getElementById("choice1").style.display = "none";
+    document.getElementById("choice2").style.display = "none";
+    document.getElementById("choice3").style.display = "none";
+    document.getElementById("choice4").style.display = "none";
 }
 
 function change_scipts1() { //失敗選項劇情接回找爸爸
@@ -424,6 +484,16 @@ function change_bag_letter() { //背包新增給爸爸的信
     m++;
 
 }
+
+function change_scipts2() { //公共場合不可以大聲喧鬧
+    istop = 1
+    stage2 = stage2_2_1;
+    m = 8;
+    Stage2_box();
+    change_bag_letter();
+}
+
+
 
 function change_bag_compass() { //背包新增給指北針
     // bag.push({ item: "envelope", image: "img/envelope_new.png", image2: "img/envelope.png", open: 0, bThing: 1, thing: "img/媽媽的信", event: Envelope_new, others: 1 })
@@ -487,13 +557,19 @@ function Password_Apple() { //輸入密碼
         score += 5;
         Stage2();
         console.log(score);
-        document.getElementById("Choice").style.display = "none";
+        document.getElementById("choice1").style.display = "none";
+        document.getElementById("choice2").style.display = "none";
+        document.getElementById("choice3").style.display = "none";
+        document.getElementById("choice4").style.display = "none";
 
     } else if (password == "0714") {
         // alert("Welcome !"); 
         score += 1;
         console.log(score);
-        document.getElementById("Choice").style.display = "none";
+        document.getElementById("choice1").style.display = "none";
+        document.getElementById("choice2").style.display = "none";
+        document.getElementById("choice3").style.display = "none";
+        document.getElementById("choice4").style.display = "none";
         stage2 = stage3;
         Stage2();
     } else {

@@ -14,7 +14,7 @@ let stage1 = [
 ]
 
 let stage2 = [ //密碼1127
-    { name: "媽媽", word: "哇！沒想到你這麼快就完成了", image: "img/媽媽/0.png", bEvent: 0, },
+    { name: "媽媽", word: "哇！沒想到你這麼快就完成了(積分+5)", image: "img/媽媽/0.png", bEvent: 0, },
     { name: "你", word: "哎呀這沒什麼沒什麼，是我應該做的", image: "img/農場主人/0.png", bEvent: 0 },
     { name: "媽媽", word: "我的兒子終於長大了，為母實在感動至極啊", image: "img/媽媽/0.png", bEvent: 0 },
     { name: "你", word: "媽媽，其實......我一直以來的夢想就是成為一名神奇寶貝大師", image: "img/農場主人/4.png", bEvent: 0 },
@@ -33,7 +33,8 @@ let stage2_1 = [ //我再考慮一下
     { name: "媽媽", word: "不是我不讓你去", image: "img/媽媽/0.png", bEvent: 0, },
     { name: "媽媽", word: "是你年紀還小，我實在放心不下啊", image: "img/媽媽/0.png", bEvent: 0, },
     { name: "你", word: "好吧，那我還是在這個蘋果園多修煉幾年再去挑戰吧", image: "img/農場主人/3.png", bEvent: 0 },
-    { name: "你", word: "但無論如何我都是不會輕易放棄的！", image: "img/農場主人/0.png", bEvent: 1, },
+    { name: "你", word: "但無論如何我都是不會輕易放棄的！", image: "img/農場主人/0.png", bEvent: 0 },
+    { name: "失敗", word: "再按一下獲得成績", image: "img/失敗.png", bEvent: 1, event: Choice_stage5 },
 
 ]
 
@@ -173,7 +174,11 @@ let stage2_2_1_0_1 = [ //北方
 ]
 
 let stage2_2_1_0_2 = [ //北方的反方向
-    { name: "你", word: "（走著走著，你來到了一個熱鬧的小鎮）", image: "img/農場主人/0.png", bEvent: 0 },
+    { name: "你", word: "哇這個小鎮好熱鬧！應該就是這裡了！", image: "img/農場主人/0.png", bEvent: 0 },
+    { name: "你", word: "這就是大都市嗎？", image: "img/農場主人/0.png", bEvent: 0 },
+    { name: "你", word: "空氣瀰漫著PM2.5根本比不上我家的農場", image: "img/農場主人/0.png", bEvent: 0 },
+    { name: "你", word: "我想是因為我家農場樹多吧", image: "img/農場主人/0.png", bEvent: 0 },
+    { name: "你", word: "樹可以產生氧氣，我最自豪我家那片蘋果樹了！！", image: "img/農場主人/0.png", bEvent: 0 },
     { name: "你", word: "應該就是這裡了", image: "img/農場主人/11.png", bEvent: 0 },
     { name: "你", word: "我想想，身為一名送貨農夫，他最有可能在哪裡出現？", image: "img/農場主人/4.png", bEvent: 0 },
     { name: "你", word: "我想想，身為一名送貨農夫，他最有可能在哪裡出現？", image: "img/農場主人/4.png", bEvent: 1, event: Choice_stage2_2_1_0_0_0 },
@@ -257,8 +262,12 @@ let stage2_2_1_0_0_0 = [ //菜市場/找到爸爸
     { name: "爸爸", word: "休息一下再繼續也可以", image: "img/爸爸/0.png", bEvent: 0 },
     { name: "你", word: "好的 我知道了", image: "img/農場主人/0.png", bEvent: 0 },
     { name: "你", word: "我一定會成為神奇寶貝大師，帶著榮譽回家", image: "img/農場主人/1.png", bEvent: 0 },
-    { name: "爸爸", word: "乖兒子，走吧！", image: "img/爸爸/0.png", bEvent: 1 },
+    { name: "爸爸", word: "乖兒子，快去報名吧！", image: "img/爸爸/0.png", bEvent: 0 },
+    { name: "你", word: "好，謝謝爸爸", image: "img/農場主人/1.png", bEvent: 0 },
+    { name: "地點", word: "(神奇寶貝街)", image: "不過神奇寶貝中心在哪裡呢？", bEvent: 0 },
+    { name: "你", word: "不過神奇寶貝中心在哪裡呢？", image: "img/農場主人/11.png", bEvent: 1, event: Choice_stage4 },
 ]
+
 
 let stage2_2_2 = [ //反駁
     { name: "你", word: "我愛在哪裡講多大聲的話都是我的自由，你管不著！", image: "img/農場主人/10.png", bEvent: 0 },
@@ -278,17 +287,18 @@ let stage2_2_2_1 = [ //你是鼎鼎大名的流動商人——哈密瓜
     { name: "哈密瓜", word: "看來你沒有明白我剛剛的那些話啊，我先離開了", image: "img/商人.png", bEvent: 0 },
     { name: "你", word: "等等！我想跟你買指北針！", image: "img/農場主人/4.png", bEvent: 0 },
     { name: "哈密瓜", word: "你這個年輕人不講品德，好自為之吧，我可不賣你。", image: "img/商人.png", bEvent: 0 },
-    { name: "你", word: "那我該如何前往南方呢？", image: "img/農場主人/4.png", bEvent: 1 },
+    { name: "你", word: "那我該如何前往南方呢？", image: "img/農場主人/4.png", bEvent: 0 },
+    { name: "失敗", word: "再按一下獲得成績", image: "img/失敗.png", bEvent: 1, event: Choice_stage5 },
 ]
 
 let stage2_2_2_2 = [ //公共場合不可以大聲喧鬧
     { name: "你", word: "公共場合不可以大聲喧鬧", image: "img/農場主人/7.png", bEvent: 0 },
     { name: "哈密瓜", word: "很好，知錯能改，善莫大焉啊。", image: "img/商人.png", bEvent: 0 },
-    { name: "你", word: "那個......你真的什麼東西都有，什麼東西都會嗎？", image: "img/農場主人/0.png", bEvent: 1 },
+    { name: "你", word: "那個......你真的什麼東西都有，什麼東西都會嗎？", image: "img/農場主人/0.png", bEvent: 1, event: change_scipts2 },
 ]
 
 let stage3 = [ //密碼0714
-    { name: "媽媽", word: "沒關係~摘蘋果本來就不是一件輕鬆事", image: "img/媽媽/0.png", bEvent: 0, },
+    { name: "媽媽", word: "沒關係~摘蘋果本來就不是一件輕鬆事(積分+1)", image: "img/媽媽/0.png", bEvent: 0, },
     { name: "媽媽", word: "下次再努力試試看吧。", image: "img/媽媽/0.png", bEvent: 0, },
     { name: "你", word: "怎麼可以沒關係！?", image: "img/農場主人/9.png", bEvent: 0 },
     { name: "你", word: "摘不到蘋果就是我這個兒子的失職，我不配當您兒子", image: "img/農場主人/8.png", bEvent: 0 },
@@ -333,4 +343,39 @@ let stage3_2 = [ //為媽媽留下
     { name: "媽媽", word: "回家種蘋果樹", image: "img/媽媽/0.png", bEvent: 0 },
     { name: "媽媽", word: "我們還能一起在蘋果樹下吃你摘回來的蘋果。", image: "img/媽媽/4.png", bEvent: 0 },
     { name: "你", word: "好。", image: "img/農場主人/11.png", bEvent: 0 },
+    { name: "失敗", word: "再按一下獲得成績", image: "img/失敗.png", bEvent: 1, event: Choice_stage5 },
+]
+
+let stage4 = [ //問路人
+    { name: "你", word: "不好意思，請問你們知道神奇寶貝中心怎麼走嗎", image: "img/農場主人/4.png", bEvent: 0 },
+    { name: "？", word: "你是要去報名神奇寶貝大賽嗎？", image: "img/小開.png", bEvent: 0 },
+    { name: "？", word: "沿著這條路走到盡頭就是神奇寶貝中心了", image: "img/市長女兒/0.png", bEvent: 0 },
+    { name: "你", word: "謝謝你們，想請問你們是？找機會我一定會報答你們的", image: "img/農場主人/1.png", bEvent: 0 },
+    { name: "小開", word: "我是道館的小開", image: "img/小開.png", bEvent: 0 },
+    { name: "市長女兒", word: "我是這座城市市長的女兒", image: "img/市長女兒/0.png", bEvent: 0 },
+    { name: "你", word: "真是謝謝你們！", image: "img/農場主人/1.png", bEvent: 0 },
+    { name: "小開", word: "不會，舉手之勞而已", image: "img/小開.png", bEvent: 0 },
+    { name: "市長女兒", word: "沒錯，這點小事不用報答的。", image: "img/市長女兒/0.png", bEvent: 0 },
+    { name: "市長女兒", word: "對了，我們也會參加神奇寶貝大賽，一起加油吧", image: "img/市長女兒/0.png", bEvent: 0 },
+    { name: "小開", word: "那麼我們還要去練習，就先離開了", image: "img/小開.png", bEvent: 0 },
+    { name: "小開", word: "再見", image: "img/小開.png", bEvent: 0 },
+    { name: "市長女兒", word: "再見", image: "img/市長女兒/0.png", bEvent: 0 },
+    { name: "你", word: "啊……再見！", image: "img/農場主人/0.png", bEvent: 0 },
+    { name: "你", word: "他們真是好人啊，不過他們看起來好像實力很強，看來我也需要加油了！", image: "img/農場主人/1.png", bEvent: 0 },
+    { name: "地點", word: "(神奇寶貝中心)", image: "", bEvent: 0 },
+    { name: "你", word: "你好，我想要報名參加神奇寶貝大賽", image: "img/農場主人/0.png", bEvent: 0 },
+    { name: "工作人員", word: "好的，請你填寫這份表單", image: "img/工作人員.png", bEvent: 0 },
+    { name: "你", word: "好的！", image: "img/農場主人/0.png", bEvent: 0 },
+    { name: "工作人員", word: "報名成功囉，祝你成功贏得冠軍", image: "img/工作人員.png", bEvent: 0 },
+    { name: "你", word: "謝謝你的祝福，我一定會成為冠軍的！", image: "img/農場主人/1.png", bEvent: 0 },
+    { name: "成功", word: "再按一下獲得成績", image: "img/成功.png", bEvent: 1, event: Choice_stage6 },
+]
+let stage5 = [ //自己找
+    { name: "你", word: "啊......我已經找了幾天了，怎麼還是找不到", image: "img/農場主人/1.png", bEvent: 0 },
+    { name: "你", word: "(這時路人聊天的聲音傳入你耳中)", image: "img/農場主人/1.png", bEvent: 0 },
+    { name: "路人甲", word: "你知道神奇寶貝大賽報名已經截止了嗎", image: "img/路人甲.png", bEvent: 0 },
+    { name: "路人乙", word: "知道啊，這次比賽冠軍會是誰呢？", image: "img/路人乙.png", bEvent: 0 },
+    { name: "你", word: "什麼？！截止了？！", image: "img/農場主人/1.png", bEvent: 0 },
+    { name: "你", word: "看來我沒機會參加大賽了", image: "img/農場主人/1.png", bEvent: 0 },
+    { name: "失敗", word: "再按一下獲得成績", image: "img/失敗.png", bEvent: 1, event: Choice_stage5 },
 ]
