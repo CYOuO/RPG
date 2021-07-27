@@ -21,7 +21,7 @@ let stage2 = [ //密碼1127
     { name: "你", word: "我可以參加神奇寶貝大賽嗎？", image: "img/農場主人/5.png", bEvent: 0 },
     { name: "媽媽", word: "兒子，想成為神奇寶貝大師不是那麼容易的事啊", image: "img/媽媽/3.png", bEvent: 0 },
     { name: "媽媽", word: "你可能會很辛苦很辛苦", image: "img/媽媽/3.png", bEvent: 0 },
-    { name: "媽媽", word: "你真的想好了嗎？", image: "img/媽媽/3.png", bEvent: 1, event: Choice_stage2_0 },
+    { name: "媽媽", word: "你真的想好了嗎？", image: "img/媽媽/3.png", bEvent: 1, event: Choice_stage2_2_0 },
 
 ]
 

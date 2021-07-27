@@ -16,14 +16,21 @@
         <div class="character" id="character">
             <img src="img/消防員/0.png" id="character_img" />
         </div>
-        <div class="display" id=Choice>
-            <div class="choice1" id="choice1"></div>
-            <div class="choice2" id="choice2"></div>
-        </div>
-        <div class="display" id=Choice3>
-            <div class="choice1" id="choice3_1"></div>
-            <div class="choice2" id="choice3_2"></div>
-            <div class="choice3" id="choice3_3"></div>
+        <div class="container">
+            <table>
+                <tr>
+                    <td id="choice1" class="table">
+                </tr>
+                <tr>
+                    <td id="choice2" class="table">
+                </tr>
+                <tr>
+                    <td id="choice3" class="table">
+                </tr>
+                <tr>
+                    <td id="choice4" class="table">
+                </tr>
+            </table>
         </div>
         <div class="name_box" id="name_box"></div>
         <div class="dialog_box" id="dialog_box"></div>
@@ -32,8 +39,8 @@
     <div class="display" id="bag_envelope">
         <div class="bag_title">背包</div>
         <div class="return" id="return" onclick="return_key()"><img src="img/return.png" width="70%" height="70%"></div>
-        <div class="envelope">
-            <img src="img/消防隊員物品/envelope_new.png" id="envelope_new" width="175%" height="175%"></img>
+        <div>
+            <img src="img/消防隊員物品/envelope_new.png" id="envelope_new" class="envelope"></img>
         </div>
         <div class="previous" id="previous">
             <img src="img/上一頁.png" width="125px" height="125px"></img>
@@ -48,8 +55,8 @@
         <div class="return" id="return2" onclick="return_key2()">
             <img src="img/return.png" width="70%" height="70%">
         </div>
-        <div class="envelope">
-            <img src="img/消防隊員物品/辭職信.png" width="90%" height="90%" id="letter" />
+        <div>
+            <img src="img/消防隊員物品/辭職信.png" class="envelope" id="letter" />
         </div>
     </div>
     <div class="display" id="box">

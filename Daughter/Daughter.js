@@ -113,102 +113,51 @@ function bag_nothing() { //背包清空
 var choice = 0
 var number = 2; //選項個數
 
-function Choice_stage1_0() { //拒絕爸爸交代的事/接受爸爸交代的事
-    number = 2;
-    choice = 0;
+function Choice_stage(num, cho, cs1, cs2, cs3) {
+    number = num;
+    choice = cho;
     Choice_box();
     document.getElementById("choice1").onclick = () => {
-        cs = stage1_1;
+        cs = cs1
         change_scipts()
     };
     document.getElementById("choice2").onclick = () => {
-        cs = stage1_2;
+        cs = cs2
         change_scipts()
     };
+    document.getElementById("choice3").onclick = () => {
+        cs = cs3
+        change_scipts()
+    };
+}
+
+
+function Choice_stage1_0() { //拒絕爸爸交代的事/接受爸爸交代的事
+    Choice_stage(2, 0, stage1_1, stage1_2);
 }
 
 function Choice_stage1_2_0() { //護士/流動商人
-    number = 2;
-    choice = 1;
-    Choice_box();
-    document.getElementById("choice1").onclick = () => {
-        cs = stage1_2_1;
-        change_scipts()
-    };
-    document.getElementById("choice2").onclick = () => {
-        cs = stage1_2_2;
-        change_scipts()
-    };
+    Choice_stage(2, 1, stage1_2_1, stage1_2_2);
 }
 
 function Choice_stage1_2_2_0() { //挽留哈密瓜/找土地分析專家
-    number = 2;
-    choice = 2;
-    Choice_box();
-    document.getElementById("choice1").onclick = () => {
-        cs = stage1_2_2_1;
-        change_scipts()
-    };
-    document.getElementById("choice2").onclick = () => {
-        cs = stage1_2_2_2;
-        change_scipts()
-    };
+    Choice_stage(2, 2, stage1_2_2_1, stage1_2_2_2);
 }
 
 function Choice_stage1_2_2_2_0() { //出借/不借
-    number = 2;
-    choice = 3;
-    Choice_box();
-    document.getElementById("choice1").onclick = () => {
-        cs = stage1_2_2_2_1;
-        change_scipts()
-    };
-    document.getElementById("choice2").onclick = () => {
-        cs = stage1_2_2_2_2;
-        change_scipts()
-    };
+    Choice_stage(2, 3, stage1_2_2_2_1, stage1_2_2_2_2);
 }
 
 function Choice_stage1_2_2_2_2_0() { //繼續站著/趕緊跟上
-    number = 2;
-    choice = 4;
-    Choice_box();
-    document.getElementById("choice1").onclick = () => {
-        cs = stage1_2_2_2_2_1;
-        change_scipts()
-    };
-    document.getElementById("choice2").onclick = () => {
-        cs = stage1_2_2_2_2_2;
-        change_scipts()
-    };
+    Choice_stage(2, 4, stage1_2_2_2_2_1, stage1_2_2_2_2_2);
 }
 
 function Choice_stage1_2_2_2_2_2_0() { //沒有過多的在意/聽取小開的建議
-    number = 2;
-    choice = 5;
-    Choice_box();
-    document.getElementById("choice1").onclick = () => {
-        cs = stage1_2_2_2_2_2_1;
-        change_scipts()
-    };
-    document.getElementById("choice2").onclick = () => {
-        cs = stage1_2_2_2_2_2_2;
-        change_scipts()
-    };
+    Choice_stage(2, 5, stage1_2_2_2_2_2_1, stage1_2_2_2_2_2_2);
 }
 
 function Choice_stage1_2_2_2_2_2_2_0() { //自己登記/邀請小開
-    number = 2;
-    choice = 6;
-    Choice_box();
-    document.getElementById("choice1").onclick = () => {
-        cs = stage1_2_2_2_2_2_2_1;
-        change_scipts()
-    };
-    document.getElementById("choice2").onclick = () => {
-        cs = stage1_2_2_2_2_2_2_2;
-        change_scipts()
-    };
+    Choice_stage(2, 6, stage1_2_2_2_2_2_2_1, stage1_2_2_2_2_2_2_2);
 }
 
 function Choice_stage5() { //失敗
@@ -261,13 +210,13 @@ let Choice = [
     { first: "繼續站著", second: "趕緊跟上 " },
     { first: "沒有過多的在意", second: "聽取小開的建議" },
     { first: "自己登記", second: "邀請小開" },
-    { first: "遊戲結束", second: "從新開始" },
+    { first: "遊戲結束", second: "重新開始" },
 ]
 
 //Stage//
 //Stage1
 var i = 0
-var istop = 0; //运行
+var istop = 0; //運行
 function Stage1() {
     // window.addEventListener('load', function() {
     // document.getElementById("bag").style.visibility = "hidden";

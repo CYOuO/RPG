@@ -14,12 +14,6 @@ function Bag_open() { //判斷背包有無新物品
         document.getElementById("bag").src = "img/bag_new.png";
     }
 }
-// Scripts Event //
-//stage1
-// function choiseMomOrDad() {
-//     document.getElementById("Choice").style.display = "block";
-//     document.getElementById("choice2").onclick = () => {};
-// }
 
 function bag_appear() {
     document.getElementById("bag").style.visibility = "visible"; //顯示背包
@@ -134,148 +128,51 @@ function Apple() {
 
 var number = 2; //選項個數
 //通關1127
-function Choice_stage2_0() { //我在考慮一下/我想好了
-    number = 2;
-    choice = 1
+
+function Choice_stage(num, cho, cs1, cs2, cs3) {
+    number = num;
+    choice = cho;
     Choice_box();
     document.getElementById("choice1").onclick = () => {
-        cs = stage2_1;
+        cs = cs1
         change_scipts()
     };
     document.getElementById("choice2").onclick = () => {
-        cs = stage2_2;
+        cs = cs2
+        change_scipts()
+    };
+    document.getElementById("choice3").onclick = () => {
+        cs = cs3
         change_scipts()
     };
 }
 
 function Choice_stage2_2_0() { //道歉/反駁
-    number = 2;
-    choice = 2
-    Choice_box();
-    document.getElementById("choice1").onclick = () => {
-        cs = stage2_2_1;
-        change_scipts();
-    };
-    document.getElementById("choice2").onclick = () => {
-        cs = stage2_2_2;
-        change_scipts();
-    };
+    Choice_stage(2, 2, stage2_2_1, stage2_2_2);
 }
 
 function Choice_stage2_2_1_0() { //280/120
-    number = 2;
-    choice = 3
-    Choice_box();
-    document.getElementById("choice1").onclick = () => {
-        cs = stage2_2_1_1;
-        change_scipts();
-    };
-    document.getElementById("choice2").onclick = () => {
-        cs = stage2_2_1_2;
-        change_scipts();
-    };
+    Choice_stage(2, 3, stage2_2_1_1, stage2_2_1_2);
 }
 
 function Choice_stage2_2_1_0_0() { //北方/北方的反方向
-    number = 2;
-    choice = 4
-    Choice_box();
-    document.getElementById("choice1").onclick = () => {
-        cs = stage2_2_1_0_1;
-        change_scipts()
-    };
-    document.getElementById("choice2").onclick = () => {
-        cs = stage2_2_1_0_2;
-        change_scipts()
-    };
+    Choice_stage(2, 4, stage2_2_1_0_1, stage2_2_1_0_2);
 }
 
 function Choice_stage2_2_1_0_0_0() { //紡織廠/福興國小/菜市場
-    number = 3;
-    choice = 5
-    Choice_box();
-    document.getElementById("choice1").onclick = () => {
-        cs = stage2_2_1_0_0_1;
-        change_scipts()
-    };
-    document.getElementById("choice2").onclick = () => {
-        cs = stage2_2_1_0_0_2;
-        change_scipts()
-    };
-    document.getElementById("choice3").onclick = () => {
-        cs = stage2_2_1_0_0_0;
-        change_scipts()
-    };
+    Choice_stage(3, 5, stage2_2_1_0_0_1, stage2_2_1_0_0_2, stage2_2_1_0_0_0);
 }
 
 function Choice_stage2_2_2_0() { //你是鼎鼎大名的流動商人/公共場合不可以大聲喧鬧
-    number = 2;
-    choice = 6
-    Choice_box();
-    document.getElementById("choice1").onclick = () => {
-        cs = stage2_2_2_1;
-        change_scipts()
-    };
-    document.getElementById("choice2").onclick = () => {
-        cs = stage2_2_2_2;
-        change_scipts()
-    };
+    Choice_stage(2, 6, stage2_2_2_1, stage2_2_2_2);
 }
 
 function Choice_stage3_0() { //為了夢想離開/為了媽媽留下
-    number = 2;
-    choice = 7
-    Choice_box();
-    document.getElementById("choice1").onclick = () => {
-        cs = stage3_1;
-        change_scipts()
-    };
-    document.getElementById("choice2").onclick = () => {
-        cs = stage3_2;
-        change_scipts()
-    };
-}
-
-function Choice_stage3_1_0() { //道歉/反駁
-    number = 2;
-    choice = 2;
-    Choice_box();
-    document.getElementById("choice1").onclick = () => {
-        cs = stage3_2_1;
-        change_scipts();
-    };
-    document.getElementById("choice2").onclick = () => {
-        cs = stage3_2_2;
-        change_scipts();
-    };
-}
-
-function Choice_stage3_2_1_0() { //280/120
-    number = 2;
-    choice = 3
-    Choice_box();
-    document.getElementById("choice1").onclick = () => {
-        cs = stage3_2_1_1;
-        change_scipts();
-    };
-    document.getElementById("choice2").onclick = () => {
-        cs = stage3_2_1_2;
-        change_scipts();
-    };
+    Choice_stage(2, 7, stage3_1, stage3_2);
 }
 
 function Choice_stage4() { //問路人/自己找
-    number = 2;
-    choice = 8;
-    Choice_box();
-    document.getElementById("choice1").onclick = () => {
-        cs = stage4;
-        change_scipts();
-    };
-    document.getElementById("choice2").onclick = () => {
-        cs = stage5;
-        change_scipts();
-    };
+    Choice_stage(2, 8, stage4, stage5);
 }
 
 function Choice_stage5() { //失敗
@@ -319,16 +216,6 @@ function Choice_box() {
             document.getElementById("choice3").textContent = Choice[choice].third;
         }
     }
-    // if (number >= 3) {
-    //     document.getElementById("Choice3").style.display = "block";
-    //     document.getElementById("choice3_3").textContent = Choice[choice].third;
-    // }
-    // if (number == 3) {
-    //     document.getElementById("Choice3").style.display = "block";
-    //     document.getElementById("choice3_1").textContent = Choice[choice].first;
-    //     document.getElementById("choice3_2").textContent = Choice[choice].second;
-    //     document.getElementById("choice3_3").textContent = Choice[choice].third;
-    // }
 }
 let Choice = [
     { first: "玩遊戲", second: "輸入密碼" },
@@ -340,19 +227,13 @@ let Choice = [
     { first: "你是鼎鼎大名的流動商人", second: "公共場合不可以大聲喧鬧" },
     { first: "為了夢想離開", second: "為了媽媽留下" },
     { first: "問路人", second: "自己找" },
-    { first: "遊戲結束", second: "從新開始" },
+    { first: "遊戲結束", second: "重新開始" },
 ]
-
-
-
-
-
-
 
 //Stage//
 //Stage1
 var i = 0
-var istop = 0; //运行
+var istop = 0; //運行
 function Stage1() {
     // window.addEventListener('load', function() {
     // document.getElementById("bag").style.visibility = "hidden";
@@ -411,10 +292,7 @@ function Stage2() { //密碼1127
 
         // 將原先Stage 1的台詞清空
         stage1 = [];
-        istop = 1 //停止
-            // bag = [];
-            // bag[0] = { item: "nothing", image: "img/Nothing.png", open: 1, thing: 0, event: "" };
-            // document.getElementById("envelope_new").src = bag[0].image;
+        istop = 1;
         Stage2_box();
         m++;
         Stage2_run();
@@ -475,7 +353,6 @@ function change_scipts1() { //失敗選項劇情接回找爸爸
 }
 
 function change_bag_letter() { //背包新增給爸爸的信
-    // bag.push({ item: "envelope", image: "img/envelope_new.png", image2: "img/envelope.png", open: 0, bThing: 1, thing: "img/媽媽的信", event: Envelope_new, others: 1 })
     bag[1] = { item: "envelope", image: "img/農場主人物品/媽媽的信封_new.png", image2: "img/農場主人物品/媽媽的信封.png", open: 0, bThing: 1, thing: "img/農場主人物品/媽媽的信.png", name: "你", word: "得趕快找到爸爸呢。", others: 1 }
     bag.open = 0;
     Bag_open();
@@ -496,7 +373,6 @@ function change_scipts2() { //公共場合不可以大聲喧鬧
 
 
 function change_bag_compass() { //背包新增給指北針
-    // bag.push({ item: "envelope", image: "img/envelope_new.png", image2: "img/envelope.png", open: 0, bThing: 1, thing: "img/媽媽的信", event: Envelope_new, others: 1 })
     bag[2] = { item: "compass", image: "img/農場主人物品/指北針_new.png", image2: "img/農場主人物品/指北針.png", open: 0, bThing: 0, thing: "", name: "", word: "", others: 1 }
     bag[1].others = 2;
     bag.open = 0;
@@ -508,11 +384,9 @@ function change_bag_compass() { //背包新增給指北針
 }
 
 function change_bag_letter2() { //背包給爸爸的信消失
-    // bag.push({ item: "envelope", image: "img/envelope_new.png", image2: "img/envelope.png", open: 0, bThing: 1, thing: "img/媽媽的信", event: Envelope_new, others: 1 })
     bag[1] = bag[2];
     bag[2] = [];
     Bag_open();
-    // bag_detect();
     Stage2_box();
     m++;
 
@@ -536,12 +410,7 @@ function return_key2() { //物品內容返回鍵
         i++;
         Stage1_box();
         i++;
-        // Stage1_run();
         X++
-    } else {
-        console.log(100 * X)
-            // Stage1_box();
-            // Stage1_run();
     }
 }
 

@@ -17,9 +17,6 @@ function Bag_open() { //判斷背包有無新物品
 
 function bag_appear() {
     document.getElementById("bag").style.visibility = "visible"; //顯示背包
-    // console.log(45678);
-    // bag_detect();
-
 }
 
 var n = 0 //用來偵測在第幾個物品
@@ -113,18 +110,27 @@ function bag_nothing() { //背包清空
 var choice = 0
 var number = 2; //選項個數
 
-function Choice_stage1_0() { //不行/可以
-    number = 2;
-    choice = 0;
+function Choice_stage(num, cho, cs1, cs2, cs3) {
+    number = num;
+    choice = cho;
     Choice_box();
     document.getElementById("choice1").onclick = () => {
-        cs = stage1_1;
+        cs = cs1
         change_scipts()
     };
     document.getElementById("choice2").onclick = () => {
-        cs = stage1_2;
+        cs = cs2
         change_scipts()
     };
+    document.getElementById("choice3").onclick = () => {
+        cs = cs3
+        change_scipts()
+    };
+}
+
+function Choice_stage1_0() { //不行/可以
+    Choice_stage(2, 0, stage1_1, stage1_2);
+
 }
 
 function Choice_game() { //玩遊戲/輸入密碼
@@ -175,26 +181,17 @@ let Choice = [
     //Stage//
     //Stage1
 var i = 0
-var istop = 0; //运行
+var istop = 0; //運行
 function Stage1() {
-    // window.addEventListener('load', function() {
-    // document.getElementById("bag").style.visibility = "hidden";
     if (istop == 1) return;
     Stage1_box();
-
     i++;
     Stage1_run();
-
-    // })
 }
 
 function Stage1_run() {
-    // if (istop >= 1) return;
-    // else {
     document.getElementById('dialog_box').addEventListener('click', function() {
         console.log(i)
-            // if (istop >= 1) return;
-            // else {
         if (i < stage1.length) {
             Stage1_box();
             if (stage1[i].bEvent === 1) { //發生Script Event
@@ -209,11 +206,7 @@ function Stage1_run() {
     })
 }
 
-// }
-
 function Stage1_box() {
-    // if (istop >= 1) return;
-    // else {
     if (i < stage1.length) {
         document.getElementById("dialog_box").textContent = stage1[i].word;
         document.getElementById("name_box").textContent = stage1[i].name;
@@ -223,55 +216,6 @@ function Stage1_box() {
         document.getElementById("dialog_box").onclick = stage1[i].event();
     }
 }
-// }
-
-//Stage2
-// var m = 0;
-
-// function Stage() { //密碼1127
-//     if (istop >= 2) return;
-//     else {
-//         // 將原先Stage 1的台詞清空
-//         stage1 = [];
-//         istop = 1 //停止
-//             // bag = [];
-//             // bag[0] = { item: "nothing", image: "img/Nothing.png", open: 1, thing: 0, event: "" };
-//             // document.getElementById("envelope_new").src = bag[0].image;
-//         Stage_box();
-//         m++;
-//         Stage_run();
-//     }
-// }
-
-// function Stage_run() {
-//     document.getElementById('dialog_box').addEventListener('click', function() {
-//         console.log(m);
-//         if (istop >= 2) return;
-//         else {
-//             if (m < stage.length) {
-//                 Stage_box();
-//                 if (stage[m].bEvent === 1) { //發生Script Event
-//                     document.getElementById("dialog_box").onclick = stage[m].event();
-//                 } else {
-//                     m++;
-//                 }
-//             } else {
-//                 m = stage.length - 1; //控制i不超出範圍
-//                 document.getElementById("dialog_box").onclick = stage[m].event();
-//             }
-//         }
-//     })
-// }
-
-// function Stage_box() {
-//     if (istop >= 2) return;
-//     else {
-//         console.log(111)
-//         document.getElementById("dialog_box").textContent = stage[m].word;
-//         document.getElementById("name_box").textContent = stage[m].name;
-//         document.getElementById("character_img").src = stage[m].image;
-//     }
-// }
 var cs = 0
 
 function change_scipts() {
