@@ -1,4 +1,4 @@
-document.write('<script src="../common.js"></script>');
+document.write('<script src="./common.js"></script>');
 document.write('<script src="Farmer/Scripts.js"></script>');
 // Global variable//
 var init = 0;
