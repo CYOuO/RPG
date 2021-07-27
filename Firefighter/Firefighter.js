@@ -1,3 +1,4 @@
+document.write('<script src="./common.js"></script>');
 document.write('<script src="Firefighter/Scripts.js"></script>');
 // Global variable//
 var init = 0;
@@ -5,15 +6,6 @@ var init = 0;
 let bag = [ //初始Bag裡的物品
     { item: "envelope", image: "img/消防隊員物品/envelope_new.png", image2: "img/消防隊員物品/envelope.png", open: 0, bThing: 1, thing: "img/消防隊員物品/辭職信.png", name: "你", word: "一定得成功辭職", others: 0 },
 ]
-
-function Bag_open() { //判斷背包有無新物品
-    for (let a = 0; a < bag.length; a++)
-        if (bag[a].open === 1) {
-            document.getElementById("bag").src = "img/bag.png";
-        } else if (bag[a].open === 0) {
-        document.getElementById("bag").src = "img/bag_new.png";
-    }
-}
 
 function bag_appear() {
     document.getElementById("bag").style.visibility = "visible"; //顯示背包
@@ -23,7 +15,6 @@ var n = 0 //用來偵測在第幾個物品
 
 function bag_detect() { //偵測按背包
     document.getElementById("bag").addEventListener('click', function() { //按背包
-        console.log(122222)
         n = 0
         document.getElementById("bag_envelope").style.display = "block"; //顯示信封
         document.getElementById("Farmer1").style.display = "none" //劇情頁消失
@@ -35,29 +26,6 @@ function bag_detect() { //偵測按背包
             document.getElementById("envelope_new").addEventListener('click', function() { Envelope_new(); });
         }
     })
-}
-
-function bag_change_thing() { //偵測背包換頁按鈕
-    if (bag.length > 1) {
-        switch (bag[n].others) {
-            case 0:
-                document.getElementById("next").style.display = "block";
-                document.getElementById("previous").style.display = "none";
-                console.log(n)
-                break;
-            case 1:
-                document.getElementById("next").style.display = "none";
-                document.getElementById("previous").style.display = "block";
-                console.log(7748)
-                break;
-            case 2:
-                document.getElementById("previous").style.display = "block";
-                document.getElementById("next").style.display = "block";
-                console.log(2266)
-                break;
-        }
-
-    }
 }
 
 function change_bag_thing() { //切換背包物品
@@ -75,30 +43,6 @@ function change_bag_thing() { //切換背包物品
     });
 }
 
-function Envelope_new() { //點背包物品外觀
-
-    if (bag[n].bThing === 1) {
-        bag[n].open = 1;
-        // document.getElementById("bag").src = "img/bag.png";
-        Bag_open();
-        bag[n].image = src = bag[n].image2; //更改為無紅點
-        document.getElementById("envelope_new").src = bag[n].image2;
-        document.getElementById("bag_envelope").style.display = "none"; //外包裝頁消失
-        document.getElementById("return2").style.display = "none"; //返回鍵消失
-        document.getElementById("bag_letter").style.display = "block";
-        document.getElementById("letter").src = bag[n].thing;
-        document.getElementById("name1").textContent = bag[n].name;
-        document.getElementById("word1").textContent = bag[n].word;
-        document.getElementById("letter").addEventListener('click', function() {
-            document.getElementById("box").style.display = "block";
-            document.getElementById("return2").style.display = "block";
-        })
-    } else {
-        bag[n].open = 1;
-        Bag_open();
-    }
-
-}
 
 function bag_nothing() { //背包清空
     bag = [];
@@ -110,27 +54,8 @@ function bag_nothing() { //背包清空
 var choice = 0
 var number = 2; //選項個數
 
-function Choice_stage(num, cho, cs1, cs2, cs3) {
-    number = num;
-    choice = cho;
-    Choice_box();
-    document.getElementById("choice1").onclick = () => {
-        cs = cs1
-        change_scipts()
-    };
-    document.getElementById("choice2").onclick = () => {
-        cs = cs2
-        change_scipts()
-    };
-    document.getElementById("choice3").onclick = () => {
-        cs = cs3
-        change_scipts()
-    };
-}
-
 function Choice_stage1_0() { //不行/可以
     Choice_stage(2, 0, stage1_1, stage1_2);
-
 }
 
 function Choice_game() { //玩遊戲/輸入密碼
@@ -139,8 +64,6 @@ function Choice_game() { //玩遊戲/輸入密碼
     document.getElementById("choice1").onclick = () => { window.open('Game/Game_Snake.html', ); };
     document.getElementById("choice2").onclick = () => { Password_Game() };
 }
-
-
 
 function Game() {
     if (istop >= 1) return;
@@ -161,25 +84,13 @@ function Game() {
     }
 }
 
-//Choice
-function Choice_box() {
-    document.getElementById("choice1").style.display = "block";
-    document.getElementById("choice1").textContent = Choice[choice].first;
-    if (number >= 2) {
-        document.getElementById("choice2").style.display = "block";
-        document.getElementById("choice2").textContent = Choice[choice].second;
-        if (number >= 3) {
-            document.getElementById("choice3").style.display = "block";
-            document.getElementById("choice3").textContent = Choice[choice].third;
-        }
-    }
-}
 let Choice = [
-        { first: "不行", second: "可以" },
-        { first: "玩遊戲", second: "輸入密碼" },
-    ]
-    //Stage//
-    //Stage1
+    { first: "不行", second: "可以" },
+    { first: "玩遊戲", second: "輸入密碼" },
+]
+
+//Stage//
+//Stage1
 var i = 0
 var istop = 0; //運行
 function Stage1() {
@@ -226,41 +137,6 @@ function change_scipts() {
     none();
 }
 
-function none() {
-    document.getElementById("choice1").style.display = "none";
-    document.getElementById("choice2").style.display = "none";
-    document.getElementById("choice3").style.display = "none";
-    document.getElementById("choice4").style.display = "none";
-}
-
-
-//返回鍵//
-function return_key() { //物品外觀返回鍵
-    document.getElementById("Farmer1").style.display = "block";
-    document.getElementById("bag_envelope").style.display = "none";
-    Stage1_box();
-}
-
-let X = 0;
-
-function return_key2() { //物品內容返回鍵
-    document.getElementById("Farmer1").style.display = "block";
-    document.getElementById("bag_letter").style.display = "none";
-    document.getElementById("box").style.display = "none";
-
-    if (X == 0) {
-        i++;
-        Stage1_box();
-        i++;
-        // Stage1_run();
-        X++
-    } else {
-        console.log(100 * X)
-            // Stage1_box();
-            // Stage1_run();
-    }
-}
-
 
 //密碼
 var score = 0
@@ -296,19 +172,3 @@ function Password_Game() { //輸入密碼
     }
 
 }
-
-//執行//
-function run() {
-    init === 0 ? Stage1() : null;
-    init = 1;
-
-}
-window.addEventListener('load', function() {
-    if (istop >= 1) return;
-    else {
-        document.getElementById("bag").style.visibility = "hidden";
-        bag_detect();
-        change_bag_thing()
-        run();
-    }
-})

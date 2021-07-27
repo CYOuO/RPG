@@ -39,7 +39,8 @@ let stage1_1 = [ //拒絕爸爸交代的事
     { name: "市長", word: "而非一心認為打敗對方就好了 ", image: "img/市長.png", bEvent: 0 },
     { name: "市長", word: "所謂的良性競爭就是要你們彼此都在競爭中進步啊", image: "img/市長.png", bEvent: 0 },
     { name: "市長", word: "今天你哪裡都不準去！", image: "img/市長.png", bEvent: 0 },
-    { name: "市長", word: "在家裡好好反省！ ", image: "img/市長.png", bEvent: 1, event: Choice_stage5 },
+    { name: "市長", word: "在家裡好好反省！ ", image: "img/市長.png", bEvent: 0, },
+    { name: "失敗", word: "再按一下獲得成績", image: "img/失敗.png", bEvent: 1, event: Choice_stage5 },
 ]
 
 
@@ -57,7 +58,8 @@ let stage1_2_1 = [ //護士
     { name: "喬伊", word: "是的我是呦~怎麼了嗎？ ", image: "img/護士.png", bEvent: 0 },
     { name: "你", word: "是這樣的市政府遇到了土地規劃的問題 ", image: "img/市長女兒/2.png", bEvent: 0 },
     { name: "喬伊", word: "這種事情怎麼會找我呢？", image: "img/護士.png", bEvent: 0 },
-    { name: "喬伊", word: "你找錯人了吧，這不在我的專業領域範圍內 ", image: "img/護士.png", bEvent: 1, event: Choice_stage5 },
+    { name: "喬伊", word: "你找錯人了吧，這不在我的專業領域範圍內 ", image: "img/護士.png", bEvent: 0 },
+    { name: "失敗", word: "再按一下獲得成績", image: "img/失敗.png", bEvent: 1, event: Choice_stage5 },
 ]
 
 let stage1_2_2 = [ //流動商人
@@ -111,7 +113,8 @@ let stage1_2_2_1 = [ //挽留哈密瓜
     { name: "哈密瓜", word: " 怎麼了孩子沉迷於我的美色無法自拔嗎？ ", image: "img/商人.png", bEvent: 0 },
     { name: "你", word: " （沉默）", image: "img/市長女兒/5.png", bEvent: 0 },
     { name: "哈密瓜", word: " 喂喂這是什麼意思？算了不跟你計較。 ", image: "img/商人.png", bEvent: 0 },
-    { name: "哈密瓜", word: " 不過剛剛才講過吧，你忘了妳要去完成公務？ ", image: "img/商人.png", bEvent: 1, event: Choice_stage5 },
+    { name: "哈密瓜", word: " 不過剛剛才講過吧，你忘了妳要去完成公務？ ", image: "img/商人.png", bEvent: 0 },
+    { name: "失敗", word: "再按一下獲得成績", image: "img/失敗.png", bEvent: 1, event: Choice_stage5 },
 ]
 
 let stage1_2_2_2 = [ //找土地分析專家 
@@ -151,7 +154,8 @@ let stage1_2_2_2_1 = [ //出借
     { name: "商人", word: " 這次因為我也沒和你說該什麼時候還，所以你借了這麼久也沒事。", image: "img/商人.png", bEvent: 0 },
     { name: "你", word: " 我知道了！對不起哈密瓜。", image: "img/市長女兒.png", bEvent: 0 },
     { name: "哈密瓜", word: " 那你打算怎麼賠償我？神奇寶貝攻略可不便宜 ", image: "img/商人.png", bEvent: 0 },
-    { name: "你", word: " 我..... ", image: "img/市長女兒.png", bEvent: 1, event: Choice_stage5 },
+    { name: "你", word: " 我..... ", image: "img/市長女兒.png", bEvent: 0 },
+    { name: "失敗", word: "再按一下獲得成績", image: "img/失敗.png", bEvent: 1, event: Choice_stage5 },
 ]
 
 let stage1_2_2_2_2 = [ //不借 
@@ -196,7 +200,8 @@ let stage1_2_2_2_2 = [ //不借
 ]
 
 let stage1_2_2_2_2_1 = [ //繼續站著 
-    { name: "小開", word: " 你怎麼還站在那裡？我們沒有在玩123木頭人耶！", image: "img/小開.png", bEvent: 1, event: Choice_stage5 },
+    { name: "小開", word: " 你怎麼還站在那裡？我們沒有在玩123木頭人耶！", image: "img/小開.png", bEvent: 0 },
+    { name: "失敗", word: "再按一下獲得成績", image: "img/失敗.png", bEvent: 1, event: Choice_stage5 },
 ]
 
 let stage1_2_2_2_2_2 = [ //趕緊跟上 
@@ -244,7 +249,8 @@ let stage1_2_2_2_2_2_1 = [ //沒有過多的在意
     { name: "你", word: " 是嗎？（半信半疑 ", image: "img/市長女兒/6.png", bEvent: 0 },
     { name: "小開", word: " 真心不騙 ", image: "img/小開.png", bEvent: 0 },
     { name: "你", word: " 總覺得很可疑 ", image: "img/市長女兒/6.png", bEvent: 0 },
-    { name: "", word: " （由於你沒有聽信小開的建議最後在大賽落敗了） ", image: "", bEvent: 1, event: Choice_stage5 },
+    { name: "", word: " （由於你沒有聽信小開的建議最後在大賽落敗了） ", image: "", bEvent: 0 },
+    { name: "失敗", word: "再按一下獲得成績", image: "img/失敗.png", bEvent: 1, event: Choice_stage5 },
 ]
 
 let stage1_2_2_2_2_2_2 = [ //聽取小開的建議 
@@ -256,7 +262,8 @@ let stage1_2_2_2_2_2_2 = [ //聽取小開的建議
 let stage1_2_2_2_2_2_2_1 = [ //自己登記 
     { name: "你", word: " 你可以在外面等我嗎？我登記一下下就好了！ ", image: "img/市長女兒/4.png", bEvent: 0 },
     { name: "小開", word: " 恩，好的我在外面等你，你快去吧 ", image: "img/.png", bEv小開ent: 0 },
-    { name: "", word: "（大賽當天小開沒來比賽） ", image: "", bEvent: 1, event: Choice_stage5 },
+    { name: "", word: "（大賽當天小開沒來比賽） ", image: "", bEvent: 0 },
+    { name: "失敗", word: "再按一下獲得成績", image: "img/失敗.png", bEvent: 1, event: Choice_stage5 },
 ]
 
 let stage1_2_2_2_2_2_2_2 = [ //邀請小開 
