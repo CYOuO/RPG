@@ -65,8 +65,8 @@ function Envelope_new() { //點背包物品外觀
         })
     } else {
         bag[n].open = 1;
-        // bag[n].image = bag[n].image2;
-        // document.getElementById("envelope_new").src = bag[n].image;
+        bag[n].image = bag[n].image2;
+        document.getElementById("envelope_new").src = bag[n].image;
         Bag_open();
     }
 
