@@ -83,7 +83,7 @@ window.addEventListener('load', function() {
 
 
 
-var audio = new Audio("../music/start.mp3"); //这里的路径写上mp3文件在项目中的绝对路径
+var audio = new Audio("music/start.mp3"); //这里的路径写上mp3文件在项目中的绝对路径
 var duration;
 duration = audio.duration; //長度單位是秒
 function bgm() {

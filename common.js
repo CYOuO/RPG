@@ -96,6 +96,7 @@ function Choice_stage(num, cho, cs1, cs2, cs3, cs4) {
 function Choice_stage5() { //失敗
     number = 2;
     console.log(score)
+
     document.getElementById("dialog_box").textContent = "你現在的積分為：" + score;
     document.getElementById("choice1").style.display = "block";
     document.getElementById("choice2").style.display = "block";
@@ -200,14 +201,14 @@ window.addEventListener('load', function() {
 })
 
 function music() {
-    var audio = new Audio("../music/Ryukyu Live.mp3");
+    var audio = new Audio("music/Ryukyu Live.mp3");
     audio.play();
     Audio.loop = -1;
 
 
 
 }
-var audio = new Audio("../music/Ryukyu Live.mp3"); //这里的路径写上mp3文件在项目中的绝对路径
+var audio = new Audio("music/Ryukyu Live.mp3"); //这里的路径写上mp3文件在项目中的绝对路径
 var duration;
 duration = audio.duration; //長度單位是秒
 var play = 0;
