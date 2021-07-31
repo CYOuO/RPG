@@ -22,9 +22,7 @@ function bag_detect() { //偵測按背包
         document.getElementById("previous").style.display = "none";
         document.getElementById("next").style.display = "none";
         bag_change_thing();
-        if (bag[n].bThing === 1) {
-            document.getElementById("envelope_new").addEventListener('click', function() { Envelope_new(); });
-        }
+        document.getElementById("envelope_new").addEventListener('click', function() { Envelope_new(); });
     })
 }
 //分支
@@ -33,7 +31,11 @@ var choice = 0
 function Choice_game() { //玩遊戲/輸入密碼
     choice = 0
     Choice_box();
-    document.getElementById("choice1").onclick = () => { window.open('Game/Game_Apple.html', ); };
+    document.getElementById("choice1").onclick = () => {
+        play = 1;
+        bgm();
+        window.open('Game/Game_Apple.html', );
+    };
     document.getElementById("choice2").onclick = () => { Password_Apple() };
 }
 
@@ -43,6 +45,8 @@ function Apple() {
         document.getElementById("character").addEventListener('click', function() {
             if (istop >= 1) return;
             else {
+                play = 1;
+                bgm()
                 window.open('Game/Game_Apple.html', );
             }
         })
@@ -83,7 +87,7 @@ function Choice_stage3_0() { //為了夢想離開/為了媽媽留下
     Choice_stage(2, 7, stage3_1, stage3_2);
 }
 
-function Choice_stage4() { //問路人/自己找
+function Choice_stage4() { //問路人/自己找 
     Choice_stage(2, 8, stage4, stage5);
 }
 let Choice = [
@@ -257,19 +261,19 @@ function Password_Apple() { //輸入密碼
     // var password = ''
     let password = prompt('輸入密碼:', '');
     if (password == "1127") {
+        password_common();
         // alert("Welcome to my homepage!");
         score += 5;
         Stage2();
-        console.log(score);
-        none();
+        bag[0].word = "完成任務了呢"
 
     } else if (password == "0714") {
         // alert("Welcome !"); 
+        password_common()
         score += 1;
-        console.log(score);
-        none();
         stage2 = stage3;
         Stage2();
+        bag[0].word = "未來還得再努力呢"
     } else {
         alert("密碼錯誤! \n\n請重新輸入 ");
     }

@@ -5,16 +5,163 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./styles.css" rel="stylesheet" type="text/css">
+    <script src="first.js"></script>
+    <link href="first.css" rel="stylesheet" type="text/css">
     <title>星晨-活動組-RPG</title>
 </head>
 
-<body class="homepage">
-    <div>
-        <p class="Title">RPG</p>
-        <div class="choose" id="start"><a href="./first/fighting.html" class="start">Start</a></div>
-        <!-- <input class="testInput" /> -->
+<body>
+
+    <div class="homepage">
+        <!-- start -->
+        <div id="homepage" class="">
+            <p class="Title">RPG</p>
+            <div class="choose" class="start" id="start" onclick="start()">Start</div>
+        </div>
+
+        <!-- fighting -->
+        <div class="display" id=fighting>
+            <p class="title">鼓勵的話</p>
+            <div class="word">
+                大家好！
+                <br/> 我是神奇寶貝村的臨時總籌
+                <br>
+                <div class="yellow">卡比哥哥！</div>
+                不是卡比獸、不是星之卡比 <br>更不是胖丁！
+                <p>這次的任務真的很艱難唷！
+                    <br> 希望你能完成任務
+                    <br> 能順利參與神奇寶貝大賽！
+                    <br> 中間需要克服重重難關
+                    <br>但也要有這一層一層的歷練
+                    <br>才能讓我有信心的把領導權給你們呀！
+                    <br>大家加油 期待在比賽場合看到各位！
+            </div>
+            <div>
+                <img src="img/下一頁.png" class="change_page" id="next1" onclick="next1()" />
+            </div>
+        </div>
+        <!-- introduce1 -->
+        <div id="introduce1" class="display">
+            <div class="word2">
+                <p>這裡是
+                    <a class="yellow">神奇寶貝</a>的世界</p>
+                <p>在這裡</p>
+                <p>所有的不合理都可以被接受</p>
+                <p>與你所在的藍色星球截然不同</p>
+                <p>這裡充斥著各式各樣的神奇寶貝</p>
+                <p>在這裡生活的人們</p>
+                <p>長到固定的年齡時就可以獲得一隻神奇寶貝</p>
+                <p>而這裡幾乎每個人都夢想參加神奇寶貝大賽</p>
+                <img src="img/下一頁.png" class="change_page" id="next2" onclick="next2()" />
+            </div>
+        </div>
+        <!-- introduce2 -->
+        <div id="introduce2" class="display">
+            <div class="word2">
+                <p>現在</p>
+                <p>你來到了這裡</p>
+                <p>接下來我會為你介紹你可以選擇的身分</p>
+                <p>來吧勇者</p>
+                <p>選擇你的神奇寶貝</p>
+                <p>化身牠的主人</p>
+                <p>帶著牠一同前往神奇寶貝大賽吧！</p>
+            </div>
+            <div>
+                <img src="img/下一頁.png" class="change_page" id="next2" onclick="next3()" />
+            </div>
+        </div>
+    </div>
+    <!-- introduce3 -->
+    <div id="introduce3" class="display">
+        <div class="homepage1" id="Farmer1">
+            <div id="character">
+                <img src="" id="character_img" class="character" />
+            </div>
+        </div>
+        <div class="dialog_box" id="dialog_box"></div>
+    </div>
+    <!-- step1 -->
+    <div id="step1" class="display">
+        <h1 class="Title1">選擇你喜歡的神奇寶貝</h1>
+        <div class="player1"><a href="/Pilot.html">波波鳥</a></div>
+        <div class="player2"><a href="/Daughter.html">伊布</a></div>
+        <div class="player3"><a href="/Hiker.html">呆呆獸</a></div>
+        <div class="player4"><a href="/Nurse.html">胖丁</a></div>
+        <div class="pokemon1">
+            <img src="../img/圖片1.png" width="125%" height="125%" />
+        </div>
+        <div class="pokemon2">
+            <img src="../img/圖片2.png" width="125%" height="125%" />
+        </div>
+        <div class="pokemon3">
+            <img src="../img/圖片3.png" width="125%" height="125%" />
+        </div>
+        <div class="pokemon4">
+            <img src="../img/圖片4.png" width="125%" height="125%" />
+        </div>
+        <div class="change_page_step">
+            <img src="/img/下一頁.png" class="change_page_step" id="change_page1" onclick="change_page1()" />
+        </div>
+    </div>
+    <!-- step2 -->
+    <div id="step2" class="display">
+        <h1 class="Title1">選擇你喜歡的神奇寶貝</h1>
+        <div class="player1"><a href="../Farmer.html">可達鴨</a></div>
+        <div class="player2"><a href="/Student.html">小火龍</a></div>
+        <div class="player3"><a href="../Firefighter.html">傑尼龜</a></div>
+        <div class="player4"><a href="/Son.html">妙蛙種子</a></div>
+        <div class="pokemon1">
+            <img src="../img/圖片5.png" width="125%" height="125%" />
+        </div>
+        <div class="pokemon2">
+            <img src="../img/圖片6.png" width="125%" height="127%" />
+        </div>
+        <div class="pokemon3">
+            <img src="../img/圖片7.png" width="125%" height="125%" />
+        </div>
+        <div class="pokemon4">
+            <img src="../img/圖片8.png" width="125%" height="125%" />
+        </div>
+        <div class="change_page_step">
+            <img src="/img/上一頁.png" class="change_page_step" id="change_page2" onclick="change_page2()" />
+        </div>
+    </div>
+    <!-- 遊玩指南 -->
+    <div id="rule" class="display">
+        <p class="title2">遊玩指南</p><br><br>
+        <div class="header">
+            <div class="left">
+                <div class="div"><img src="img/遊玩指南/滑鼠.png" />&emsp;
+                    <p class="directions">為確保遊戲體驗，<br> 請全程除小遊戲外，僅使用滑鼠左鍵操作。</p>
+                </div>
+                <br><br>
+                <div class="div"><img src="img/遊玩指南/滾輪.png" />&emsp;
+                    <p class="directions">若遇圖片跑版等問題，<br>請按住鍵盤Ctrl鍵(通常在鍵盤左下角)<br>加滑動滑鼠滾輪，<br>去調整適合大小</p>
+                </div><br><br>
+                <div class="div"><img src="img/遊玩指南/燈泡.png" />&emsp;
+                    <p class="directions">遊戲中的各選項都可能有關乎劇情走向，<br>及最終的成功失敗，請謹記你的目的，<br>並且貫徹始終。</p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="div"><img src="img/遊玩指南/小人.png" />&emsp;
+                    <p class="directions">每個不同角色都對應了不同劇情，<br>等你來發掘。</p>
+                </div><br><br>
+                <div class="div"><img src="img/遊玩指南/算數.png" />&emsp;
+                    <p class="directions">積分計算：<br> 小遊戲成功+5<br> 小遊戲失敗+1 <br>通過完整故事線+10</p>
+                </div>
+            </div>
+            <div>
+                <img src="img/下一頁.png" class="change_page1" id="next0" onclick="next0()" />
+            </div>
+        </div>
     </div>
 </body>
+
+
+
+
+
+
+
 
 </html>

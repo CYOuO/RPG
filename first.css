@@ -1,0 +1,310 @@
+/* 共用 */
+
+body {
+    background-color: black;
+    color: white;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    user-select: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.homepage {
+    color: white;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.display {
+    display: none;
+}
+
+
+/* 一開始 */
+
+.choose {
+    width: 15em;
+    margin: auto;
+    border-color: white;
+    border: 3px solid;
+    font-size: 1.55em;
+    text-align: center;
+    cursor: pointer;
+}
+
+.choose:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.Title {
+    font-size: 12em;
+    margin: 0em;
+}
+
+
+/* 介紹 */
+
+.title {
+    border-radius: 10px;
+    border-color: white;
+    border: 3px solid;
+    margin: 0;
+    padding: 0;
+    font-size: 350%;
+    text-align: center;
+}
+
+.word {
+    margin: 0;
+    font-size: 250%;
+    text-align: center;
+}
+
+.word2 {
+    margin: 0;
+    padding-top: 0%;
+    font-size: 240%;
+    text-align: center;
+}
+
+.yellow {
+    color: rgb(255, 251, 0);
+    margin: 0;
+    text-align: center;
+}
+
+.change_page {
+    height: 9%;
+    left: 110%;
+    top: 88%;
+    position: absolute;
+    cursor: pointer;
+    transition: all .3s linear;
+}
+
+.change_page:hover {
+    transform: scale(1.2);
+    left: 110%;
+    top: 88%;
+    position: absolute;
+    cursor: pointer;
+}
+
+
+/* 角色介紹 */
+
+.homepage1 {
+    color: white;
+    margin: auto;
+    position: absolute;
+    top: 36%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.character {
+    z-index: -2;
+}
+
+.dialog_box {
+    background-color: black;
+    border-color: white;
+    border: 3px solid;
+    font-size: 3em;
+    height: 32%;
+    width: 99.5%;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    cursor: pointer;
+}
+
+
+/* 角色選擇 */
+
+.Title1 {
+    font-size: 75px;
+    text-align: center;
+}
+
+.player1 {
+    text-align: center;
+    width: 185px;
+    border-color: white;
+    border: 3px solid;
+    font-size: 45px;
+    left: 50%;
+    top: 25%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player2 {
+    text-align: center;
+    width: 185px;
+    border-color: white;
+    border: 3px solid;
+    font-size: 45px;
+    left: 50%;
+    top: 43%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player3 {
+    text-align: center;
+    width: 185px;
+    border-color: white;
+    border: 3px solid;
+    font-size: 45px;
+    left: 50%;
+    top: 61%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player4 {
+    text-align: center;
+    width: 185px;
+    border-color: white;
+    border: 3px solid;
+    font-size: 45px;
+    left: 50%;
+    top: 79%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.player1:hover {
+    color: rgb(255, 166, 0);
+    cursor: pointer;
+}
+
+.player2:hover {
+    color: rgb(255, 166, 0);
+    cursor: pointer;
+}
+
+.player3:hover {
+    color: rgb(255, 166, 0);
+    cursor: pointer;
+}
+
+.player4:hover {
+    color: rgb(255, 166, 0);
+    cursor: pointer;
+}
+
+.pokemon1 {
+    user-select: none;
+    left: 63%;
+    top: 16%;
+    position: absolute;
+}
+
+.pokemon2 {
+    left: 23%;
+    top: 30%;
+    position: absolute;
+}
+
+.pokemon3 {
+    left: 63%;
+    top: 49%;
+    position: absolute;
+}
+
+.pokemon4 {
+    left: 23%;
+    top: 68%;
+    position: absolute;
+}
+
+.change_page_step {
+    left: 80%;
+    top: 90%;
+    position: absolute;
+    cursor: pointer;
+    transition: all .3s linear;
+}
+
+.change_page_step:hover {
+    transform: scale(1.2);
+}
+
+.div {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.title2 {
+    margin: 0;
+    padding: 0;
+    font-size: 400%;
+    text-align: center;
+}
+
+.directions {
+    margin: 0;
+    font-size: 250%;
+    justify-content: right;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.left {
+    flex: 1;
+    text-align: left;
+}
+
+.right {
+    flex: 1;
+    text-align: left;
+}
+
+.change_page1 {
+    height: 9%;
+    left: 90%;
+    top: 87%;
+    position: absolute;
+    cursor: pointer;
+    transition: all .3s linear;
+}
+
+.change_page1:hover {
+    transform: scale(1.2);
+    position: absolute;
+    cursor: pointer;
+}

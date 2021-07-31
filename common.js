@@ -71,7 +71,7 @@ function Envelope_new() { //點背包物品外觀
 
 }
 
-function Choice_stage(num, cho, cs1, cs2, cs3) {
+function Choice_stage(num, cho, cs1, cs2, cs3, cs4) {
     number = num;
     choice = cho;
     Choice_box();
@@ -87,6 +87,10 @@ function Choice_stage(num, cho, cs1, cs2, cs3) {
         cs = cs3
         change_scipts()
     };
+    document.getElementById("choice4").onclick = () => {
+        cs = cs4
+        change_scipts()
+    };
 }
 
 function Choice_stage5() { //失敗
@@ -98,14 +102,19 @@ function Choice_stage5() { //失敗
     document.getElementById("choice1").textContent = "遊戲結束"
     document.getElementById("choice2").textContent = "重新開始"
     document.getElementById("choice1").onclick = () => { //遊戲結束
+        window.open("https://forms.gle/QXbTJSpdoQCxGhyk8");
     };
     document.getElementById("choice2").onclick = () => { //重新開始
         window.location.href = 'index.html';
     };
 }
+var end = 0
 
 function Choice_stage6() { //成功
-    score += 10;
+    if (end === 0) {
+        score += 10;
+        end++;
+    }
     number = 2;
     console.log(score)
     document.getElementById("dialog_box").textContent = "恭喜妳成功讓主角參加神奇寶貝大賽啦！你現在的積分為：" + score;
@@ -115,10 +124,14 @@ function Choice_stage6() { //成功
     document.getElementById("choice1").textContent = "遊戲結束"
     document.getElementById("choice2").textContent = "重新開始"
     document.getElementById("choice1").onclick = () => { //遊戲結束
+        window.open("https://forms.gle/QXbTJSpdoQCxGhyk8");
+        // window.location.href = '';
     };
     document.getElementById("choice2").onclick = () => { //從新開始
         window.location.href = 'index.html';
     };
+
+
 }
 
 //Choice
@@ -131,7 +144,12 @@ function Choice_box() {
         if (number >= 3) {
             document.getElementById("choice3").style.display = "block";
             document.getElementById("choice3").textContent = Choice[choice].third;
+            if (number >= 4) {
+                document.getElementById("choice4").style.display = "block";
+                document.getElementById("choice4").textContent = Choice[choice].fourth;
+            }
         }
+
     }
 }
 
@@ -171,6 +189,7 @@ function run() {
 
 }
 window.addEventListener('load', function() {
+    // music();
     if (istop >= 1) return;
     else {
         document.getElementById("bag").style.visibility = "hidden";
@@ -179,3 +198,30 @@ window.addEventListener('load', function() {
         run();
     }
 })
+
+function music() {
+    var audio = new Audio("../music/Ryukyu Live.mp3");
+    audio.play();
+    Audio.loop = -1;
+
+
+
+}
+var audio = new Audio("../music/Ryukyu Live.mp3"); //这里的路径写上mp3文件在项目中的绝对路径
+var duration;
+duration = audio.duration; //長度單位是秒
+var play = 0;
+
+function password_common() {
+    console.log(score);
+    none();
+    play = 0;
+    bgm();
+}
+
+function bgm() {
+    if (play == 0) { //播放
+        audio.play();
+    } else { audio.pause(); }
+}
+window.setInterval("bgm()", duration * 1000 + 1000);
