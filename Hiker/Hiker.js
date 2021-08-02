@@ -36,31 +36,22 @@ function Choice_game() { //玩遊戲/輸入密碼
     document.getElementById("choice1").onclick = () => {
         play = 1;
         bgm();
-        window.open('', );
+        window.open('https://games.gdevelop-app.com/game-00fe894a-ec87-419f-bcbd-da741a153bad/index.html', );
     };
     document.getElementById("choice2").onclick = () => { Password_Game() };
 }
 
-function Game() {
-    if (istop >= 1) return;
-    else {
-        document.getElementById("character").addEventListener('click', function() {
-            if (istop >= 1) return;
-            else {
-                play = 1;
-                bgm();
-                window.open('', );
-            }
-        })
-        document.getElementById("dialog_box").addEventListener('click', function() {
-            if (istop >= 1) return;
-            else {
-                i++;
-                Stage1_box();
-            }
-        })
-    }
+function Choice_game1() { //玩遊戲/輸入密碼
+    choice = 0
+    Choice_box();
+    document.getElementById("choice1").onclick = () => {
+        play = 1;
+        bgm();
+        window.open('Game/Game_match.html', );
+    };
+    document.getElementById("choice2").onclick = () => { Password_Game1() };
 }
+
 
 function Choice_stage4_0() { //東/南/西/北
     Choice_stage(4, 1, stage4_1, stage4_2, stage4_3, stage4_4);
@@ -158,6 +149,21 @@ function Password_Game() { //輸入密碼
         score += 1;
         password_common();
         cs = stage2;
+        change_scipts();
+    } else {
+        alert("密碼錯誤! \n\n請重新輸入 ");
+    }
+
+}
+
+function Password_Game1() { //輸入密碼
+    // var password = ''
+    let password = prompt('輸入密碼:', '');
+    if (password == "0606") {
+        // alert("Welcome to my homepage!");
+        istop = 1
+        password_common();
+        cs = stage5;
         change_scipts();
     } else {
         alert("密碼錯誤! \n\n請重新輸入 ");

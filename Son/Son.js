@@ -4,7 +4,7 @@ document.write('<script src="Son/Scripts.js"></script>');
 var init = 0;
 //Bag//
 let bag = [ //初始Bag裡的物品
-    { item: "envelope", image: "img/農場主人物品/envelope_new.png", image2: "img/農場主人物品/envelope.png", open: 0, bThing: 1, thing: "img/農場主人物品/letter.png", name: "你", word: "得趕快去摘蘋果呢。", others: 0 },
+    { item: "envelope", image: "img/兒子物品/寶貝球_new.png", image2: "img/兒子物品/寶貝球.png", open: 0, bThing: 0, others: 0 },
 ]
 
 function bag_appear() {
@@ -31,30 +31,46 @@ var choice = 0
 var number = 2; //選項個數
 
 function Choice_game() { //玩遊戲/輸入密碼
-    choice = 0
+    choice = 1
     Choice_box();
-    document.getElementById("choice1").onclick = () => { window.open('', ); };
+    document.getElementById("choice1").onclick = () => {
+        play = 1;
+        bgm();
+        window.open('Game/Game_pingpong.html', );
+    };
     document.getElementById("choice2").onclick = () => { Password_Game() };
 }
 
+function Choice_game1() { //玩遊戲/輸入密碼
+    choice = 1
+    Choice_box();
+    document.getElementById("choice1").onclick = () => { window.open('Game/Game_maze.html', ); };
+    document.getElementById("choice2").onclick = () => { Password_Game1() };
+}
 
 
-function Choice_stage1_0() { //冒險開飛機/存錢修飛機 
+function Choice_stage1_0() { //拒絕挑戰/接受挑戰
     Choice_stage(2, 0, stage1_1, stage1_2);
 }
 
-function Choice_stage1_2_0() { //找博士應聘/找其他工作
-    Choice_stage(2, 1, stage1_2_1, stage1_2_2);
+function Choice_stage2_0() { //拒絕挑戰/接受挑戰
+    Choice_stage(2, 0, stage2_1, stage2_2);
 }
 
-function Choice_stage1_2_2_0() { //每天待在家處理訂單/辛苦的幫忙送貨
-    Choice_stage(2, 2, stage1_2_2_1, stage1_2_2_2);
+function Choice_stage4_2_0() { //在外面等待/一起報名
+    Choice_stage(2, 2, stage4_2_1, stage4_2_2);
+}
+
+
+function Choice_stage4_0() { //直接走掉/繼續等待
+    Choice_stage(2, 3, stage4_1, stage4_2);
 }
 
 let Choice = [
     { first: "拒絕挑戰", second: "接受挑戰" },
     { first: "玩遊戲", second: "輸入密碼" },
-    { first: "一起報名", second: "在外面等待" },
+    { first: "在外面等待", second: "一起報名" },
+    { first: "直接走掉", second: "繼續等待" },
 ]
 
 //Stage//
@@ -103,4 +119,47 @@ function change_scipts() {
     Stage1_box();
     i++;
     none();
+}
+
+//密碼
+var score = 0
+
+function Password_Game() { //輸入密碼
+
+    // var password = ''
+    let password = prompt('輸入密碼:', '');
+    if (password == "0404") {
+        password_common();
+        // alert("Welcome to my homepage!");
+        istop = 1
+        score += 5;
+        cs = stage2;
+        change_scipts();
+    } else if (password == "0107") {
+        // alert("Welcome !");
+        password_common();
+        istop = 1
+        score += 1;
+        cs = stage3;
+        change_scipts();
+    } else {
+        alert("密碼錯誤! \n\n請重新輸入 ");
+    }
+
+}
+
+function Password_Game1() { //輸入密碼
+
+    // var password = ''
+    let password = prompt('輸入密碼:', '');
+    if (password == "0228") {
+        password_common();
+        // alert("Welcome to my homepage!");
+        istop = 1
+        cs = stage4;
+        change_scipts();
+    } else {
+        alert("密碼錯誤! \n\n請重新輸入 ");
+    }
+
 }

@@ -38,13 +38,18 @@ let stage1 = [
     { name: "你", word: "呆呆獸別氣餒！除了水系以外，你還擁有超能力系，使用精神強念！", image: "img/登山客/6.png", bEvent: 0 },
     { name: "", word: "（火爆猴被定住30秒） ", image: "img/登山客/火爆猴.png", bEvent: 0 },
     { name: "你", word: "做得好呆呆獸，趁牠不注意我們快點跑吧~ ", image: "img/登山客/0.png", bEvent: 0 },
-    { name: "你", word: "點擊？？ ", image: "img/登山客/0.png", bEvent: 1, event: Game },
-    { name: "提示", word: "輸入通關密碼吧", image: "", bEvent: 1, event: Choice_game },
+    { name: "提示", word: "玩遊戲獲取通關密碼後，回來輸入通關密碼吧", image: "img/登山客物品/跑步.png", bEvent: 1, event: Choice_game },
 ]
 let stage2 = [ //闖關失敗(0514) 
-    { name: "你", word: "怎...怎麼辦？牠追上來了啊啊啊！", image: "img/登山客/5.png", bEvent: 0 },
+    { name: "你", word: "怎...怎麼辦？牠追上來了啊啊啊(積分+1)！", image: "img/登山客/5.png", bEvent: 0 },
     { name: "", word: "（就這樣，我和呆呆獸又跑了快20分鐘）", image: "", bEvent: 0 },
     { name: "你", word: "呼...呼...牠應該沒追上來吧...再..再追上來我..我就跑不動了... ", image: "img/登山客/7.png", bEvent: 0 },
+    {
+        name: "你",
+        word: "我還自誇自己有多勇猛呢，結果被一隻猴子追得如此狼狽，看來我還需要多加歷練了",
+        image: "img/登山客/5.png",
+        bEvent: 0
+    },
     {
         name: "你",
         word: "我還自誇自己有多勇猛呢，結果被一隻猴子追得如此狼狽，看來我還需要多加歷練了",
@@ -57,9 +62,10 @@ let stage2 = [ //闖關失敗(0514)
     },
 ]
 let stage3 = [ //通關(0330) 
+    { name: "你", word: "呼...呼...總算甩掉牠了，剛剛真是好險定住了牠30秒(積分+5)", image: "img/登山客/0.png", bEvent: 0 },
     {
         name: "你",
-        word: "呼...呼...總算甩掉牠了，剛剛真是好險定住了牠30秒",
+        word: "呼...呼...總算甩掉牠了，剛剛真是好險定住了牠30秒(積分+5)",
         image: "img/登山客/0.png",
         bEvent: 1,
         event: function() {
@@ -79,7 +85,7 @@ let stage4 = [ //失敗成功重複
     { name: "你", word: "跑了這麼久你一定很累了，先回到寶貝球裡休息吧。", image: "img/登山客/5.png", bEvent: 0 },
     { name: "你", word: "剛剛真是多虧了呆呆獸爭取了那30秒時間才能脫離險境", image: "img/登山客/0.png", bEvent: 0 },
     { name: "你", word: "我還是快點找路吧！", image: "img/登山客/1.png", bEvent: 0 },
-    { name: "", word: "（此時天空突然烏雲密佈）", image: "", bEvent: 0 },
+    { name: "", word: "（此時天空突然烏雲密佈）", image: "img/登山客物品/烏雲.png", bEvent: 0 },
     { name: "你", word: "額...不...不會吧，那不是傳說嗎喂", image: "img/登山客/5.png", bEvent: 0 },
     { name: "你", word: "等等，地上的蚯蚓怎麼都跑出來了", image: "img/登山客/7.png", bEvent: 0 },
     { name: "你", word: "真的要下雨了，快走！！", image: "img/登山客/7.png", bEvent: 0 },
@@ -89,10 +95,10 @@ let stage4 = [ //失敗成功重複
     { name: "你", word: "我好像看到前面有一個山洞，去那裡休息一下。 ", image: "img/登山客/0.png", bEvent: 0 },
     { name: "你", word: "（山洞）唉急救包裡只剩一份藥，用完就沒有了", image: "img/登山客/5.png", bEvent: 0 },
     { name: "你", word: "算了先包紮一下傷口，如果細菌感染就不好了", image: "img/登山客/2.png", bEvent: 0 },
-    { name: "", word: "（7分鐘後）", image: "", bEvent: 0 },
+    { name: "", word: "（7分鐘後）", image: "img/時間.png", bEvent: 0 },
     { name: "你", word: "終於好了，不過頭好像有點暈暈的...", image: "img/登山客/7.png", bEvent: 0 },
     { name: "你", word: "好想睡覺啊...睡覺...睡...", image: "img/登山客/8.png", bEvent: 0 },
-    { name: "", word: "（隔天）", image: "", bEvent: 0 },
+    { name: "", word: "（隔天）", image: "img/時間.png", bEvent: 0 },
     { name: "你", word: "哇啊啊啊！怎麼回事，我怎麼睡在山洞裡！！", image: "img/登山客/5.png", bEvent: 0 },
     { name: "你", word: "啊對齁，昨天晚上突然下起傾盆大雨，我不小心滑倒撞到石頭", image: "img/登山客/2.png", bEvent: 0 },
     { name: "你", word: "受了點傷就昏昏沉沉的走到這裡休息了，我怕不是被撞傻了。", image: "img/登山客/5.png", bEvent: 0 },
@@ -122,9 +128,8 @@ let stage4 = [ //失敗成功重複
         image: "img/商人.png",
         bEvent: 1,
         event: function() {
-            bag_appear();
-            i++;
             Stage1_box();
+            bag_appear();
             i++;
         }
     },
@@ -135,9 +140,10 @@ let stage4 = [ //失敗成功重複
     { name: "你", word: "該往哪裡走呢？", image: "img/登山客/8.png", bEvent: 1, event: Choice_stage4_0 },
 ]
 let stage4_1 = [ //東 
-    { name: "", word: "（走著走著，看到了一條長長的河流）", image: "", bEvent: 0 },
+    { name: "", word: "（走著走著，看到了一條長長的河流）", image: "img/登山客物品/河流.png", bEvent: 0 },
     { name: "你", word: "這裡的河水好乾淨呀，現在大城市裡。可看不到這樣的景象嘍", image: "img/登山客/4.png", bEvent: 0 },
     { name: "你", word: "不過...我是不是迷路了呀？這裡除了這條河什麼都沒有", image: "img/登山客/2.png", bEvent: 0 },
+    { name: "你", word: "真糟糕，再這樣下去不知道趕不趕得上神奇寶貝大賽。", image: "img/登山客/5.png", bEvent: 0 },
     {
         name: "你",
         word: "真糟糕，再這樣下去不知道趕不趕得上神奇寶貝大賽。",
@@ -150,9 +156,10 @@ let stage4_1 = [ //東
     },
 ]
 let stage4_2 = [ //南 
-    { name: "", word: "（走著走著，看到了一排櫻花樹道）", image: "", bEvent: 0 },
+    { name: "", word: "（走著走著，看到了一排櫻花樹道）", image: "img/登山客物品/櫻花樹.png", bEvent: 0 },
     { name: "你", word: "哇~好美呀，沒想到這個地方居然有如此漂亮的景色，真可惜我沒有帶照相機來", image: "img/登山客/3.png", bEvent: 0 },
     { name: "你", word: "不對，現在的重點不是這個！", image: "img/登山客/5.png", bEvent: 0 },
+    { name: "你", word: "真糟糕，再這樣下去不知道趕不趕得上神奇寶貝大賽。", image: "img/登山客/5.png", bEvent: 0 },
     {
         name: "你",
         word: "我好像迷路了，真糟糕，再這樣下去不知道趕不趕得上神奇寶貝大賽",
@@ -165,9 +172,10 @@ let stage4_2 = [ //南
     },
 ]
 let stage4_3 = [ //西 
-    { name: "", word: "（走著走著，來到了一片高大的神木森林）", image: "", bEvent: 0 },
+    { name: "", word: "（走著走著，來到了一片高大的神木森林）", image: "img/登山客物品/森林.png", bEvent: 0 },
     { name: "你", word: "哇~好高大的神木呀，這些都應該有幾百年、幾千年的歷史了吧", image: "img/登山客/4.png", bEvent: 0 },
     { name: "你", word: "不過這些樹又高又多，我都沒辦法看清楚前面的路了，真糟糕", image: "img/登山客/2.png", bEvent: 0 },
+    { name: "你", word: "真糟糕，再這樣下去不知道趕不趕得上神奇寶貝大賽。", image: "img/登山客/5.png", bEvent: 0 },
     {
         name: "你",
         word: "我好像真的迷路了，得快點想個辦法，不然再這樣下去不知道還趕不趕得上神奇寶貝大賽。",
@@ -221,7 +229,7 @@ let stage4_4_2 = [ //出發前往神奇寶貝大賽
     { name: "你", word: "好久沒來這裡了，這裡還是跟以前一樣熱鬧，好多新奇的東西", image: "img/登山客/3.png", bEvent: 0 },
     { name: "你", word: "對了，那位善良的院長也在這間神奇寶貝中心", image: "img/登山客/4.png", bEvent: 0 },
     { name: "你", word: "我在報名之前先去拜訪一下院長吧，剛好我的急救包也沒了", image: "img/登山客/4.png", bEvent: 0 },
-    { name: "", word: "（神奇寶貝中心）", image: "", bEvent: 0 },
+    { name: "", word: "（神奇寶貝中心）", image: "img/神奇寶貝中心.png", bEvent: 0 },
     { name: "你", word: "院長好久不見，最近過得如何，身體還好嗎？ ", image: "img/登山客/4.png", bEvent: 0 },
     { name: "院長", word: "是你啊，真的很久不見了，我最近很好，你呢？", image: "img/院長/2.png", bEvent: 0 },
     { name: "你", word: "我過得也不錯，對了....我知道這樣很突然，但是......可以賣我急救包嗎？", image: "img/登山客/2.png", bEvent: 0 },
@@ -233,20 +241,23 @@ let stage4_4_2 = [ //出發前往神奇寶貝大賽
 ]
 
 let stage4_4_2_1 = [ //會
-    { name: "院長", word: "真是拿你沒辦法～那你去幫那邊的先生包紮吧", image: "img/院長/5.png", bEvent: 0 },
+    { name: "院長", word: "真是拿你沒辦法～真不愧是你呢！", image: "img/院長/5.png", bEvent: 0 },
     { name: "院長", word: "但以防萬一還是提醒你一下。步驟是這樣的：", image: "img/院長/0.png", bEvent: 0 },
     { name: "院長", word: "1.清潔傷口2.塗抹優碘3.擦除優碘", image: "img/院長/0.png", bEvent: 0 },
     { name: "院長", word: "4.塗抹藥膏5.覆蓋紗布6.固定傷口", image: "img/院長/0.png", bEvent: 0 },
-    {
-        name: "院長",
-        word: "趕緊去幫他包紮吧。 ",
-        image: "img/院長/0.png",
-        bEvent: 1,
-        event: function() {
-            cs = stage5,
-                change_scipts();
-        }
-    },
+    { name: "院長", word: "聽懂了嗎？先來給你測試測試吧！", image: "img/院長/3.png", bEvent: 0 },
+    { name: "你", word: "放馬過來吧！", image: "img/登山客/0.png", bEvent: 0 },
+    { name: "提示", word: "玩遊戲獲取通關密碼後，回來輸入通關密碼吧", image: "img/登山客物品/包紮.png", bEvent: 1, event: Choice_game1 },
+    // {
+    //     name: "院長",
+    //     word: "趕緊去幫他包紮吧。 ",
+    //     image: "img/院長/0.png",
+    //     bEvent: 1,
+    //     event: function() {
+    //         cs = stage5,
+    //             change_scipts();
+    //     }
+    // },
 ]
 
 
@@ -255,26 +266,30 @@ let stage4_4_2_2 = [ //不會
     { name: "院長", word: "步驟是這樣的：", image: "img/院長/0.png", bEvent: 0 },
     { name: "院長", word: "1.清潔傷口2.塗抹優碘3.擦除優碘", image: "img/院長/0.png", bEvent: 0 },
     { name: "院長", word: "4.塗抹藥膏5.覆蓋紗布6.固定傷口", image: "img/院長/0.png", bEvent: 0 },
-    {
-        name: "院長",
-        word: "趕緊去幫他包紮吧。 ",
-        image: "img/院長/0.png",
-        bEvent: 1,
-        event: function() {
-            cs = stage5,
-                change_scipts();
-        }
-    },
+    { name: "院長", word: "聽懂了嗎？先來給你測試測試吧！", image: "img/院長/3.png", bEvent: 0 },
+    { name: "你", word: "放馬過來吧！", image: "img/登山客/0.png", bEvent: 0 },
+    { name: "提示", word: "玩遊戲獲取通關密碼後，回來輸入通關密碼吧", image: "img/登山客物品/包紮.png", bEvent: 1, event: Choice_game1 },
+    // {
+    //     name: "院長",
+    //     word: "趕緊去幫他包紮吧。 ",
+    //     image: "img/院長/0.png",
+    //     bEvent: 1,
+    //     event: function() {
+    //         cs = stage05,
+    //             change_scipts();
+    //     }
+    // },
 ]
 
+
 let stage5 = [
+    { name: "院長", word: "不錯呢！那你先幫那邊的先生包紮吧。", image: "img/院長/0.png", bEvent: 0 },
     { name: "你", word: "先生，我先幫你清理傷口塗優碘哦~然後擦除優碘再塗藥膏。 ", image: "img/登山客/1.png", bEvent: 0 },
-    { name: "", word: "（••••••）", image: "", bEvent: 0 },
+    { name: "", word: "（••••••）", image: "img/時間.png", bEvent: 0 },
     { name: "你", word: "先生，我已經幫你覆蓋紗布並且固定傷口了。", image: "img/登山客/1.png", bEvent: 0 },
     { name: "院長", word: "再來是這位小姐和那邊的婆婆，啊啊還有2個小朋友也麻煩你了。", image: "img/院長/3.png", bEvent: 0 },
     { name: "你", word: "阿這...好我馬上就來！", image: "img/登山客/0.png", bEvent: 0 },
-    { name: "", word: "（••••••）", image: "", bEvent: 0 },
-    { name: "", word: "（••••••）", image: "", bEvent: 0 },
+    { name: "", word: "（••••••）", image: "img/時間.png", bEvent: 0 },
     { name: "你", word: "包紮好了小朋友，下次玩要注意安全哦~", image: "img/登山客/4.png", bEvent: 0 },
     { name: "你", word: "呼...呼...終於完成了，跑來跑去的有點累", image: "img/登山客/0.png", bEvent: 0 },
     { name: "院長", word: "辛苦你啦，沒想到你包紮技術挺厲害的。", image: "img/院長/3.png", bEvent: 0 },

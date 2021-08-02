@@ -26,6 +26,9 @@ function bag_change_thing() { //偵測背包換頁按鈕
                 console.log(2266)
                 break;
         }
+    } else {
+        document.getElementById("next").style.display = "none";
+        document.getElementById("previous").style.display = "none";
     }
 }
 

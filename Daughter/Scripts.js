@@ -50,6 +50,17 @@ let stage1_2 = [ //接受爸爸交代的事
     { name: "你", word: "這次工作要做什麼呢？ ", image: "img/市長女兒/0.png ", bEvent: 0 },
     { name: "市長", word: "這次縣長說要把城市的土地利用重新規劃 ", image: "img/市長/2.png ", bEvent: 0 },
     { name: "市長", word: "雖然很突然但我這次真的不太懂他的想法 ", image: "img/市長/2.png ", bEvent: 0 },
+    {
+        name: "市長",
+        word: "這是空白的土地企畫書，那就交給你了女兒",
+        image: "img/市長/2.png ",
+        bEvent: 1,
+        event: function() {
+            Stage1_box();
+            bag_appear();
+            i++;
+        }
+    },
     { name: "你", word: "（土地利用可以找誰幫忙呢？） ", image: " img/市長女兒/0.png ", bEvent: 0 },
     { name: "你", word: " 腦中一個熟悉的名字閃過 ", image: " img/市長女兒/3.png ", bEvent: 1, event: Choice_stage1_2_0 }
 ]
@@ -127,8 +138,11 @@ let stage1_2_2_2 = [ //找土地分析專家
     { name: "土地分析專家", word: " 我馬上過去 ", image: "img/電話1.png", bEvent: 0 },
     { name: "", word: " （土地分析專家快速到達）", image: "", bEvent: 0 },
     { name: "你", word: " 感謝您的到來，讓我們趕緊開始討論吧！ ", image: "img/市長女兒/3.png", bEvent: 0 },
-    { name: "土地分析專家", word: " 資料我都帶齊全了！", image: "img/土地分析專家.png", bEvent: 0 },
-    { name: "", word: " （討論中）", image: "", bEvent: 0 },
+    { name: "土地分析專家", word: " 資料我都帶齊全了！你先幫我分類整理一下吧！", image: "img/土地分析專家.png", bEvent: 0 },
+    { name: "提示", word: "玩遊戲獲取通關密碼後，回來輸入通關密碼吧", image: "img/女兒物品/資料.png", bEvent: 1, event: Choice_game1 },
+]
+let stage4 = [
+    { name: "", word: " （討論中）", image: "img/時間.png", bEvent: 0 },
     { name: "你", word: " （專業術語）（專業術語） ", image: "img/市長女兒/2.png", bEvent: 0 },
     { name: "土地分析專家", word: " （專業術語）（專業術語） ", image: "img/土地分析專家.png", bEvent: 0 },
     { name: "你", word: " 天色都這麼晚啦，今天真的很感謝您的協助", image: "img/市長女兒/3.png", bEvent: 0 },
@@ -163,13 +177,13 @@ let stage1_2_2_2_2 = [ //不借
     { name: "你", word: " 但是這不是我的東西，我沒辦法決定能不能借給你 ", image: "img/市長女兒/5.png", bEvent: 0 },
     { name: "你", word: " 很抱歉…等我存到夠的錢跟哈密瓜買下來我一定會借給您的！", image: "img/市長女兒/5.png", bEvent: 0 },
     { name: "你", word: " 我希望自己想要的東西能用自己努力存的錢買下來 ", image: "img/市長女兒/3.png", bEvent: 0 },
-    { name: "土地分析專家", word: " 沒關係沒關係！", image: "img土地分析專家.png", bEvent: 0 },
+    { name: "土地分析專家", word: " 沒關係沒關係！", image: "img/土地分析專家.png", bEvent: 0 },
     { name: "你", word: " 真的很抱歉，這是我跟爸爸請款的一些費用 ", image: "img/市長女兒/5.png", bEvent: 0 },
     { name: "你", word: " 雖然數目不多但請您收下這點心意，畢竟是公事請您不需要感到壓力", image: "img/市長女兒/5.png", bEvent: 0 },
     { name: "土地分析專家", word: " 那我就恭敬不如從命收下了！那麼再見了，這段時間我過的很開心 ", image: "img/土地分析專家.png", bEvent: 0 },
     { name: "你", word: " 我也是！ ", image: "img/市長女兒/3.png", bEvent: 0 },
-    { name: "地點", word: "（市長辦公室）", image: "", bEvent: 0 },
-    { name: "市長", word: " 不愧是我的女兒，這麼快就完成了，我等會兒看看，今天辛苦妳了", image: "img/市長/0.png", bEvent: 0 },
+    { name: "地點", word: "（市長辦公室）", image: "img/辦公室.png", bEvent: 0 },
+    { name: "市長", word: " 不愧是我的女兒，這麼快就完成了，我等會兒看看，今天辛苦妳了", image: "img/市長/0.png", bEvent: 1, event: bag_nothing },
     { name: "你", word: " 不會啦，我知道這對我的未來有幫助，而且也是我自己說想成為市長秘書的。", image: "img/市長女兒/3.png", bEvent: 0 },
     { name: "你", word: " 但爸爸，我去找小開真的不是為了玩，我是想和他一起切磋神奇寶貝", image: "img/市長女兒/2.png", bEvent: 0 },
     { name: "市長", word: " 我知道你們從有神奇寶貝開始就會約彼此切磋了，爸爸也不會反對你們切磋", image: "img/市長/0.png", bEvent: 0 },
@@ -187,7 +201,29 @@ let stage1_2_2_2_2 = [ //不借
     { name: "你", word: " 當...當然呀，這座城市除了他就沒有人能贏我了，不找他就沒有第二個人選了 ", image: "img/市長女兒/4.png", bEvent: 0 },
     { name: "市長", word: " 是這樣啊，那女兒妳安心準備，我最近就不派工作給妳了，好好努力啊，加油！ ", image: "img/市長/0.png", bEvent: 0 },
     { name: "你", word: " 好的，我會成為你的驕傲的 ", image: "img/市長女兒/3.png", bEvent: 0 },
-    { name: "地點", word: "（隔天，小開家道館）", image: "", bEvent: 0 },
+    { name: "你", word: " 去找小開前，先自己訓練一下吧！ 可不能再輸小開了呢！", image: "img/市長女兒/3.png", bEvent: 0 },
+    { name: "你", word: " 先來訓練收服神奇寶貝能力好了。 ", image: "img/市長女兒/3.png", bEvent: 0 },
+    { name: "你", word: " 出來吧 ！伊布！", image: "img/市長女兒/3.png", bEvent: 0 },
+    { name: "提示", word: "玩遊戲獲取通關密碼後，回來輸入通關密碼吧", image: "img/女兒物品/資料.png", bEvent: 1, event: Choice_game },
+]
+let stage2 = [ //過關
+    { name: "你", word: "哈哈哈，果然難不倒我，照這個進度下去，我一定能在比賽好好發揮出實力", image: "img/市長女兒/3.png", bEvent: 0 },
+    { name: "地點", word: "（隔天，小開家道館）", image: "img/寶貝球.png", bEvent: 0 },
+    { name: "你", word: " 早上好！不好意思打擾了抱歉昨天突然有急事沒辦法到…", image: "img/市長女兒/2.png", bEvent: 0 },
+    { name: "小開", word: " 該不會你又去跑公務了吧？", image: "img/小開/0.png", bEvent: 0 },
+    { name: "你", word: " 是沒錯啦！爸爸太忙了，昨天縣長突然派工作下來 ", image: "img/市長女兒/0.png", bEvent: 0 },
+    { name: "你", word: " 我想幫爸爸分擔，何況我未來想成為市長秘書", image: "img/市長女兒/0.png", bEvent: 0 },
+    { name: "小開", word: " 算了你每次都這樣也不知道休息一下…都不知道我很擔心你… ", image: "img/小開/1.png", bEvent: 0 },
+    { name: "你", word: " 嗯？剛剛說什麼？ ", image: "img/市長女兒/6.png", bEvent: 0 },
+    { name: "小開", word: " 沒什麼啦！還不快點開始今天的比賽！ ", image: "img/小開/5.png", bEvent: 0 },
+    { name: "你", word: " 真是的！你還不是一樣常常逃避我的問題… ", image: "img/市長女兒/1.png", bEvent: 0 },
+    { name: "小開", word: " 你怎麼還在那裡？快點跟上，我們要去練習場了 ", image: "img/小開/0.png", bEvent: 0 },
+    { name: "", word: "（小開站在原地等你）", image: "", bEvent: 1, event: Choice_stage1_2_2_2_2_0 },
+]
+
+let stage3 = [ //失敗
+    { name: "你", word: "我果然還是得再練習練習，伊布讓我們再繼續加油吧！", image: "img/市長女兒/6.png", bEvent: 0 },
+    { name: "地點", word: "（隔天，小開家道館）", image: "img/寶貝球.png", bEvent: 0 },
     { name: "你", word: " 早上好！不好意思打擾了抱歉昨天突然有急事沒辦法到…", image: "img/市長女兒/2.png", bEvent: 0 },
     { name: "小開", word: " 該不會你又去跑公務了吧？", image: "img/小開/0.png", bEvent: 0 },
     { name: "你", word: " 是沒錯啦！爸爸太忙了，昨天縣長突然派工作下來 ", image: "img/市長女兒/1.png", bEvent: 0 },
@@ -207,8 +243,8 @@ let stage1_2_2_2_2_1 = [ //繼續站著
 
 let stage1_2_2_2_2_2 = [ //趕緊跟上 
     { name: "你", word: "來了！", image: "img/市長女兒/3.png", bEvent: 0 },
+    { name: "地點", word: "（練習場）", image: "img/練習場.png", bEvent: 0 },
     { name: "你", word: "哇！好久沒來了！真懷念呀", image: "img/市長女兒/3.png", bEvent: 0 },
-    { name: "地點", word: "（練習場）", image: "", bEvent: 0 },
     { name: "小開", word: "說什麼傻話呀！我們不是每個禮拜都會在一起練習嗎？ ", image: "img/小開/3.png", bEvent: 0 },
     { name: "小開", word: "最近為了大賽還更頻繁了，平日沒事時也都待在一塊… ", image: "img/小開/0.png", bEvent: 0 },
     { name: "你", word: " 呀！你不要破壞氣氛啦！被別人聽到會誤會的 ", image: "img/市長女兒/1.png", bEvent: 0 },
@@ -219,7 +255,7 @@ let stage1_2_2_2_2_2 = [ //趕緊跟上
     { name: "小開", word: "反正我們又沒做什麼虧心事", image: "img/小開/0.png", bEvent: 0 },
     { name: "你", word: "我這次絕對會贏你！！ ", image: "img/市長女兒/1.png", bEvent: 0 },
     { name: "小開", word: "那我可要用盡全力了！ ", image: "img/小開/4.png", bEvent: 0 },
-    { name: "", word: " （一段時間後） ", image: "", bEvent: 0 },
+    { name: "", word: " （一段時間後） ", image: "img/時間.png", bEvent: 0 },
     { name: "你", word: "為什麼阿？又輸了… ", image: "img/市長女兒/2.png", bEvent: 0 },
     { name: "小開", word: "從小到大我都跟你待在一起，你的習慣我幾乎都知道", image: "img/小開/3.png", bEvent: 0 },
     { name: "你", word: "咦…（看來回去的時候該去翻翻神奇寶貝攻略秘笈了） ", image: "img/市長女兒/6.png", bEvent: 0 },
@@ -231,7 +267,7 @@ let stage1_2_2_2_2_2 = [ //趕緊跟上
     { name: "你", word: "好啦停止這個話題", image: "img/市長女兒/4.png", bEvent: 0 },
     { name: "你", word: "今..今天道館怎麼這麼熱啊，我都出汗了", image: "img/市長女兒/4.png", bEvent: 0 },
     { name: "你", word: "我們要不要去外面玩", image: "img/市長女兒/0.png", bEvent: 0 },
-    { name: "小開", word: "嗯...好啊，今天的練習量已經夠了，我們走吧 ", image: "img/小開3.png", bEvent: 0 },
+    { name: "小開", word: "嗯...好啊，今天的練習量已經夠了，我們走吧 ", image: "img/小開/3.png", bEvent: 0 },
     { name: "你", word: " 不過我們要去哪裡呀？ ", image: "img/市長女兒/0.png", bEvent: 0 },
     { name: "小開", word: "去附近逛逛看看風景放鬆一下心情", image: "img/小開/3.png", bEvent: 0 },
     { name: "", word: "（並肩一起走到到目的地）", image: "", bEvent: 0 },
@@ -272,5 +308,5 @@ let stage1_2_2_2_2_2_2_1 = [ //自己登記
 let stage1_2_2_2_2_2_2_2 = [ //邀請小開 
     { name: "你", word: " 你要跟我一起去報名登記嗎？ ", image: "img/市長女兒/3.png", bEvent: 0 },
     { name: "小開", word: " 好呀！順道一起，剛好省下特地過來的時間 ", image: "img/小開/3.png", bEvent: 0 },
-    { name: "", word: "（登記成功）", image: "", bEvent: 1, event: Choice_stage6 },
+    { name: "", word: "（登記成功）", image: "img/成功.png", bEvent: 1, event: Choice_stage6 },
 ]

@@ -67,26 +67,6 @@ function Choice_game() { //玩遊戲/輸入密碼
     document.getElementById("choice2").onclick = () => { Password_Game() };
 }
 
-function Game() {
-    if (istop >= 1) return;
-    else {
-        document.getElementById("character").addEventListener('click', function() {
-            if (istop >= 1) return;
-            else {
-                play = 1;
-                bgm()
-                window.open('Game/Game_Snake.html', );
-            }
-        })
-        document.getElementById("dialog_box").addEventListener('click', function() {
-            if (istop >= 1) return;
-            else {
-                i++;
-                Stage1_box();
-            }
-        })
-    }
-}
 
 let Choice = [
     { first: "不行", second: "可以" },

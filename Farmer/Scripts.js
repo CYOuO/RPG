@@ -9,8 +9,7 @@ let stage1 = [
     { name: "你", word: "算了先不想了，我手邊還有一項母親派給我的事情要做。。", image: "img/農場主人/0.png", bEvent: 0 },
     { name: "你", word: "再看一次媽媽留下的紙條然後趕快完成吧。。", image: "img/農場主人/0.png", bEvent: 1, event: bag_appear },
     { name: "你", word: "事不宜遲趕緊完成媽媽交代的家事吧！", image: "img/農場主人/0.png", bEvent: 0, },
-    { name: "提示", word: "點擊蘋果去幫媽媽摘蘋果吧！", image: "img/農場主人物品/game_apple.png", bEvent: 1, event: Apple },
-    { name: "提示", word: "輸入通關密碼吧", image: "", bEvent: 1, event: Choice_game },
+    { name: "提示", word: "玩遊戲獲取通關密碼後，回來輸入通關密碼吧", image: "img/農場主人物品/game_apple.png", bEvent: 1, event: Choice_game },
 ]
 
 let stage2 = [ //密碼1127
@@ -264,7 +263,7 @@ let stage2_2_1_0_0_0 = [ //菜市場/找到爸爸
     { name: "你", word: "我一定會成為神奇寶貝大師，帶著榮譽回家", image: "img/農場主人/1.png", bEvent: 0 },
     { name: "爸爸", word: "乖兒子，快去報名吧！", image: "img/爸爸/0.png", bEvent: 0 },
     { name: "你", word: "好，謝謝爸爸", image: "img/農場主人/1.png", bEvent: 0 },
-    { name: "地點", word: "(神奇寶貝街)", image: "不過神奇寶貝中心在哪裡呢？", bEvent: 0 },
+    { name: "地點", word: "(神奇寶貝街)", image: "", bEvent: 0 },
     { name: "你", word: "不過神奇寶貝中心在哪裡呢？", image: "img/農場主人/11.png", bEvent: 1, event: Choice_stage4 },
 ]
 
@@ -362,7 +361,7 @@ let stage4 = [ //問路人
     { name: "市長女兒", word: "再見", image: "img/市長女兒/0.png", bEvent: 0 },
     { name: "你", word: "啊……再見！", image: "img/農場主人/0.png", bEvent: 0 },
     { name: "你", word: "他們真是好人啊，不過他們看起來好像實力很強，看來我也需要加油了！", image: "img/農場主人/1.png", bEvent: 0 },
-    { name: "地點", word: "(神奇寶貝中心)", image: "", bEvent: 0 },
+    { name: "地點", word: "(神奇寶貝中心)", image: "img/神奇寶貝中心.png", bEvent: 0 },
     { name: "你", word: "你好，我想要報名參加神奇寶貝大賽", image: "img/農場主人/0.png", bEvent: 0 },
     { name: "工作人員", word: "好的，請你填寫這份表單", image: "img/工作人員.png", bEvent: 0 },
     { name: "你", word: "好的！", image: "img/農場主人/0.png", bEvent: 0 },
@@ -372,7 +371,7 @@ let stage4 = [ //問路人
 ]
 let stage5 = [ //自己找
     { name: "你", word: "啊......我已經找了幾天了，怎麼還是找不到", image: "img/農場主人/1.png", bEvent: 0 },
-    { name: "你", word: "(這時路人聊天的聲音傳入你耳中)", image: "img/農場主人/1.png", bEvent: 0 },
+    { name: "你", word: "(這時路人聊天的聲音傳入你耳中)", image: "img/討論中.png", bEvent: 0 },
     { name: "路人甲", word: "你知道神奇寶貝大賽報名已經截止了嗎", image: "img/路人甲.png", bEvent: 0 },
     { name: "路人乙", word: "知道啊，這次比賽冠軍會是誰呢？", image: "img/路人乙.png", bEvent: 0 },
     { name: "你", word: "什麼？！截止了？！", image: "img/農場主人/1.png", bEvent: 0 },

@@ -20,7 +20,7 @@ body {
     display: inline-block;
     font-size: 40px;
     position: absolute;
-    top: 92%;
+    top: 80%;
     left: 91%;
     transform: translate(-50%, -50%);
 }
@@ -29,7 +29,16 @@ body {
     font-size: 40px;
     background-color: #542db1;
     color: white;
-    top: 67%;
-    left: 82.75%;
+    top: 40%;
+    left: 82%;
     position: absolute;
+}
+
+.rule {
+    font-size: 35px;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 12%;
+    transform: translate(-50%, -50%);
 }

@@ -39,23 +39,7 @@ function Choice_game() { //玩遊戲/輸入密碼
     document.getElementById("choice2").onclick = () => { Password_Apple() };
 }
 
-function Apple() {
-    if (istop >= 1) return;
-    else {
-        document.getElementById("character").addEventListener('click', function() {
-            if (istop >= 1) return;
-            else {
-                play = 1;
-                bgm()
-                window.open('Game/Game_Apple.html', );
-            }
-        })
-        document.getElementById("dialog_box").addEventListener('click', function() {
-            i++;
-            Stage1_box();
-        })
-    }
-}
+
 
 var number = 2; //選項個數
 

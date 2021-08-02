@@ -4,7 +4,7 @@ document.write('<script src="Pilot/Scripts.js"></script>');
 var init = 0;
 //Bag//
 let bag = [ //初始Bag裡的物品
-    { item: "envelope", image: "img/農場主人物品/envelope_new.png", image2: "img/農場主人物品/envelope.png", open: 0, bThing: 1, thing: "img/農場主人物品/letter.png", name: "你", word: "得趕快去摘蘋果呢。", others: 0 },
+    { item: "envelope", image: "img/飛行員物品/帳本_new.png", image2: "img/飛行員物品/帳本.png", open: 0, bThing: 1, thing: "img/飛行員物品/錢.png", name: "你", word: "沒有錢要怎麼修飛機呢", others: 0 },
 ]
 
 function bag_appear() {
@@ -31,7 +31,16 @@ var choice = 0
 
 var number = 2; //選項個數
 
-
+function Choice_game() { //玩遊戲/輸入密碼
+    choice = 4
+    Choice_box();
+    document.getElementById("choice1").onclick = () => {
+        play = 1;
+        bgm();
+        window.open('https://games.gdevelop-app.com/game-4a41c8d1-3138-4813-b10a-818ab523ebf3/index.html', );
+    };
+    document.getElementById("choice2").onclick = () => { Password_Game() };
+}
 
 function Choice_stage1_0() { //冒險開飛機/存錢修飛機 
     Choice_stage(2, 0, stage1_1, stage1_2);
@@ -39,6 +48,10 @@ function Choice_stage1_0() { //冒險開飛機/存錢修飛機
 
 function Choice_stage1_2_0() { //找博士應聘/找其他工作
     Choice_stage(2, 1, stage1_2_1, stage1_2_2);
+}
+
+function Choice_stage1_2_1_0() { //堅持成為助理/練習神奇寶貝大賽
+    Choice_stage(2, 3, stage1_2_1_1, stage1_2_1_2);
 }
 
 function Choice_stage1_2_2_0() { //每天待在家處理訂單/辛苦的幫忙送貨
@@ -49,6 +62,8 @@ let Choice = [
     { first: "冒險開飛機", second: "存錢修飛機" },
     { first: "找博士應聘", second: "找其他工作" },
     { first: "待在家處理訂單", second: "辛苦的幫忙送貨" },
+    { first: "堅持成為助理", second: "練習神奇寶貝大賽" },
+    { first: "玩遊戲", second: "輸入密碼" },
 ]
 
 //Stage//
@@ -99,5 +114,37 @@ function change_scipts() {
     none();
 }
 
+function change_bag_report() { //背包新增報告
+    bag[1] = { item: "envelope", image: "img/飛行員物品/報告_new.png", image2: "img/飛行員物品/報告.png", open: 0, bThing: 1, thing: "img/飛行員物品/報告內頁.png", name: "你", word: "看完後，我更了解了波波鳥呢", others: 1 }
+    bag.open = 0;
+    Bag_open();
+    // bag_detect();
+    Stage1_box();
+    i++;
+}
 //密碼
 var score = 0
+
+function Password_Game() { //輸入密碼
+
+    // var password = ''
+    let password = prompt('輸入密碼:', '');
+    if (password == "0408") {
+        password_common();
+        // alert("Welcome to my homepage!");
+        istop = 1
+        score += 5;
+        cs = stage2_1;
+        change_scipts();
+    } else if (password == "1025") {
+        // alert("Welcome !");
+        password_common();
+        istop = 1
+        score += 1;
+        cs = stage2_2;
+        change_scipts();
+    } else {
+        alert("密碼錯誤! \n\n請重新輸入 ");
+    }
+
+}

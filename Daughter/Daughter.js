@@ -4,7 +4,7 @@ document.write('<script src="Daughter/Scripts.js"></script>');
 var init = 0;
 //Bag//
 let bag = [ //初始Bag裡的物品
-    { item: "envelope", image: "img/消防隊員物品/envelope_new.png", image2: "img/消防隊員物品/envelope.png", open: 0, bThing: 1, thing: "img/消防隊員物品/辭職信.png", name: "你", word: "一定得成功辭職", others: 0 },
+    { item: "envelope", image: "img/女兒物品/土地企劃書.png", image2: "img/女兒物品/土地企劃書_new.png", open: 0, bThing: 0, others: 0 },
 ]
 
 function bag_appear() {
@@ -38,6 +38,28 @@ function bag_nothing() { //背包清空
 //分支
 var choice = 0
 var number = 2; //選項個數
+
+function Choice_game() { //玩遊戲/輸入密碼
+    choice = 7
+    Choice_box();
+    document.getElementById("choice1").onclick = () => {
+        play = 1;
+        bgm();
+        window.open('', );
+    };
+    document.getElementById("choice2").onclick = () => { Password_Game() };
+}
+
+function Choice_game1() { //玩遊戲/輸入密碼
+    choice = 7
+    Choice_box();
+    document.getElementById("choice1").onclick = () => {
+        play = 1;
+        bgm();
+        window.open('https://games.gdevelop-app.com/game-17fd3769-7c61-4f43-bde9-ee4e4ab33700/index.html', );
+    };
+    document.getElementById("choice2").onclick = () => { Password_Game1() };
+}
 
 function Choice_stage1_0() { //拒絕爸爸交代的事/接受爸爸交代的事
     Choice_stage(2, 0, stage1_1, stage1_2);
@@ -76,7 +98,8 @@ let Choice = [
     { first: "繼續站著", second: "趕緊跟上 " },
     { first: "沒有過多的在意", second: "聽取小開的建議" },
     { first: "自己登記", second: "邀請小開" },
-    { first: "遊戲結束", second: "重新開始" },
+    { first: "玩遊戲", second: "輸入密碼" },
+
 ]
 
 //Stage//
@@ -123,6 +146,12 @@ function Stage1_box() {
     }
 }
 
+function bag_nothing() { //背包清空
+    bag = [];
+    bag[0] = { item: "nothing", image: "img/Nothing.png", open: 1, thing: 0, event: "" };
+    i++;
+}
+
 var cs = 0
 
 function change_scipts() {
@@ -134,3 +163,41 @@ function change_scipts() {
 }
 
 var score = 0;
+
+function Password_Game() { //輸入密碼
+    // var password = ''
+    let password = prompt('輸入密碼:', '');
+    if (password == "0066") {
+        // alert("Welcome to my homepage!");
+        istop = 1
+        score += 5;
+        password_common();
+        cs = stage2;
+        change_scipts();
+    } else if (password == "6600") {
+        // alert("Welcome !");
+        istop = 1
+        score += 1;
+        password_common();
+        cs = stage3;
+        change_scipts();
+    } else {
+        alert("密碼錯誤! \n\n請重新輸入 ");
+    }
+
+}
+
+function Password_Game1() { //輸入密碼
+    // var password = ''
+    let password = prompt('輸入密碼:', '');
+    if (password == "0705") {
+        // alert("Welcome to my homepage!");
+        istop = 1
+        password_common();
+        cs = stage4;
+        change_scipts();
+    } else {
+        alert("密碼錯誤! \n\n請重新輸入 ");
+    }
+
+}

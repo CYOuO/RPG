@@ -4,7 +4,7 @@ document.write('<script src="Nurse/Scripts.js"></script>');
 var init = 0;
 //Bag//
 let bag = [ //初始Bag裡的物品
-    { item: "envelope", image: "img/農場主人物品/envelope_new.png", image2: "img/農場主人物品/envelope.png", open: 0, bThing: 1, thing: "img/農場主人物品/letter.png", name: "你", word: "得趕快去摘蘋果呢。", others: 0 },
+    { item: "envelope", image: "img/護士物品/OK繃.png", image2: "img/護士物品/OK繃.png", open: 1, bThing: 0, others: 0 },
 ]
 
 function bag_appear() {
@@ -25,6 +25,12 @@ function bag_detect() { //偵測按背包
         document.getElementById("envelope_new").addEventListener('click', function() { Envelope_new(); });
 
     })
+}
+
+function bag_nothing() { //背包清空
+    bag = [];
+    bag[0] = { item: "nothing", image: "img/Nothing.png", open: 1, thing: 0, event: "" };
+    i++;
 }
 //分支
 var choice = 0
