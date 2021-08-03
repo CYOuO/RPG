@@ -204,7 +204,7 @@ let stage1_2_2_2_2 = [ //不借
     { name: "你", word: " 去找小開前，先自己訓練一下吧！ 可不能再輸小開了呢！", image: "img/市長女兒/3.png", bEvent: 0 },
     { name: "你", word: " 先來訓練收服神奇寶貝能力好了。 ", image: "img/市長女兒/3.png", bEvent: 0 },
     { name: "你", word: " 出來吧 ！伊布！", image: "img/市長女兒/3.png", bEvent: 0 },
-    { name: "提示", word: "玩遊戲獲取通關密碼後，回來輸入通關密碼吧", image: "img/女兒物品/資料.png", bEvent: 1, event: Choice_game },
+    { name: "提示", word: "玩遊戲獲取通關密碼後，回來輸入通關密碼吧", image: "img/寶貝球(2).png", bEvent: 1, event: Choice_game },
 ]
 let stage2 = [ //過關
     { name: "你", word: "哈哈哈，果然難不倒我，照這個進度下去，我一定能在比賽好好發揮出實力(積分+5)", image: "img/市長女兒/3.png", bEvent: 0 },
