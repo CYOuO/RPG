@@ -351,7 +351,7 @@ let stage6_2 = [ //練習比賽→
     { name: "你", word: "幸好找回了阿龍，我也要抓緊時間練習比賽了", image: "img/學生/5.png", bEvent: 0 },
     { name: "你", word: "阿龍，我們開始吧！", image: "img/學生/0.png", bEvent: 0 },
     { name: "小火龍", word: "大哥沒有輸！阿聾阿聾", image: "img/神奇寶貝/5.png", bEvent: 0 },
-    { name: "提示", word: "玩遊戲獲取通關密碼後，回來輸入通關密碼吧", image: "img/小開物品/寶貝球(2).png", bEvent: 1, event: Choice_game },
+    { name: "提示", word: "玩遊戲獲取通關密碼後，回來輸入通關密碼吧", image: "img/寶貝球(2).png", bEvent: 1, event: Choice_game },
 ]
 
 let stage7 = [ //（遊戲成功0727）→

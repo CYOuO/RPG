@@ -4,7 +4,7 @@ document.write('<script src="Son/Scripts.js"></script>');
 var init = 0;
 //Bag//
 let bag = [ //初始Bag裡的物品
-    { item: "envelope", image: "img/兒子物品/寶貝球_new.png", image2: "img/兒子物品/寶貝球.png", open: 0, bThing: 0, others: 0 },
+    { item: "envelope", image: "img/小開物品/寶貝球_new.png", image2: "img/小開物品/寶貝球.png", open: 0, bThing: 0, others: 0 },
 ]
 
 function bag_appear() {

@@ -1,6 +1,16 @@
 let stage1 = [
     { name: "你", word: " 我是道館老闆的兒子", image: "img/小開/4.png", bEvent: 0 },
-    { name: "你", word: " 市長女兒和我是感情深厚的青梅竹馬", image: "img/小開/0.png", bEvent: 0 },
+    {
+        name: "你",
+        word: " 市長女兒和我是感情深厚的青梅竹馬",
+        image: "img/小開/0.png",
+        bEvent: 1,
+        event: function() {
+            Stage1_box();
+            bag_appear();
+            i++;
+        }
+    },
     { name: "你", word: " 我最喜歡和市長女兒一起切磋彼此的神奇寶貝的能力", image: "img/小開/3.png", bEvent: 0 },
     { name: "你", word: " 雖然她的實力也不容小覷", image: "img/小開/4.png", bEvent: 0 },
     { name: "你", word: " 但因為我太了解她了", image: "img/小開/3.png", bEvent: 0 },
