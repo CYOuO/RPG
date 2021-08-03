@@ -43,7 +43,7 @@ function Choice_game() { //玩遊戲/輸入密碼
     document.getElementById("choice1").onclick = () => {
         play = 1;
         bgm();
-        window.open('https://games.gdevelop-app.com/game-6078f6aa-81f3-4cf9-a26b-a27ee938a99b/index.html', );
+        window.open('https://games.gdevelop-app.com/game-75ed91cd-83e1-4af1-8d95-bf965eb4d243/index.html', );
     };
     document.getElementById("choice2").onclick = () => { Password_Game() };
 }
