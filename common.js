@@ -49,7 +49,7 @@ function change_bag_thing() { //切換背包物品
 
 function Envelope_new() { //點背包物品外觀
 
-    if (bag[n].bThing === 1) {
+    if (bag[n].bThing == 1) {
         bag[n].open = 1;
         // document.getElementById("bag").src = "img/bag.png";
         Bag_open();

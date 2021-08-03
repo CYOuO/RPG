@@ -42,10 +42,12 @@ function Choice_game() { //玩遊戲/輸入密碼
 }
 
 function Choice_game1() { //玩遊戲/輸入密碼
-    choice = 1
-    Choice_box();
-    document.getElementById("choice1").onclick = () => { window.open('Game/Game_maze.html', ); };
-    document.getElementById("choice2").onclick = () => { Password_Game1() };
+    document.getElementById("choice1").onclick = () => {
+        play = 1;
+        bgm();
+        window.open('Game/Game_maze.html', );
+    };
+    document.getElementById("choice2").onclick = () => { Password_Game() };
 }
 
 
@@ -66,11 +68,26 @@ function Choice_stage4_0() { //直接走掉/繼續等待
     Choice_stage(2, 3, stage4_1, stage4_2);
 }
 
+function Choice_stage5_0() { //小路/大路
+    Choice_stage(2, 4, stage5_1, stage5_2);
+}
+
+function Choice_stage5_1_0() { //不行/可以
+    Choice_stage(2, 5, stage5_1_1, stage5_1_2);
+}
+
+function Choice_stage6_0() { //紗網/螺絲起子
+    Choice_stage(2, 6, stage6_1, stage6_2);
+}
+
 let Choice = [
     { first: "拒絕挑戰", second: "接受挑戰" },
     { first: "玩遊戲", second: "輸入密碼" },
     { first: "在外面等待", second: "一起報名" },
     { first: "直接走掉", second: "繼續等待" },
+    { first: "小路", second: "大路" },
+    { first: "不行", second: "可以" },
+    { first: "紗網", second: "螺絲起子" },
 ]
 
 //Stage//

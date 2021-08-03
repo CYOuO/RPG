@@ -36,7 +36,7 @@ function Choice_game() { //玩遊戲/輸入密碼
     document.getElementById("choice1").onclick = () => {
         play = 1;
         bgm();
-        window.open('https://games.gdevelop-app.com/game-00fe894a-ec87-419f-bcbd-da741a153bad/index.html', );
+        window.open('https://games.gdevelop-app.com/game-bd6af893-7ec2-4f5d-9c0f-3df269789645/index.html', );
     };
     document.getElementById("choice2").onclick = () => { Password_Game() };
 }

@@ -6,7 +6,7 @@ let stage1 = [
     { name: "你", word: "為了在大賽前去製作並執行我的訓練企劃，", image: "img/學生/0.png", bEvent: 0 },
     { name: "你", word: " 我得先拿到空白企劃書", image: "img/學生/0.png", bEvent: 0 },
     { name: "你", word: "因此要趕快把報告拿給博士看！", image: "img/學生/0.png", bEvent: 0 },
-    { name: "你", word: " 不過博士可能會問我幾個問題，還是在那之前再看一次吧。", image: "img/學生/4.png", bEvent: 0 },
+    { name: "你", word: " 不過博士可能會問我幾個問題，還是在那之前再看一次吧。", image: "img/學生/4.png", bEvent: 1, event: bag_appear },
     { name: "地點", word: "（博士的實驗室門口）", image: "img/門.png", bEvent: 0 },
     { name: "你", word: "博士！ 博士！ 博士你在嗎？", image: "img/學生/1.png", bEvent: 0 },
     { name: "你", word: "咦？ 博士平常這個時間不是都泡在實驗室裡做研究嗎？", image: "img/學生/1.png", bEvent: 0 },
@@ -356,7 +356,7 @@ let stage6_2 = [ //練習比賽→
 
 let stage7 = [ //（遊戲成功0727）→
     { name: "你", word: "哈哈哈，果然難不倒我", image: "img/學生/0.png", bEvent: 0 },
-    { name: "你", word: "照這個進度下去，我一定能在比賽好好發揮出實力", image: "img/學生.png", bEvent: 0 },
+    { name: "你", word: "照這個進度下去，我一定能在比賽好好發揮出實力", image: "img/學生/5.png", bEvent: 0 },
     {
         name: "你",
         word: "照這個進度下去，我一定能在比賽好好發揮出實力",

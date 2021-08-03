@@ -22,7 +22,9 @@ function bag_detect() { //偵測按背包
         document.getElementById("next").style.display = "none";
         document.getElementById("envelope_new").src = bag[n].image;
         bag_change_thing();
-        document.getElementById("envelope_new").addEventListener('click', function() { Envelope_new(); });
+        if (bag[n].bThing === 1) {
+            document.getElementById("envelope_new").addEventListener('click', function() { Envelope_new(); });
+        } else {}
     })
 }
 
@@ -44,7 +46,7 @@ function change_bag_thing() { //切換背包物品
 
 function bag_nothing() { //背包清空
     bag = [];
-    bag[0] = { item: "nothing", image: "img/Nothing.png", open: 1, thing: 0, event: "" };
+    bag[0] = { item: "nothing", image: "img/Nothing.png", image2: "img/Nothing.png", open: 1, bThing: 0, event: "" };
     i++;
 }
 

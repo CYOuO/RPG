@@ -29,11 +29,6 @@ function bag_detect() { //偵測按背包
     })
 }
 
-function bag_nothing() { //背包清空
-    bag = [];
-    bag[0] = { item: "nothing", image: "img/Nothing.png", open: 1, thing: 0, event: "" };
-    i++;
-}
 
 //分支
 var choice = 0
@@ -148,7 +143,7 @@ function Stage1_box() {
 
 function bag_nothing() { //背包清空
     bag = [];
-    bag[0] = { item: "nothing", image: "img/Nothing.png", open: 1, thing: 0, event: "" };
+    bag[0] = { item: "nothing", image: "img/Nothing.png", image2: "img/Nothing.png", open: 1, bThing: 0, event: "" };
     i++;
 }
 

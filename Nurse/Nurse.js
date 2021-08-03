@@ -29,7 +29,7 @@ function bag_detect() { //偵測按背包
 
 function bag_nothing() { //背包清空
     bag = [];
-    bag[0] = { item: "nothing", image: "img/Nothing.png", open: 1, thing: 0, event: "" };
+    bag[0] = { item: "nothing", image: "img/Nothing.png", image2: "img/Nothing.png", open: 1, bThing: 0, event: "" };
     i++;
 }
 //分支
@@ -37,7 +37,27 @@ var choice = 0
 
 var number = 2; //選項個數
 
+function Choice_game() { //玩遊戲/輸入密碼
+    choice = 3
+    Choice_box();
+    document.getElementById("choice1").onclick = () => {
+        play = 1;
+        bgm();
+        window.open('Game/Game_cube.html', );
+    };
+    document.getElementById("choice2").onclick = () => { Password_Game() };
+}
 
+function Choice_game1() { //玩遊戲/輸入密碼
+    choice = 3
+    Choice_box();
+    document.getElementById("choice1").onclick = () => {
+        play = 1;
+        bgm();
+        window.open('Game/Game_cube.html', );
+    };
+    document.getElementById("choice2").onclick = () => { Password_Game1() };
+}
 
 function Choice_stage1_0() { //還是留下來吧 /跟院長談談 
     Choice_stage(2, 0, stage1_1, stage1_2);
@@ -55,6 +75,7 @@ let Choice = [
     { first: "還是留下來吧 ", second: "跟院長談談" },
     { first: "流動商人", second: "農場主人 " },
     { first: "忽視", second: "尋找聲音來源" },
+    { first: "玩遊戲", second: "輸入密碼" },
 ]
 
 //Stage//
@@ -103,4 +124,55 @@ function change_scipts() {
     Stage1_box();
     i++;
     none();
+}
+
+//密碼
+var score = 0
+
+function Password_Game() { //輸入密碼
+
+    // var password = ''
+    let password = prompt('輸入密碼:', '');
+    if (password == "0617") {
+        password_common();
+        // alert("Welcome to my homepage!");
+        istop = 1
+        score += 5;
+        cs = stage3;
+        change_scipts();
+    } else if (password == "0716") {
+        // alert("Welcome !");
+        password_common();
+        istop = 1
+        score += 1;
+        cs = stage4;
+        change_scipts();
+    } else {
+        alert("密碼錯誤! \n\n請重新輸入 ");
+    }
+
+}
+
+function Password_Game1() { //輸入密碼
+
+    // var password = ''
+    let password = prompt('輸入密碼:', '');
+    if (password == "0617") {
+        password_common();
+        // alert("Welcome to my homepage!");
+        istop = 1
+        score += 5;
+        cs = stage5;
+        change_scipts();
+    } else if (password == "0716") {
+        // alert("Welcome !");
+        password_common();
+        istop = 1
+        score += 1;
+        cs = stage6;
+        change_scipts();
+    } else {
+        alert("密碼錯誤! \n\n請重新輸入 ");
+    }
+
 }

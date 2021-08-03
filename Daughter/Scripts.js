@@ -89,7 +89,7 @@ let stage1_2_2 = [ //流動商人
     { name: "你", word: " 欸？這個跟某知名卡通人物驚人的相似度是怎麼回事？ ", image: "img/市長女兒/0.png", bEvent: 0 },
     { name: "你", word: " 該不會是在消費哆啦X夢吧 ", image: "img/市長女兒/4.png", bEvent: 0 },
     { name: "哈密瓜", word: " 喂喂！我都聽到了！！你真的需要我的幫助嗎？", image: "img/商人.png", bEvent: 0 },
-    { name: "你", word: " 抱歉抱歉，第一次見到鼎鼎大名的流動商人哈密瓜我太興奮了 ", image: "img/商人.png", bEvent: 0 },
+    { name: "你", word: " 抱歉抱歉，第一次見到鼎鼎大名的流動商人哈密瓜我太興奮了 ", image: "img/市長女兒/0.png", bEvent: 0 },
     { name: "哈密瓜", word: " 算了這也是凡人應該有的正常反應就原諒你了！ ", image: "img/商人.png", bEvent: 0 },
     { name: "哈密瓜", word: " 所以你到底要買什麼？", image: "img/商人.png", bEvent: 0 },
     { name: "你", word: " 我需要土地分析表 ", image: "img/市長女兒/2.png", bEvent: 0 },
@@ -207,7 +207,7 @@ let stage1_2_2_2_2 = [ //不借
     { name: "提示", word: "玩遊戲獲取通關密碼後，回來輸入通關密碼吧", image: "img/女兒物品/資料.png", bEvent: 1, event: Choice_game },
 ]
 let stage2 = [ //過關
-    { name: "你", word: "哈哈哈，果然難不倒我，照這個進度下去，我一定能在比賽好好發揮出實力", image: "img/市長女兒/3.png", bEvent: 0 },
+    { name: "你", word: "哈哈哈，果然難不倒我，照這個進度下去，我一定能在比賽好好發揮出實力(積分+5)", image: "img/市長女兒/3.png", bEvent: 0 },
     { name: "地點", word: "（隔天，小開家道館）", image: "img/寶貝球.png", bEvent: 0 },
     { name: "你", word: " 早上好！不好意思打擾了抱歉昨天突然有急事沒辦法到…", image: "img/市長女兒/2.png", bEvent: 0 },
     { name: "小開", word: " 該不會你又去跑公務了吧？", image: "img/小開/0.png", bEvent: 0 },

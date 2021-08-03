@@ -27,10 +27,102 @@ let stage1 = [
     { name: "你", word: " 可是您卻連我展示的機會都不願意給我。", image: "img/小開/1.png", bEvent: 0 },
     { name: "爸爸", word: "這...不是爸爸不相信你", image: "img/道長.png", bEvent: 0 },
     { name: "爸爸", word: "只是在爸爸心中你就還像是個小孩一樣。", image: "img/道長.png", bEvent: 0 },
-    { name: "爸爸", word: "既然這樣的話， 我這裡有一個關於乒乓球的考驗", image: "img/道長.png", bEvent: 0 },
+    { name: "爸爸", word: "既然這樣的話，那明天去我們去道館測試看看你的能力是不是真的足以讓你參加大賽", image: "img/道長.png", bEvent: 0 },
+    { name: "爸爸", word: "對了我明天會早點去道館布置，你去的時候走小路吧", image: "img/道長.png", bEvent: 0 },
+    { name: "爸爸", word: "據說大馬路上最近出現了很多蟲，你可要小心一點。 ", image: "img/道長.png", bEvent: 0 },
+    { name: "你", word: "別擔心，我一個男孩子能發生什麼呢", image: "img/小開/4.png", bEvent: 0 },
+    { name: "爸爸", word: "就算是男孩子也要小心！危險是不分性別的", image: "img/道長.png", bEvent: 0 },
+    { name: "你", word: "好啦好啦，爸爸我知道了，那我先去準備了，您也早點休息。", image: "img/小開/4.png", bEvent: 0 },
+    { name: "爸爸", word: "好，期待你明天的表現", image: "img/道長.png", bEvent: 0 },
+    { name: "你", word: "我不會讓您失望的", image: "img/小開/4.png", bEvent: 0 },
+    { name: "", word: "(隔天)", image: "img/隔一天.png", bEvent: 0 },
+    { name: "你", word: "嗯…雖然爸爸那麼說了，那我到底該走哪條路呢？", image: "img/小開/0.png", bEvent: 1, event: Choice_stage5_0 },
+]
+let stage5_1 = [ //小路
+    { name: "你", word: "還是聽爸爸的話走小路吧，不過走罕無人煙的小路怪可怕的", image: "img/小開/1.png", bEvent: 0 },
+    { name: "你", word: "等等，我好像聽到後面有腳步聲，而且越來越近了怎麼辦啊啊啊", image: "img/小開/6.png", bEvent: 0 },
+    { name: "", word: "(突然一隻手搭上你的肩膀)", image: "", bEvent: 0 },
+    { name: "你", word: "啊啊啊啊啊啊啊！", image: "img/小開/5.png", bEvent: 0 },
+    { name: "？", word: "你還好嗎孩子", image: "img/哲哲.png", bEvent: 0 },
+    { name: "你", word: "？!！你是誰？", image: "img/小開/5.png", bEvent: 0 },
+    { name: "哲哲", word: "我？我是哲哲啊，社區糾察隊的大隊長", image: "img/哲哲.png", bEvent: 0 },
+    { name: "哲哲", word: "對了最近社區會舉辦淨灘活動，你要參加嗎？", image: "img/哲哲.png", bEvent: 0 },
+    { name: "你", word: "你、你嚇到我了！幹嘛突然搭我肩膀", image: "img/小開/5.png", bEvent: 0 },
+    { name: "哲哲", word: "啊就沒辦法啊，原本計畫好的淨灘，因為最近大馬路上出現的蟲蟲危機", image: "img/哲哲.png", bEvent: 0 },
+    { name: "哲哲", word: "所以社區民眾參加意願普遍降低，我只好邊巡邏社區邊招人了。", image: "img/哲哲.png", bEvent: 0 },
+    { name: "你", word: "呼…我還以為你是壞人，在小路搭人肩膀，怎麼可能招的到人啦。", image: "img/小開/1.png", bEvent: 0 },
+    { name: "哲哲", word: "真是抱歉，我承認我這麼做不對", image: "img/哲哲.png", bEvent: 0 },
+    { name: "哲哲", word: "不過遇到危險時首先要冷靜判斷情況，然後迅速遠離危險喔，這麼亂吼亂叫可不行", image: "img/哲哲.png", bEvent: 0 },
+    { name: "你", word: "我知道了，下次我會注意的大隊長。", image: "img/小開/1.png", bEvent: 0 },
+    { name: "哲哲", word: "既然如此，那你來參加我們巡邏隊幫助社區回饋社會吧", image: "img/哲哲.png", bEvent: 1, event: Choice_stage5_1_0 },
+]
+let stage5_1_1 = [ //不行
+    { name: "你", word: "抱歉…我可能要去參加大賽，訓練時間跟巡邏隊時間可能會撞到", image: "img/小開/0.png", bEvent: 0 },
+    { name: "你", word: "嗯…不過如果是小事我還是可以幫忙的", image: "img/小開/4.png", bEvent: 0 },
+    {
+        name: "你",
+        word: "嗯…不過如果是小事我還是可以幫忙的",
+        image: "img/小開/4.png",
+        bEvent: 1,
+        event: function() {
+            cs = stage6,
+                change_scipts();
+        }
+    },
+]
+let stage5_1_2 = [ //可以
+    { name: "你", word: "好當然可以，不過得等我先比完大賽", image: "img/小開/4.png", bEvent: 0 },
+    {
+        name: "你",
+        word: "嗯…不過如果是小事我現在還是可以幫忙的",
+        image: "img/小開/4.png",
+        bEvent: 1,
+        event: function() {
+            cs = stage6,
+                change_scipts();
+        }
+    },
+]
+
+let stage6 = [
+    { name: "哲哲", word: "那真是太好了！我等等要去上任大隊長家幫他換紗窗", image: "img/哲哲.png", bEvent: 0 },
+    { name: "哲哲", word: "但我一直忘記換紗窗要準備什麼，你知道嗎？", image: "img/哲哲.png", bEvent: 1, event: Choice_stage6_0 },
+]
+
+let stage6_1 = [ //紗網 
+    { name: "哲哲", word: "啊對！是他是他就是他，那我先去買紗網了，你路上小心啊！", image: "img/哲哲.png", bEvent: 0 },
+    { name: "你", word: "好，有緣再見！", image: "img/小開/3.png", bEvent: 0 },
+    { name: "你", word: "我得趕快去道館", image: "img/小開/3.png", bEvent: 0 },
+    { name: "", word: "（道館）", image: "img/寶貝球.png", bEvent: 0 },
+    { name: "爸爸", word: "你終於來了啊，還記得我昨天說的嗎？想參加大賽首先得通過測試", image: "img/道長.png", bEvent: 0 },
+    { name: "爸爸", word: "我這裡有一個關於乒乓球的考驗", image: "img/道長.png", bEvent: 0 },
     { name: "爸爸", word: "千萬不要小看它， 這很考驗你的專注度", image: "img/道長.png", bEvent: 0 },
     { name: "爸爸", word: "你...要挑戰看看嗎？", image: "img/道長.png", bEvent: 1, event: Choice_stage1_0 },
 ]
+
+let stage6_2 = [ //螺絲起子 
+    { name: "哲哲", word: "好像是名字裡帶紗的物品，到底是什麼呢？", image: "img/哲哲.png", bEvent: 0 },
+    { name: "你", word: "紗網？", image: "img/小開/0.png", bEvent: 0 },
+    {
+        name: "你",
+        word: "紗網？",
+        image: "img/小開/0.png",
+        bEvent: 1,
+        event: function() {
+            cs = stage6_1,
+                change_scipts();
+        }
+    },
+]
+
+let stage5_2 = [ //大路
+    { name: "你", word: "還是走大馬路吧，只是蟲而已沒事的吧", image: "img/小開/4.png", bEvent: 0 },
+    { name: "", word: " (遭遇蟲蟲危機，受傷而無法參加比賽) ", image: "img/小開物品/蟲蟲危機.png", bEvent: 0 },
+    { name: "失敗", word: "再按一下獲得成績", image: "img/失敗.png", bEvent: 1, event: Choice_stage5 },
+]
+
+
+
 let stage1_1 = [ //拒絕挑戰
     { name: "你", word: " 不，爸爸我不相信光用一顆乒乓球就能測試我的專注度", image: "img/小開/2.png", bEvent: 0 },
     { name: "你", word: "我拒絕挑戰這個考驗。", image: "img/小開/2.png", bEvent: 0 },

@@ -47,7 +47,7 @@ let stage1 = [
     { name: "你", word: "為了成為神奇寶貝大師，我需要做很多的準備以及練習", image: "img/消防員/3.png", bEvent: 0 },
     { name: "你", word: "所以...對不起隊長...我要辭職（給出辭職信", image: "img/消防員/6.png", bEvent: 1, event: bag_nothing },
     { name: "消防隊長", word: "我不跟你開玩笑了，你也不要跟我開玩笑啦QAQ ", image: "img/消防隊長/4.png", bEvent: 0 },
-    { name: "消防隊長", word: "不要走啦嗚嗚嗚，你怎麼會突然這樣想呢", image: "img/消防隊長.png", bEvent: 0 },
+    { name: "消防隊長", word: "不要走啦嗚嗚嗚，你怎麼會突然這樣想呢", image: "img/消防隊長/4.png", bEvent: 0 },
     { name: "你", word: "我其實一直以來都想成為神奇寶貝大師... ", image: "img/消防員/6.png", bEvent: 0 },
     { name: "你", word: "奈何之前總是各種錯過... ", image: "img/消防員/6.png", bEvent: 0 },
     { name: "消防隊長", word: "你知道參加大賽需要付出多少嗎？ ", image: "img/消防隊長/3.png", bEvent: 0 },
@@ -100,7 +100,7 @@ let stage1_2 = [ //可以
     { name: "農村媽媽", word: "我收成工作都沒辦法繼續了。 ", image: "img/媽媽/3.png", bEvent: 0 },
     { name: "你", word: "農村媽媽你別擔心", image: "img/消防員/0.png", bEvent: 0 },
     { name: "你", word: "我這就去幫你把有毒的蛇抓起來", image: "img/消防員/1.png", bEvent: 0 },
-    { name: "提示", word: "玩遊戲獲取通關密碼後，回來輸入通關密碼吧", image: "img/消防員物品/蛇.png", bEvent: 1, event: Choice_game },
+    { name: "提示", word: "玩遊戲獲取通關密碼後，回來輸入通關密碼吧", image: "img/消防隊員物品/蛇.png", bEvent: 1, event: Choice_game },
 
 ]
 
@@ -164,7 +164,7 @@ let stage3 = [ //抓蛇失敗1328
     { name: "農村媽媽", word: "好，麻煩你了", image: "img/媽媽/0.png", bEvent: 0 },
     { name: "地點", word: "（野外求生專家的臨時小屋）", image: "", bEvent: 0 },
     { name: "野外求生專家", word: "嘿小夥子，好久不見啊", image: "img/野外求生專家/0.png", bEvent: 0 },
-    { name: "野外求生專家", word: "你來我這荒郊野外的小屋作做什麼呀？", image: "img/野外求生專家/0.png", bEvent: 0 },
+    { name: "野外求生專家", word: "你來我這荒郊野外的小屋做什麼呀？", image: "img/野外求生專家/0.png", bEvent: 0 },
     { name: "你", word: "是這樣的，我剛剛在農村媽媽家抓蛇", image: "img/消防員/6.png", bEvent: 0 },
     { name: "你", word: "結果那邊的蛇實在是太多了", image: "img/消防員/7.png", bEvent: 0 },
     { name: "你", word: "抓都抓不完", image: "img/消防員/8.png", bEvent: 0 },

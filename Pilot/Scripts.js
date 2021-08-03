@@ -212,7 +212,7 @@ let stage1_2_1_1 = [ //堅持成為助理
     { name: "地點", word: "(神奇寶貝中心)", image: "img/神奇寶貝中心.png", bEvent: 0 },
     { name: "你", word: "你好，我想要報名參加神奇寶貝大賽", image: "img/飛行員/0.png", bEvent: 0 },
     { name: "工作人員", word: "好的，請你填寫這份表單", image: "img/工作人員.png", bEvent: 0 },
-    { name: "你", word: "好的！", image: "img/農場主人/0.png", bEvent: 0 },
+    { name: "你", word: "好的！", image: "img/飛行員/0.png", bEvent: 0 },
     { name: "工作人員", word: "報名成功囉，祝你成功贏得冠軍", image: "img/工作人員.png", bEvent: 0 },
     { name: "你", word: "謝謝你的祝福，我一定會成為冠軍的！", image: "img/飛行員/0.png", bEvent: 0 },
     { name: "", word: "（到了比賽當天)", image: "img/隔一天.png", bEvent: 0 },
@@ -233,7 +233,7 @@ let stage2_2 = [
 
     { name: "", word: "雖然修好了飛機，卻因為飛行技術而在途中出了點意外(積分+1)", image: "img/隔一天.png", bEvent: 0 },
     { name: "你", word: "阿…雖然我成功報名了大賽，卻沒有達成想在大賽上開著飛機華麗出場的心願呢", image: "img/飛行員/3.png", bEvent: 0 },
-    { name: "你", word: "：但還好還是參加到了大賽呢！", image: "img/飛行員/0.png", bEvent: 0 },
+    { name: "你", word: "但還好還是參加到了大賽呢！", image: "img/飛行員/0.png", bEvent: 0 },
     { name: "成功", word: "再按一下獲得成績", image: "img/成功.png", bEvent: 1, event: Choice_stage6 },
 ]
 

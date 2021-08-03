@@ -4,8 +4,7 @@ document.write('<script src="Student/Scripts.js"></script>');
 var init = 0;
 //Bag//
 let bag = [ //初始Bag裡的物品
-    { item: "envelope", image: "img/學生物品/報告第一頁_new.png", image2: "img/學生物品/報告第一頁.png", open: 0, bThing: 0, others: 0 },
-    { item: "envelope", image: "img/學生物品/報告第二頁_new.png", image2: "img/學生物品/報告第二頁.png", open: 0, bThing: 0, others: 1 },
+    { item: "envelope", image: "img/學生物品/報告第一頁_new.png", image2: "img/學生物品/報告第一頁.png", open: 0, bThing: 1, thing: "img/學生物品/內頁.png", name: "你", word: "博士肯定會考！我必須得記住呢！", others: 0 },
 ]
 
 function bag_appear() {
@@ -29,7 +28,7 @@ function bag_detect() { //偵測按背包
 
 function bag_nothing() { //背包清空
     bag = [];
-    bag[0] = { item: "nothing", image: "img/Nothing.png", open: 1, thing: 0, event: "" };
+    bag[0] = { item: "nothing", image: "img/Nothing.png", image2: "img/Nothing.png", open: 1, bThing: 0, event: "" };
     i++;
 }
 

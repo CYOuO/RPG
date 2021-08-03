@@ -1,4 +1,5 @@
 function start() {
+    document.getElementById("star").style.display = "none";
     document.getElementById("homepage").style.display = "none";
     document.getElementById("rule").style.display = "block";
 }
@@ -46,6 +47,28 @@ function pokemon1() {
     document.getElementById("character_img").src = pokemon[i].image;
     document.getElementById("dialog_box").textContent = pokemon[i].word;
     i++;
+}
+
+function star() {
+    document.getElementById("star").style.display = "none";
+    document.getElementById("homepage").style.display = "none";
+    document.getElementById("personnel").style.display = "block";
+}
+
+function Next1() {
+    document.getElementById("personnel").style.display = "none";
+    document.getElementById("personnel2").style.display = "block";
+}
+
+function Next2() {
+    document.getElementById("personnel2").style.display = "none";
+    document.getElementById("personnel3").style.display = "block";
+}
+
+function return_key() {
+    document.getElementById("personnel3").style.display = "none";
+    document.getElementById("star").style.display = "block";
+    document.getElementById("homepage").style.display = "block";
 }
 
 function run() {
