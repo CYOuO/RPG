@@ -7,8 +7,9 @@ body {
 .homepage {
     color: white;
     margin: auto;
-    position: absolute;
+    /* position: absolute;
     top: 54%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
+    text-align: center;
 }
