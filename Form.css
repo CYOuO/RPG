@@ -1,0 +1,14 @@
+body {
+    background-color: black;
+    color: white;
+    user-select: none;
+}
+
+.homepage {
+    color: white;
+    margin: auto;
+    position: absolute;
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
