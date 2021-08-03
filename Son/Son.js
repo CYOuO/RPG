@@ -42,12 +42,14 @@ function Choice_game() { //玩遊戲/輸入密碼
 }
 
 function Choice_game1() { //玩遊戲/輸入密碼
+    choice = 1
+    Choice_box();
     document.getElementById("choice1").onclick = () => {
         play = 1;
         bgm();
         window.open('Game/Game_maze.html', );
     };
-    document.getElementById("choice2").onclick = () => { Password_Game() };
+    document.getElementById("choice2").onclick = () => { Password_Game1() };
 }
 
 

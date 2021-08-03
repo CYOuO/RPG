@@ -191,7 +191,6 @@ let stage2_2_1_0_0_1 = [ //紡織廠
     { name: "你", word: "原來這些都是紡織業！", image: "img/農場主人/1.png", bEvent: 0 },
     { name: "你", word: "咦不對，爸爸不在這裡耶", image: "img/農場主人/11.png", bEvent: 0 },
     { name: "你", word: "我找錯地方了", image: "img/農場主人/4.png", bEvent: 0 },
-    { name: "你", word: "爸爸是去送貨的，應該在菜市場啦", image: "img/農場主人/4.png", bEvent: 0 },
     {
         name: "你",
         word: "爸爸是去送貨的，應該在菜市場啦",
@@ -209,7 +208,6 @@ let stage2_2_1_0_0_2 = [ //福興國小
     { name: "你", word: "想當年我也跟他們一樣活潑可愛", image: "img/農場主人/1.png", bEvent: 0 },
     { name: "你", word: "咦不對，爸爸不在這裡耶", image: "img/農場主人/11.png", bEvent: 0 },
     { name: "你", word: "我找錯地方了", image: "img/農場主人/4.png", bEvent: 0 },
-    { name: "你", word: "爸爸是去送貨的，應該在菜市場啦", image: "img/農場主人/4.png", bEvent: 0 },
     {
         name: "你",
         word: "爸爸是去送貨的，應該在菜市場啦",

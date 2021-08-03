@@ -355,7 +355,7 @@ let stage6_2 = [ //練習比賽→
 ]
 
 let stage7 = [ //（遊戲成功0727）→
-    { name: "你", word: "哈哈哈，果然難不倒我", image: "img/學生/0.png", bEvent: 0 },
+    { name: "你", word: "哈哈哈，果然難不倒我(積分+5)", image: "img/學生/0.png", bEvent: 0 },
     { name: "你", word: "照這個進度下去，我一定能在比賽好好發揮出實力", image: "img/學生/5.png", bEvent: 0 },
     {
         name: "你",
@@ -369,7 +369,7 @@ let stage7 = [ //（遊戲成功0727）→
     },
 ]
 let stage8 = [ //（遊戲失敗1325）→
-    { name: "你", word: "幾天沒練習，果然是生疏了", image: "img/學生/6.png", bEvent: 0 },
+    { name: "你", word: "幾天沒練習，果然是生疏了(積分+1)", image: "img/學生/6.png", bEvent: 0 },
     { name: "你", word: "不過我不會放棄的，相信只要我多加練習就能發揮出實力的", image: "img/學生/5.png", bEvent: 0 },
     {
         name: "你",

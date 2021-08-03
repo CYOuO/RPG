@@ -115,7 +115,6 @@ let stage1_2_1 = [ //找博士應聘
     { name: "你", word: "是這樣的，我想在神奇寶貝大賽上開著我的飛機登場", image: "img/飛行員/0.png", bEvent: 0 },
     { name: "你", word: "可是我的飛機壞了，我想賺錢修好他", image: "img/飛行員/1.png", bEvent: 0 },
     { name: "博士", word: "哈哈正好我現在新研究了飛機", image: "img/博士.png", bEvent: 0 },
-    { name: "博士", word: "我可以免費幫你修好飛機", image: "img/博士.png", bEvent: 0 },
     { name: "博士", word: "既然要參加神奇寶貝大賽", image: "img/博士.png", bEvent: 0 },
     { name: "博士", word: "現在最重要的是練習吧", image: "img/博士.png", bEvent: 0 },
     { name: "博士", word: "嗯不過得先讓我把一些實驗相關的東西整理好，才能幫你修飛機", image: "img/博士.png", bEvent: 0 },

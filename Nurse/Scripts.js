@@ -141,7 +141,7 @@ let stage1_2_1_1 = [ //忽視
     { name: "提示", word: "玩遊戲獲取通關密碼後，回來輸入通關密碼吧", image: "img/護士物品/方塊.png", bEvent: 1, event: Choice_game },
 ]
 let stage3 = [ //忽視遊戲成功線
-    { name: "你", word: "哇據說這個新場地的訓練特別難，沒想到我們一次就通過了！", image: "img/護士/3.png", bEvent: 0 },
+    { name: "你", word: "哇據說這個新場地的訓練特別難，沒想到我們一次就通過了！(積分+5)", image: "img/護士/3.png", bEvent: 0 },
     { name: "你", word: "嘿嘿希望我們參加大賽能獲得優勝。", image: "img/護士/3.png", bEvent: 0 },
     { name: "你", word: "我們回去報名吧！", image: "img/護士/0.png", bEvent: 0 },
     { name: "地點", word: "(神奇寶貝中心)", image: "img/神奇寶貝中心.png", bEvent: 0 },
@@ -201,7 +201,7 @@ let stage3 = [ //忽視遊戲成功線
 ]
 
 let stage4 = [ //忽視遊戲失敗線
-    { name: "你", word: "沒事的胖丁，我們再接再厲！", image: "img/護士/2.png", bEvent: 0 },
+    { name: "你", word: "沒事的胖丁，我們再接再厲！(積分+1)", image: "img/護士/2.png", bEvent: 0 },
     { name: "你", word: "至少我今天的目的——測試攻擊組合，已經達成啦", image: "img/護士/3.png", bEvent: 0 },
     { name: "你", word: "我們回去報名吧，之後再來訓練！", image: "img/護士/0.png", bEvent: 0 },
     { name: "地點", word: "(神奇寶貝中心)", image: "img/神奇寶貝中心.png", bEvent: 0 },
@@ -302,7 +302,7 @@ let stage1_2_1_2 = [ //尋找聲音來源
     { name: "提示", word: "玩遊戲獲取通關密碼後，回來輸入通關密碼吧", image: "img/護士物品/方塊.png", bEvent: 1, event: Choice_game1 },
 ]
 let stage5 = [ //救道長遊戲成功線
-    { name: "你", word: "哇據說這個新場地的訓練特別難，沒想到我們一次就通過了！", image: "img/護士/3.png", bEvent: 0 },
+    { name: "你", word: "哇據說這個新場地的訓練特別難，沒想到我們一次就通過了！(積分+5)", image: "img/護士/3.png", bEvent: 0 },
     { name: "你", word: "嘿嘿希望我們參加大賽能獲得優勝。", image: "img/護士/3.png", bEvent: 0 },
     { name: "你", word: "我們回去報名吧！", image: "img/護士/0.png", bEvent: 0 },
     { name: "地點", word: "(神奇寶貝中心)", image: "img/神奇寶貝中心.png", bEvent: 0 },
@@ -344,7 +344,7 @@ let stage5 = [ //救道長遊戲成功線
     { name: "成功", word: "再按一下獲得成績", image: "img/成功.png", bEvent: 1, event: Choice_stage6 },
 ]
 let stage6 = [ //救道長遊戲失敗線
-    { name: "你", word: "哇據說這個新場地的訓練特別難，沒想到我們一次就通過了！", image: "img/護士/3.png", bEvent: 0 },
+    { name: "你", word: "哇據說這個新場地的訓練特別難，沒想到我們一次就通過了！(積分+1)", image: "img/護士/3.png", bEvent: 0 },
     { name: "你", word: "嘿嘿希望我們參加大賽能獲得優勝。", image: "img/護士/3.png", bEvent: 0 },
     { name: "你", word: "我們回去報名吧！", image: "img/護士/0.png", bEvent: 0 },
     { name: "地點", word: "(神奇寶貝中心)", image: "img/神奇寶貝中心.png", bEvent: 0 },

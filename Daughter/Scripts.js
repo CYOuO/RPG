@@ -222,7 +222,7 @@ let stage2 = [ //過關
 ]
 
 let stage3 = [ //失敗
-    { name: "你", word: "我果然還是得再練習練習，伊布讓我們再繼續加油吧！", image: "img/市長女兒/6.png", bEvent: 0 },
+    { name: "你", word: "我果然還是得再練習練習，伊布讓我們再繼續加油吧！(積分+1)", image: "img/市長女兒/6.png", bEvent: 0 },
     { name: "地點", word: "（隔天，小開家道館）", image: "img/寶貝球.png", bEvent: 0 },
     { name: "你", word: " 早上好！不好意思打擾了抱歉昨天突然有急事沒辦法到…", image: "img/市長女兒/2.png", bEvent: 0 },
     { name: "小開", word: " 該不會你又去跑公務了吧？", image: "img/小開/0.png", bEvent: 0 },

@@ -203,18 +203,22 @@ a {
 }
 
 .player1:hover {
+    color: rgb(0, 183, 255);
     cursor: pointer;
 }
 
 .player2:hover {
+    color: rgb(0, 183, 255);
     cursor: pointer;
 }
 
 .player3:hover {
+    color: rgb(0, 183, 255);
     cursor: pointer;
 }
 
 .player4:hover {
+    color: rgb(0, 183, 255);
     cursor: pointer;
 }
 

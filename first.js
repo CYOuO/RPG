@@ -97,12 +97,23 @@ let pokemon = [
     { image: "img/神奇寶貝/7.png", word: "我是一位道館小開（老闆的兒子），妙蛙種子是我的神奇寶貝。" },
 ]
 
+function player() {
+    document.getElementById('player1').addEventListener('click', function() { window.location.href = 'Farmer.html' })
+    document.getElementById('player2').addEventListener('click', function() { window.location.href = 'Student.html' })
+    document.getElementById('player3').addEventListener('click', function() { window.location.href = 'Firefighter.html' })
+    document.getElementById('player4').addEventListener('click', function() { window.location.href = 'Son.html' })
+    document.getElementById('player5').addEventListener('click', function() { window.location.href = 'Pilot.html' })
+    document.getElementById('player6').addEventListener('click', function() { window.location.href = 'Daughter.html' })
+    document.getElementById('player7').addEventListener('click', function() { window.location.href = 'Hiker.html' })
+    document.getElementById('player8').addEventListener('click', function() { window.location.href = 'Nurse.html' })
+}
 
 window.addEventListener('load', function() {
     pokemon1();
     run();
-
+    player();
 })
+
 
 
 
