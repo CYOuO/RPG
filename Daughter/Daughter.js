@@ -40,7 +40,7 @@ function Choice_game() { //玩遊戲/輸入密碼
     document.getElementById("choice1").onclick = () => {
         play = 1;
         bgm();
-        window.open('', );
+        window.open('Game/Game_baby.html', );
     };
     document.getElementById("choice2").onclick = () => { Password_Game() };
 }
