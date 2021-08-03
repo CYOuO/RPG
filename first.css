@@ -404,3 +404,9 @@ a:active {
     font-size: 90%;
     text-align: center;
 }
+
+.form {
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
