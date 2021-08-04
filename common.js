@@ -121,7 +121,7 @@ function Choice_stage6() { //成功
     }
     number = 2;
     console.log(score)
-    document.getElementById("dialog_box").textContent = "恭喜妳成功讓主角參加神奇寶貝大賽啦！(積分+10)  你現在的積分為：" + score;
+    document.getElementById("dialog_box").textContent = "恭喜你成功讓主角參加神奇寶貝大賽啦！(積分+10)  你現在的積分為：" + score;
     Choice_box();
     document.getElementById("choice1").style.display = "block";
     document.getElementById("choice2").style.display = "block";
