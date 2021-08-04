@@ -41,7 +41,7 @@ let stage1 = [
     { name: "提示", word: "玩遊戲獲取通關密碼後，回來輸入通關密碼吧", image: "img/登山客物品/跑步.png", bEvent: 1, event: Choice_game },
 ]
 let stage2 = [ //闖關失敗(0514) 
-    { name: "你", word: "怎...怎麼辦？牠追上來了啊啊啊(積分+1)！", image: "img/登山客/5.png", bEvent: 0 },
+    { name: "你", word: "怎...怎麼辦？牠追上來了啊啊啊！(積分+1)", image: "img/登山客/5.png", bEvent: 0 },
     { name: "", word: "（就這樣，我和呆呆獸又跑了快20分鐘）", image: "", bEvent: 0 },
     { name: "你", word: "呼...呼...牠應該沒追上來吧...再..再追上來我..我就跑不動了... ", image: "img/登山客/7.png", bEvent: 0 },
     {
@@ -210,7 +210,7 @@ let stage4_4 = [ //北
 let stage4_4_1 = [ //殺鬼
     { name: "炭治郎", word: "(炭治郎出現)", image: "img/登山客/炭治郎.png", bEvent: 0 },
     { name: "炭治郎", word: "大哥沒有輸！", image: "img/登山客/炭治郎.png", bEvent: 0 },
-    { name: "你", word: "(嚇) 還是趕快去神奇寶貝大賽吧", image: "img/登山客.png", bEvent: 0 },
+    { name: "你", word: "(嚇) 還是趕快去神奇寶貝大賽吧", image: "img/登山客/5.png", bEvent: 0 },
     {
         name: "你",
         word: "(嚇) 還是趕快去神奇寶貝大賽吧",
