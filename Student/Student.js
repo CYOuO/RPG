@@ -143,9 +143,10 @@ function choice_run() {
             Stage1_box();
             i++
         } else {
+            none();
             i++;
-            Stage1_box();
-            Choice_stage5();
+            // Stage1_box();
+
 
 
         }

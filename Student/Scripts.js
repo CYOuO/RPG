@@ -278,6 +278,7 @@ let stage4_1 = [ //哆啦a夢
     { name: "哈密瓜", word: "你個騙子！是個人都看得出來阿龍有多麼喜歡鬼滅之刃！", image: "img/商人.png", bEvent: 0 },
     { name: "哈密瓜", word: "你怎麼能夠忽視牠眼神散發出的那種大哥沒有輸的真摯情感", image: "img/商人.png", bEvent: 0 },
     { name: "哈密瓜", word: "你別想帶走阿龍！", image: "img/商人.png", bEvent: 0 },
+    { name: "你", word: "沒有小火龍就不能參加大賽了...", image: "img/學生/6.png", bEvent: 0 },
     { name: "失敗", word: "再按一下獲得成績", image: "img/失敗.png", bEvent: 1, event: Choice_stage5 },
 ]
 let stage4_2 = [ //鬼滅之刃
