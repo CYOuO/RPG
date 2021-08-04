@@ -118,7 +118,17 @@ let stage1_2_1 = [ //找博士應聘
     { name: "博士", word: "既然要參加神奇寶貝大賽", image: "img/博士.png", bEvent: 0 },
     { name: "博士", word: "現在最重要的是練習吧", image: "img/博士.png", bEvent: 0 },
     { name: "博士", word: "嗯不過得先讓我把一些實驗相關的東西整理好，才能幫你修飛機", image: "img/博士.png", bEvent: 0 },
-    { name: "博士", word: "嗯不過得先讓我把一些實驗相關的東西整理好，才能幫你修飛機", image: "img/博士.png", bEvent: 1, event: Choice_stage1_2_1_0 },
+    {
+        name: "博士",
+        word: "嗯不過得先讓我把一些實驗相關的東西整理好，才能幫你修飛機",
+        image: "img/博士.png",
+        bEvent: 1,
+        event: function() {
+            bag[0].word = "還好有博士可以幫我修飛機呢"
+            Choice_stage1_2_1_0();
+
+        }
+    },
 
 ]
 
@@ -316,6 +326,8 @@ let stage1_2_2_2 = [ //方法二（ 辛苦的幫忙送貨）
         event: function() {
             bag[0].thing = "img/飛行員物品/錢2.png"
             bag[0].word = "終於有錢啦"
+            Stage1_box();
+            i++;
         }
     },
     { name: "你", word: " 謝謝你， 沒想到你人那麼好", image: "img/飛行員/0.png", bEvent: 0 },
@@ -328,7 +340,6 @@ let stage1_2_2_2 = [ //方法二（ 辛苦的幫忙送貨）
     { name: "哈密瓜", word: "他甚至還為了你去研究飛機", image: "img/商人.png", bEvent: 0 },
     { name: "哈密瓜", word: "想說等你某天回去他可以和你一起探討飛機", image: "img/商人.png", bEvent: 0 },
     { name: "哈密瓜", word: "現在不就是機會嗎？", image: "img/商人.png", bEvent: 0 },
-    { name: "哈密瓜", word: "你以前是博士的學生吧？", image: "img/商人.png", bEvent: 0 },
     { name: "你", word: "  博士竟然還為我研究飛機？！", image: "img/飛行員/1.png", bEvent: 0 },
     { name: "你", word: "他不是一向只研究神奇寶貝嗎", image: "img/飛行員/1.png", bEvent: 0 },
     { name: "哈密瓜", word: "由此可知博士有多重視你吧， 快回去看看博士吧", image: "img/商人.png", bEvent: 0 },
@@ -358,10 +369,7 @@ let stage1_2_2_2 = [ //方法二（ 辛苦的幫忙送貨）
     { name: "博士", word: "我也可以幫你修飛機，至於費用嘛…", image: "img/博士.png", bEvent: 0 },
     { name: "你", word: "您隨便開價！就算我錢不夠我也會再去賺的", image: "img/飛行員/4.png", bEvent: 0 },
     { name: "博士", word: "哈哈不要緊張，我可以免費幫你修好飛機", image: "img/博士.png", bEvent: 0 },
-    { name: "博士", word: "我可以免費幫你修好飛機", image: "img/博士.png", bEvent: 0 },
     { name: "你", word: "不行啦！那我做您的助理作為替代吧，據說您最近在招募助理", image: "img/飛行員/5.png", bEvent: 0 },
-
-
     { name: "博士", word: "既然要參加神奇寶貝大賽", image: "img/博士.png", bEvent: 0 },
     { name: "博士", word: "現在最重要的是練習吧", image: "img/博士.png", bEvent: 0 },
     { name: "博士", word: "嗯不過得先讓我把一些實驗相關的東西整理好，才能幫你修飛機", image: "img/博士.png", bEvent: 0 },
