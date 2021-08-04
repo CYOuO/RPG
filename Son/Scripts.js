@@ -260,7 +260,7 @@ let stage4_2 = [ //繼續等待
     { name: "你", word: "去附近逛逛看看風景放鬆一下心情", image: "img/小開/3.png", bEvent: 0 },
     { name: "", word: "（並肩一起走到到目的地）", image: "", bEvent: 0 },
     { name: "你", word: "大賽快要開始了啊…有點緊張 ", image: "img/小開/6.png", bEvent: 0 },
-    { name: "市長女兒", word: " 對了昨天呀爸爸同意讓我參加了耶！好開心喔！", image: "img/市長女兒/3.png", bEvent: 0 },
+    { name: "市長女兒", word: " 別緊張！你一定能取得好成績，不如說你可不能輸！我們要在決賽場上見！", image: "img/市長女兒/3.png", bEvent: 0 },
     { name: "市長女兒", word: " 對了昨天呀爸爸同意讓我參加了耶！好開心喔！", image: "img/市長女兒/3.png", bEvent: 0 },
     { name: "你", word: "真的嗎那真是太好了。 ", image: "img/小開/3.png", bEvent: 0 },
     { name: "市長女兒", word: " 你呢？你會參加的吧？", image: "img/市長女兒/3.png", bEvent: 0 },
