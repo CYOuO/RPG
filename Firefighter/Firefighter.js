@@ -4,7 +4,7 @@ document.write('<script src="Firefighter/Scripts.js"></script>');
 var init = 0;
 //Bag//
 let bag = [ //初始Bag裡的物品
-    { item: "envelope", image: "img/消防隊員物品/envelope_new.png", image2: "img/消防隊員物品/envelope.png", open: 0, bThing: 1, thing: "img/消防隊員物品/辭職信.png", name: "你", word: "一定得成功辭職", others: 0 },
+    { item: "envelope", image: "img/消防隊員物品/envelope_new.png", image2: "img/消防隊員物品/envelope.png", open: 0, bThing: 1, thing: "img/消防隊員物品/辭職信.png", name: "你", word: "一定得成功辭職！", others: 0 },
 ]
 
 function bag_appear() {

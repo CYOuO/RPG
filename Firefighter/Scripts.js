@@ -64,7 +64,7 @@ let stage1 = [
     { name: "消防隊長", word: "追逐夢想本來就不是錯呀！ ", image: "img/消防隊長/0.png", bEvent: 0 },
     { name: "消防隊長", word: "但是不是...儘管我再挽留... ", image: "img/消防隊長/4.png", bEvent: 0 },
     { name: "消防隊長", word: "你也不會為我停留？ ", image: "img/消防隊長/4.png", bEvent: 0 },
-    { name: "消防隊長", word: "好吧！我同意你辭職 ", image: "img/消防隊長/0.png", bEvent: 0 },
+    { name: "消防隊長", word: "好吧！我同意你辭職 ", image: "img/消防隊長/1.png", bEvent: 0 },
     { name: "消防隊長", word: "但我還想派給你最後一個任務", image: "img/消防隊長/1.png", bEvent: 0 },
     { name: "消防隊長", word: "你可以去幫農村媽媽抓蛇嗎？ ", image: "img/消防隊長/1.png", bEvent: 1, event: Choice_stage1_0 },
 ]
@@ -76,6 +76,7 @@ let stage1_1 = [ //不行
     { name: "消防隊長", word: "他兒子曾說過：「一個人如果沒有夢想， ", image: "img/消防隊長/1.png", bEvent: 0 },
     { name: "消防隊長", word: "那就是一具沒有靈魂的軀殼", image: "img/消防隊長/1.png", bEvent: 0 },
     { name: "消防隊長", word: "每個人都該有追逐夢想的權利。」", image: "img/消防隊長/1.png", bEvent: 0 },
+    { name: "消防隊長", word: "我就是想到這句話，才同意你辭職的。", image: "img/消防隊長.png", bEvent: 0 },
     {
         name: "消防隊長",
         word: "我就是想到這句話，才同意你辭職的。",
@@ -131,11 +132,12 @@ let stage2 = [ //抓蛇成功2931
     { name: "你", word: "哇！好香啊 ", image: "img/消防員/0.png", bEvent: 0 },
     { name: "你", word: "謝謝農村媽媽 ", image: "img/消防員/0.png", bEvent: 0 },
     { name: "你", word: "那我先告辭嘍 ", image: "img/消防員/0.png", bEvent: 0 },
+    { name: "農村媽媽", word: "路上小心啊！ ", image: "img/媽媽/4.png", bEvent: 0, },
     {
         name: "農村媽媽",
         word: "路上小心啊！ ",
         image: "img/媽媽/4.png",
-        bEvent: 0,
+        bEvent: 1,
         event: function() {
             cs = stage4,
                 change_scipts();
@@ -251,11 +253,12 @@ let stage3 = [ //抓蛇失敗1328
     { name: "你", word: "不過聽說博士最近在做研究", image: "img/消防員/4.png", bEvent: 0 },
     { name: "你", word: "這隻大岩蛇或許對他有幫助", image: "img/消防員/4.png", bEvent: 0 },
     { name: "你", word: "我先把牠送去博士那再出發好了，我先走啦~", image: "img/消防員/0.png", bEvent: 0 },
+    { name: "野外求生專家", word: "那我也先離開了，有緣再見！", image: "img/野外求生專家/0.png", bEvent: 0 },
     {
         name: "野外求生專家",
         word: "那我也先離開了，有緣再見！",
         image: "img/野外求生專家/0.png",
-        bEvent: 0,
+        bEvent: 1,
         event: function() {
             cs = stage4,
                 change_scipts();
