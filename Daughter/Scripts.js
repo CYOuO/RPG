@@ -156,20 +156,20 @@ let stage4 = [
 ]
 
 let stage1_2_2_2_1 = [ //出借 
-    { name: "你", word: " （就幾天而已沒事吧）那就借給您囉！ ", image: "img/市長女兒.png", bEvent: 0 },
+    { name: "你", word: " （就幾天而已沒事吧）那就借給您囉！ ", image: "img/市長女兒/3.png", bEvent: 0 },
     { name: "土地分析專家", word: " 謝謝，我家孩子一定會很高興的", image: "img/土地分析專家.png", bEvent: 0 },
-    { name: "日期", word: " （比賽當天）", image: "", bEvent: 0 },
+    { name: "日期", word: " （比賽當天）", image: "img/隔一天.png", bEvent: 0 },
     { name: "哈密瓜", word: "嗨小女孩，我的那本神奇寶貝攻略秘笈呢？", image: "img/商人.png", bEvent: 0 },
     { name: "哈密瓜", word: "神奇寶貝大賽就要開始了，我想拿著那本對照觀察一下比賽情勢。", image: "img/商人.png", bEvent: 0 },
-    { name: "你", word: " 我.......我借給別人了。 ", image: "img/市長女兒.png", bEvent: 0 },
-    { name: "土地分析專家", word: " 什麼？！沒人告訴過你別人借給你的東西不能未經同意轉借嗎？ ", image: "img/市長女兒.png", bEvent: 0 },
-    { name: "你", word: " 我以為他很快就會還了。 ", image: "img/市長女兒.png", bEvent: 0 },
+    { name: "你", word: " 我.......我借給別人了。 ", image: "img/市長女兒/2.png", bEvent: 0 },
+    { name: "商人", word: " 什麼？！沒人告訴過你別人借給你的東西不能未經同意轉借嗎？ ", image: "img/商人.png", bEvent: 0 },
+    { name: "你", word: " 我以為他很快就會還了。 ", image: "img/市長女兒/2.png", bEvent: 0 },
     { name: "哈密瓜", word: " 很多時候，你以為的真的只是你以為", image: "img/商人.png", bEvent: 0 },
     { name: "哈密瓜", word: " 無論如何別人借你的東西都不能借給別人！並且還要按時歸還", image: "img/商人.png", bEvent: 0 },
     { name: "商人", word: " 這次因為我也沒和你說該什麼時候還，所以你借了這麼久也沒事。", image: "img/商人.png", bEvent: 0 },
-    { name: "你", word: " 我知道了！對不起哈密瓜。", image: "img/市長女兒.png", bEvent: 0 },
+    { name: "你", word: " 我知道了！對不起哈密瓜。", image: "img/市長女兒/2.png", bEvent: 0 },
     { name: "哈密瓜", word: " 那你打算怎麼賠償我？神奇寶貝攻略可不便宜 ", image: "img/商人.png", bEvent: 0 },
-    { name: "你", word: " 我..... ", image: "img/市長女兒.png", bEvent: 0 },
+    { name: "你", word: " 我..... ", image: "img/市長女兒/5.png", bEvent: 0 },
     { name: "失敗", word: "再按一下獲得成績", image: "img/失敗.png", bEvent: 1, event: Choice_stage5 },
 ]
 
