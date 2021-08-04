@@ -4,7 +4,7 @@ document.write('<script src="Daughter/Scripts.js"></script>');
 var init = 0;
 //Bag//
 let bag = [ //初始Bag裡的物品
-    { item: "envelope", image: "img/女兒物品/土地企劃書.png", image2: "img/女兒物品/土地企劃書_new.png", open: 0, bThing: 0, others: 0 },
+    { item: "envelope", image: "img/女兒物品/土地企劃書_new.png", image2: "img/女兒物品/土地企劃書.png", open: 0, bThing: 0, others: 0 },
 ]
 
 function bag_appear() {
@@ -23,9 +23,8 @@ function bag_detect() { //偵測按背包
         document.getElementById("next").style.display = "none";
         document.getElementById("envelope_new").src = bag[n].image;
         bag_change_thing();
-        if (bag[n].bThing === 1) {
-            document.getElementById("envelope_new").addEventListener('click', function() { Envelope_new(); });
-        }
+
+        document.getElementById("envelope_new").addEventListener('click', function() { Envelope_new(); });
     })
 }
 
