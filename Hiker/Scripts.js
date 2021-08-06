@@ -11,6 +11,7 @@ let stage1 = [
     { name: "呆呆獸", word: "亞~", image: "img/神奇寶貝/2.png", bEvent: 0 },
     { name: "你", word: "你說，我能不能成為神奇寶貝大師呀？", image: "img/登山客/4.png", bEvent: 0 },
     { name: "你", word: "這幾年我很少有與人對戰的經驗，都在山林裡對付野生神奇寶貝", image: "img/登山客/1.png", bEvent: 0 },
+    { name: "你", word: "不知道其他參賽者的能力怎麼樣。", image: "img/登山客/1.png", bEvent: 0 },
     { name: "呆呆獸", word: "亞~亞亞~", image: "img/神奇寶貝/2.png", bEvent: 0 },
     { name: "你", word: "我一定能成功？雖然太猖狂了些，但你說得好像也對啦嘻嘻", image: "img/登山客/3.png", bEvent: 0 },
     { name: "你", word: "我可是在深山裡遊歷好幾年", image: "img/登山客/3.png", bEvent: 0 },
@@ -175,10 +176,11 @@ let stage4_3 = [ //西
     { name: "", word: "（走著走著，來到了一片高大的神木森林）", image: "img/登山客物品/森林.png", bEvent: 0 },
     { name: "你", word: "哇~好高大的神木呀，這些都應該有幾百年、幾千年的歷史了吧", image: "img/登山客/4.png", bEvent: 0 },
     { name: "你", word: "不過這些樹又高又多，我都沒辦法看清楚前面的路了，真糟糕", image: "img/登山客/2.png", bEvent: 0 },
-    { name: "你", word: "真糟糕，再這樣下去不知道趕不趕得上神奇寶貝大賽。", image: "img/登山客/5.png", bEvent: 0 },
+    { name: "你", word: "我好像真的迷路了，得快點想個辦法", image: "img/登山客/5.png", bEvent: 0 },
+    { name: "你", word: "不然再這樣下去不知道還趕不趕得上神奇寶貝大賽。", image: "img/登山客/5.png", bEvent: 0 },
     {
         name: "你",
-        word: "我好像真的迷路了，得快點想個辦法，不然再這樣下去不知道還趕不趕得上神奇寶貝大賽。",
+        word: "不然再這樣下去不知道還趕不趕得上神奇寶貝大賽。",
         image: "img/登山客/5.png",
         bEvent: 1,
         event: function() {
