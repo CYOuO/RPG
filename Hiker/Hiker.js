@@ -126,8 +126,8 @@ function change_bag_letter() { //背包新增給醫藥箱
     bag.open = 0;
     Bag_open();
     // bag_detect();
-    Stage1_box();
     i++;
+
 
 }
 //密碼
